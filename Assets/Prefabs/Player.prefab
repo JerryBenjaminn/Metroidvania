@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7161714350010502117, guid: 5a43093f514a8a7458201ea0458ca3c5, type: 3}
+  m_Sprite: {fileID: -8702430084159399980, guid: 7caf5ef77b1c86b45b148e8cc63ff023, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -168,7 +168,7 @@ Transform:
   m_GameObject: {fileID: 5691894068016559960}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.87, y: 1.46, z: 0}
+  m_LocalPosition: {x: 0.87, y: 1.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 6770830313523687997}
   - component: {fileID: 5702099993572567927}
   - component: {fileID: 7959630617242225100}
+  - component: {fileID: 6559042776447973326}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -433,14 +434,14 @@ MonoBehaviour:
   moveSpeed: 6
   accel: 60
   decel: 80
-  jumpForce: 12
-  maxAirJumps: 1
+  jumpForce: 15
+  maxAirJumps: 0
   groundMask:
     serializedVersion: 2
     m_Bits: 64
   groundCheckRadius: 0.1
   groundCheck: {fileID: 7186152266802875939}
-  baseGravityScale: 4
+  baseGravityScale: 3
   fallGravityMultiplier: 1.8
   lowJumpGravityMultiplier: 2.5
   riseGravityMultiplier: 1
@@ -473,5 +474,26 @@ MonoBehaviour:
   animator: {fileID: 3063019151869941754}
   sr: {fileID: 2130835848777201979}
   moveAnimThreshold: 0.05
-  runEnterSpeedRatio: 0.7
-  runExitSpeedRatio: 0.6
+  runEnterSpeedRatio: 0.9
+  runExitSpeedRatio: 0.8
+--- !u!114 &6559042776447973326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9074775790662725853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf8109b6461cbb48b3ae0a10867127a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  origin: {fileID: 159567034771147113}
+  radius: 0.9
+  interactableMask:
+    serializedVersion: 2
+    m_Bits: 768
+  preferFacingDirection: 1
+  cooldown: 0.15
+  animator: {fileID: 3063019151869941754}
+  interactTrigger: Interact
