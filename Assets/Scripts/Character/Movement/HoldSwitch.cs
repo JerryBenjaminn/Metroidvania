@@ -12,6 +12,7 @@ public class HoldSwitch : MonoBehaviour, IInteractable
     public string GetPrompt() => "Hold to activate";
 
     public void Interact(GameObject who) => onActivated?.Invoke();
+
     public void OnFocusEnter(GameObject who) { }
     public void OnFocusExit(GameObject who) { }
 }
