@@ -1,0 +1,3042 @@
+fileFormatVersion: 2
+guid: d7e6f7750eeecba4bbec0065eeef9c6b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -510582360839387881
+    second: Zweihander_Spritesheet_Player_0
+  - first:
+      213: -4443889442892720809
+    second: Zweihander_Spritesheet_Player_1
+  - first:
+      213: 9139455674340901053
+    second: Zweihander_Spritesheet_Player_2
+  - first:
+      213: 797384778864886043
+    second: Zweihander_Spritesheet_Player_3
+  - first:
+      213: 896789856188735976
+    second: Zweihander_Spritesheet_Player_4
+  - first:
+      213: -9160496550443389144
+    second: Zweihander_Spritesheet_Player_5
+  - first:
+      213: -2672689021422875628
+    second: Zweihander_Spritesheet_Player_6
+  - first:
+      213: -6143388322080500522
+    second: Zweihander_Spritesheet_Player_7
+  - first:
+      213: 4448919226370330949
+    second: Zweihander_Spritesheet_Player_8
+  - first:
+      213: 4739085107970154361
+    second: Zweihander_Spritesheet_Player_9
+  - first:
+      213: 8756139908186137522
+    second: Zweihander_Spritesheet_Player_10
+  - first:
+      213: -846739491622932113
+    second: Zweihander_Spritesheet_Player_11
+  - first:
+      213: 7640009688029840676
+    second: Zweihander_Spritesheet_Player_12
+  - first:
+      213: -8856315617750589969
+    second: Zweihander_Spritesheet_Player_13
+  - first:
+      213: 993958638774073063
+    second: Zweihander_Spritesheet_Player_14
+  - first:
+      213: -3737992085852569650
+    second: Zweihander_Spritesheet_Player_15
+  - first:
+      213: -7488054116999160661
+    second: Zweihander_Spritesheet_Player_16
+  - first:
+      213: 3974315873874802826
+    second: Zweihander_Spritesheet_Player_17
+  - first:
+      213: 859257835371686119
+    second: Zweihander_Spritesheet_Player_18
+  - first:
+      213: -6451011950319045215
+    second: Zweihander_Spritesheet_Player_19
+  - first:
+      213: 650009913999991603
+    second: Zweihander_Spritesheet_Player_20
+  - first:
+      213: 2490895599682999890
+    second: Zweihander_Spritesheet_Player_21
+  - first:
+      213: 1376609612640812391
+    second: Zweihander_Spritesheet_Player_22
+  - first:
+      213: 1068830754783319075
+    second: Zweihander_Spritesheet_Player_23
+  - first:
+      213: -1324258198301765761
+    second: Zweihander_Spritesheet_Player_24
+  - first:
+      213: -512924871010776128
+    second: Zweihander_Spritesheet_Player_25
+  - first:
+      213: -4937036529921038429
+    second: Zweihander_Spritesheet_Player_26
+  - first:
+      213: -112279069019682148
+    second: Zweihander_Spritesheet_Player_27
+  - first:
+      213: 4074744124809590711
+    second: Zweihander_Spritesheet_Player_28
+  - first:
+      213: 4137785045173229448
+    second: Zweihander_Spritesheet_Player_29
+  - first:
+      213: -5424553473840636756
+    second: Zweihander_Spritesheet_Player_30
+  - first:
+      213: 8165588006081413269
+    second: Zweihander_Spritesheet_Player_31
+  - first:
+      213: 4983571694087103406
+    second: Zweihander_Spritesheet_Player_32
+  - first:
+      213: 5676288544808764080
+    second: Zweihander_Spritesheet_Player_33
+  - first:
+      213: 8680347084410252583
+    second: Zweihander_Spritesheet_Player_34
+  - first:
+      213: 300230250064714006
+    second: Zweihander_Spritesheet_Player_35
+  - first:
+      213: -7280301677147855096
+    second: Zweihander_Spritesheet_Player_36
+  - first:
+      213: 2568433863637165515
+    second: Zweihander_Spritesheet_Player_37
+  - first:
+      213: 1077910083578250392
+    second: Zweihander_Spritesheet_Player_38
+  - first:
+      213: 8352827058070816179
+    second: Zweihander_Spritesheet_Player_39
+  - first:
+      213: -6695464504404883030
+    second: Zweihander_Spritesheet_Player_40
+  - first:
+      213: -4144423236996091867
+    second: Zweihander_Spritesheet_Player_41
+  - first:
+      213: 1630714580559438651
+    second: Zweihander_Spritesheet_Player_42
+  - first:
+      213: -9100882457658962515
+    second: Zweihander_Spritesheet_Player_43
+  - first:
+      213: 2662779954374090507
+    second: Zweihander_Spritesheet_Player_44
+  - first:
+      213: -1472930902710320891
+    second: Zweihander_Spritesheet_Player_45
+  - first:
+      213: -2345444491961166189
+    second: Zweihander_Spritesheet_Player_46
+  - first:
+      213: 6005116736365581997
+    second: Zweihander_Spritesheet_Player_47
+  - first:
+      213: -7954721698347992965
+    second: Zweihander_Spritesheet_Player_48
+  - first:
+      213: 6493649965533781712
+    second: Zweihander_Spritesheet_Player_49
+  - first:
+      213: -1109231935647577823
+    second: Zweihander_Spritesheet_Player_50
+  - first:
+      213: 8055813204317268136
+    second: Zweihander_Spritesheet_Player_51
+  - first:
+      213: -8272020353745558238
+    second: Zweihander_Spritesheet_Player_52
+  - first:
+      213: -3308805725814728509
+    second: Zweihander_Spritesheet_Player_53
+  - first:
+      213: 643049874042018595
+    second: Zweihander_Spritesheet_Player_54
+  - first:
+      213: -3682618074516257609
+    second: Zweihander_Spritesheet_Player_55
+  - first:
+      213: 3053816095303591275
+    second: Zweihander_Spritesheet_Player_56
+  - first:
+      213: -8992644829924846337
+    second: Zweihander_Spritesheet_Player_57
+  - first:
+      213: 3199752573451217239
+    second: Zweihander_Spritesheet_Player_58
+  - first:
+      213: -3294862171254330867
+    second: Zweihander_Spritesheet_Player_59
+  - first:
+      213: 318978556777679761
+    second: Zweihander_Spritesheet_Player_60
+  - first:
+      213: 794358614531295553
+    second: Zweihander_Spritesheet_Player_61
+  - first:
+      213: -4724831715911734328
+    second: Zweihander_Spritesheet_Player_62
+  - first:
+      213: 8710119771291777032
+    second: Zweihander_Spritesheet_Player_63
+  - first:
+      213: 7664945103069365404
+    second: Zweihander_Spritesheet_Player_64
+  - first:
+      213: -3471554130785789838
+    second: Zweihander_Spritesheet_Player_65
+  - first:
+      213: 5300454674525819587
+    second: Zweihander_Spritesheet_Player_66
+  - first:
+      213: 5333232461913138472
+    second: Zweihander_Spritesheet_Player_67
+  - first:
+      213: 7616171428728057583
+    second: Zweihander_Spritesheet_Player_68
+  - first:
+      213: 8870805527139649021
+    second: Zweihander_Spritesheet_Player_69
+  - first:
+      213: 4128866805670165327
+    second: Zweihander_Spritesheet_Player_70
+  - first:
+      213: -268270557514014012
+    second: Zweihander_Spritesheet_Player_71
+  - first:
+      213: 2787997654089724590
+    second: Zweihander_Spritesheet_Player_72
+  - first:
+      213: 850045130298164659
+    second: Zweihander_Spritesheet_Player_73
+  - first:
+      213: 2140403948536702835
+    second: Zweihander_Spritesheet_Player_74
+  - first:
+      213: -7603172447139603554
+    second: Zweihander_Spritesheet_Player_75
+  - first:
+      213: 6829759659751368460
+    second: Zweihander_Spritesheet_Player_76
+  - first:
+      213: -8164018857523991064
+    second: Zweihander_Spritesheet_Player_77
+  - first:
+      213: -8376705021388445533
+    second: Zweihander_Spritesheet_Player_78
+  - first:
+      213: 6046066910716866909
+    second: Zweihander_Spritesheet_Player_79
+  - first:
+      213: -7297661289954090715
+    second: Zweihander_Spritesheet_Player_80
+  - first:
+      213: -1345148559006871569
+    second: Zweihander_Spritesheet_Player_81
+  - first:
+      213: -7142989059294555970
+    second: Zweihander_Spritesheet_Player_82
+  - first:
+      213: -2291298419224753480
+    second: Zweihander_Spritesheet_Player_83
+  - first:
+      213: 4975348592740202340
+    second: Zweihander_Spritesheet_Player_84
+  - first:
+      213: -193465238594819857
+    second: Zweihander_Spritesheet_Player_85
+  - first:
+      213: -2380512120732537613
+    second: Zweihander_Spritesheet_Player_86
+  - first:
+      213: 5313393275747007030
+    second: Zweihander_Spritesheet_Player_87
+  - first:
+      213: 5508256669693439177
+    second: Zweihander_Spritesheet_Player_88
+  - first:
+      213: -8469678881269506166
+    second: Zweihander_Spritesheet_Player_89
+  - first:
+      213: -825643255750341067
+    second: Zweihander_Spritesheet_Player_90
+  - first:
+      213: -3697373225817174728
+    second: Zweihander_Spritesheet_Player_91
+  - first:
+      213: 5185233376099164363
+    second: Zweihander_Spritesheet_Player_92
+  - first:
+      213: 1839025782716775640
+    second: Zweihander_Spritesheet_Player_93
+  - first:
+      213: 1560187456441444259
+    second: Zweihander_Spritesheet_Player_94
+  - first:
+      213: 4791389559409957549
+    second: Zweihander_Spritesheet_Player_95
+  - first:
+      213: -5553779801319327556
+    second: Zweihander_Spritesheet_Player_96
+  - first:
+      213: 4989509963641300930
+    second: Zweihander_Spritesheet_Player_97
+  - first:
+      213: -8928290345201820375
+    second: Zweihander_Spritesheet_Player_98
+  - first:
+      213: -8864823375139661864
+    second: Zweihander_Spritesheet_Player_99
+  - first:
+      213: 7012225398203276504
+    second: Zweihander_Spritesheet_Player_100
+  - first:
+      213: -180926091981734912
+    second: Zweihander_Spritesheet_Player_101
+  - first:
+      213: 7711289031779341179
+    second: Zweihander_Spritesheet_Player_102
+  - first:
+      213: 2023901150442064517
+    second: Zweihander_Spritesheet_Player_103
+  - first:
+      213: 9096621259629782925
+    second: Zweihander_Spritesheet_Player_104
+  - first:
+      213: 2866805736726694233
+    second: Zweihander_Spritesheet_Player_105
+  - first:
+      213: 2099404738524152161
+    second: Zweihander_Spritesheet_Player_106
+  - first:
+      213: 80356676920632456
+    second: Zweihander_Spritesheet_Player_107
+  - first:
+      213: 8600848629489796565
+    second: Zweihander_Spritesheet_Player_108
+  - first:
+      213: -8960421365556217684
+    second: Zweihander_Spritesheet_Player_109
+  - first:
+      213: -3419019576966681240
+    second: Zweihander_Spritesheet_Player_110
+  - first:
+      213: -391897382169862538
+    second: Zweihander_Spritesheet_Player_111
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_0
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 2127
+        width: 85
+        height: 83
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71586994c0c0ae8f0800000000000000
+      internalID: -510582360839387881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_1
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 2127
+        width: 86
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 755554fa8122452c0800000000000000
+      internalID: -4443889442892720809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_2
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 2127
+        width: 85
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db0848d438ed5de70800000000000000
+      internalID: 9139455674340901053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_3
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 2127
+        width: 84
+        height: 87
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b118b8d4b31e01b00800000000000000
+      internalID: 797384778864886043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_4
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 2127
+        width: 85
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e1ad407f99027c00800000000000000
+      internalID: 896789856188735976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_5
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 2127
+        width: 86
+        height: 85
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82f61a8fbe06fd080800000000000000
+      internalID: -9160496550443389144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_6
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 2127
+        width: 85
+        height: 83
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41cc00bde73b8ead0800000000000000
+      internalID: -2672689021422875628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_7
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1872
+        width: 92
+        height: 69
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d4db11cedc4ebaa0800000000000000
+      internalID: -6143388322080500522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_8
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 1872
+        width: 62
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 541953a077cbdbd30800000000000000
+      internalID: 4448919226370330949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_9
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 1872
+        width: 92
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97f97e40ccc94c140800000000000000
+      internalID: 4739085107970154361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_10
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 1872
+        width: 105
+        height: 73
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b36e0fbade048970800000000000000
+      internalID: 8756139908186137522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_11
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 1872
+        width: 104
+        height: 73
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6135882be6cf34f0800000000000000
+      internalID: -846739491622932113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_12
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 1872
+        width: 77
+        height: 73
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 425cf8f2554c60a60800000000000000
+      internalID: 7640009688029840676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_13
+      rect:
+        serializedVersion: 2
+        x: 1642
+        y: 1872
+        width: 62
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fed5b315edb081580800000000000000
+      internalID: -8856315617750589969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_14
+      rect:
+        serializedVersion: 2
+        x: 1868
+        y: 1872
+        width: 92
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e63f81ad104bcd00800000000000000
+      internalID: 993958638774073063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_15
+      rect:
+        serializedVersion: 2
+        x: 2129
+        y: 1871
+        width: 85
+        height: 83
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecf398da00cff1cc0800000000000000
+      internalID: -3737992085852569650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_16
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1616
+        width: 105
+        height: 73
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bac1d593476151890800000000000000
+      internalID: -7488054116999160661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_17
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1616
+        width: 104
+        height: 73
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a88f08ffa3b972730800000000000000
+      internalID: 3974315873874802826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_18
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 1616
+        width: 104
+        height: 73
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e8eccfd272bceb00800000000000000
+      internalID: 859257835371686119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_19
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 1598
+        width: 68
+        height: 82
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a5fe636fc66976a0800000000000000
+      internalID: -6451011950319045215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_20
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 1616
+        width: 93
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 333a378a29c450900800000000000000
+      internalID: 650009913999991603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_21
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 1616
+        width: 96
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25650bfb950719220800000000000000
+      internalID: 2490895599682999890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_22
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 1360
+        width: 95
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76df7db2623ba1310800000000000000
+      internalID: 1376609612640812391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_23
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1360
+        width: 108
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3245fd798ef35de00800000000000000
+      internalID: 1068830754783319075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_24
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 1360
+        width: 84
+        height: 102
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7f03535f2a4f9de0800000000000000
+      internalID: -1324258198301765761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_25
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 1360
+        width: 61
+        height: 129
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cb80f22c89b1e8f0800000000000000
+      internalID: -512924871010776128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_26
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 1349
+        width: 97
+        height: 69
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a7edeefe6f1c7bb0800000000000000
+      internalID: -4937036529921038429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_27
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 1349
+        width: 97
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9ace5718ca117ef0800000000000000
+      internalID: -112279069019682148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_28
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 1350
+        width: 97
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b7b2ed41366c8830800000000000000
+      internalID: 4074744124809590711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_29
+      rect:
+        serializedVersion: 2
+        x: 1905
+        y: 1349
+        width: 97
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 887597e539d5c6930800000000000000
+      internalID: 4137785045173229448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_30
+      rect:
+        serializedVersion: 2
+        x: 2161
+        y: 1352
+        width: 97
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cac1e962b5d18b4b0800000000000000
+      internalID: -5424553473840636756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_31
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 1353
+        width: 86
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5904ca4470ff15170800000000000000
+      internalID: 8165588006081413269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_32
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 1354
+        width: 83
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea3e0ca3d04392540800000000000000
+      internalID: 4983571694087103406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_33
+      rect:
+        serializedVersion: 2
+        x: 2924
+        y: 1360
+        width: 85
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b202f37b5a36ce40800000000000000
+      internalID: 5676288544808764080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_34
+      rect:
+        serializedVersion: 2
+        x: 3176
+        y: 1360
+        width: 100
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72dee5dcea9c67870800000000000000
+      internalID: 8680347084410252583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_35
+      rect:
+        serializedVersion: 2
+        x: 3430
+        y: 1360
+        width: 95
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6191fed52d1aa2400800000000000000
+      internalID: 300230250064714006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_36
+      rect:
+        serializedVersion: 2
+        x: 3675
+        y: 1360
+        width: 114
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 807ebe3823c27fa90800000000000000
+      internalID: -7280301677147855096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_37
+      rect:
+        serializedVersion: 2
+        x: 3924
+        y: 1360
+        width: 74
+        height: 97
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc56d27adf8e4a320800000000000000
+      internalID: 2568433863637165515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_38
+      rect:
+        serializedVersion: 2
+        x: 4164
+        y: 1360
+        width: 60
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8944e7f828185fe00800000000000000
+      internalID: 1077910083578250392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_39
+      rect:
+        serializedVersion: 2
+        x: 4386
+        y: 1359
+        width: 85
+        height: 83
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b5059244f33be370800000000000000
+      internalID: 8352827058070816179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_40
+      rect:
+        serializedVersion: 2
+        x: 4642
+        y: 1359
+        width: 85
+        height: 83
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa9c5b0e18ee413a0800000000000000
+      internalID: -6695464504404883030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_41
+      rect:
+        serializedVersion: 2
+        x: 4898
+        y: 1359
+        width: 85
+        height: 83
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52039f7260d0c76c0800000000000000
+      internalID: -4144423236996091867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_42
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 1104
+        width: 66
+        height: 95
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b33ab48654671a610800000000000000
+      internalID: 1630714580559438651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_43
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1146
+        width: 8
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dad47a09f9b23b180800000000000000
+      internalID: -9100882457658962515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_44
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 1104
+        width: 52
+        height: 111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0f9f7fa24814f420800000000000000
+      internalID: 2662779954374090507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_45
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 1142
+        width: 6
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 501814dd5291f8be0800000000000000
+      internalID: -1472930902710320891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_46
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 1104
+        width: 57
+        height: 116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 396124849ae437fd0800000000000000
+      internalID: -2345444491961166189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_47
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 1104
+        width: 115
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da6d2d1fad5765350800000000000000
+      internalID: 6005116736365581997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_48
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 1104
+        width: 115
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7830e2e2c62b9190800000000000000
+      internalID: -7954721698347992965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_49
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 1104
+        width: 110
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0de5e532d341e1a50800000000000000
+      internalID: 6493649965533781712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_50
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 1104
+        width: 139
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12905367e673b90f0800000000000000
+      internalID: -1109231935647577823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_51
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 1104
+        width: 139
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a86b348d6ffbcf60800000000000000
+      internalID: 8055813204317268136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_52
+      rect:
+        serializedVersion: 2
+        x: 2165
+        y: 1104
+        width: 139
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 225e138b051e33d80800000000000000
+      internalID: -8272020353745558238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_53
+      rect:
+        serializedVersion: 2
+        x: 2419
+        y: 1104
+        width: 41
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c8d80229b2c412d0800000000000000
+      internalID: -3308805725814728509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_54
+      rect:
+        serializedVersion: 2
+        x: 2463
+        y: 1142
+        width: 8
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32b522314729ce800800000000000000
+      internalID: 643049874042018595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_55
+      rect:
+        serializedVersion: 2
+        x: 2468
+        y: 1112
+        width: 80
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b486016f56b4ecc0800000000000000
+      internalID: -3682618074516257609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_56
+      rect:
+        serializedVersion: 2
+        x: 2663
+        y: 1104
+        width: 94
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b65e0f11f85516a20800000000000000
+      internalID: 3053816095303591275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_57
+      rect:
+        serializedVersion: 2
+        x: 2915
+        y: 1104
+        width: 86
+        height: 73
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff493191c25b33380800000000000000
+      internalID: -8992644829924846337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_58
+      rect:
+        serializedVersion: 2
+        x: 2907
+        y: 1106
+        width: 17
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 759a3b5330ec76c20800000000000000
+      internalID: 3199752573451217239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_59
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 848
+        width: 139
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0a638aef4c4642d0800000000000000
+      internalID: -3294862171254330867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_60
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 848
+        width: 108
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19b43bfae4d3d6400800000000000000
+      internalID: 318978556777679761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_61
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 848
+        width: 114
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 149c86383f0260b00800000000000000
+      internalID: 794358614531295553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_62
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 848
+        width: 105
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cbe49d66960e6eb0800000000000000
+      internalID: -4724831715911734328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_63
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 848
+        width: 70
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 808f3f6a8cf80e870800000000000000
+      internalID: 8710119771291777032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_64
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 861
+        width: 43
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c94c15be5fa5f5a60800000000000000
+      internalID: 7664945103069365404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_65
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 869
+        width: 13
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27819ff39ef82dfc0800000000000000
+      internalID: -3471554130785789838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_66
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 818
+        width: 46
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c29b27817ffe8940800000000000000
+      internalID: 5300454674525819587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_67
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 861
+        width: 43
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8252aecdaa2730a40800000000000000
+      internalID: 5333232461913138472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_68
+      rect:
+        serializedVersion: 2
+        x: 1659
+        y: 869
+        width: 13
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feea0ddef8312b960800000000000000
+      internalID: 7616171428728057583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_69
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 818
+        width: 46
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df50bbc90ae6b1b70800000000000000
+      internalID: 8870805527139649021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_70
+      rect:
+        serializedVersion: 2
+        x: 1871
+        y: 861
+        width: 43
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4b3fdceb7eac4930800000000000000
+      internalID: 4128866805670165327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_71
+      rect:
+        serializedVersion: 2
+        x: 1915
+        y: 869
+        width: 13
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c26eab6959e64cf0800000000000000
+      internalID: -268270557514014012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_72
+      rect:
+        serializedVersion: 2
+        x: 1923
+        y: 818
+        width: 46
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea2f3ae4815f0b620800000000000000
+      internalID: 2787997654089724590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_73
+      rect:
+        serializedVersion: 2
+        x: 2122
+        y: 848
+        width: 56
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b50972da87fbcb00800000000000000
+      internalID: 850045130298164659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_74
+      rect:
+        serializedVersion: 2
+        x: 2171
+        y: 812
+        width: 40
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 377af540d0e34bd10800000000000000
+      internalID: 2140403948536702835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_75
+      rect:
+        serializedVersion: 2
+        x: 2367
+        y: 813
+        width: 60
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9bd43251fa1c7690800000000000000
+      internalID: -7603172447139603554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_76
+      rect:
+        serializedVersion: 2
+        x: 2587
+        y: 846
+        width: 96
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c07e5c4993e28ce50800000000000000
+      internalID: 6829759659751368460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_77
+      rect:
+        serializedVersion: 2
+        x: 2836
+        y: 847
+        width: 103
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ed21b99a1493be80800000000000000
+      internalID: -8164018857523991064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_78
+      rect:
+        serializedVersion: 2
+        x: 3152
+        y: 847
+        width: 85
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a829eb2a27ffbb80800000000000000
+      internalID: -8376705021388445533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_79
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 847
+        width: 10
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d51b58562d1f7e350800000000000000
+      internalID: 6046066910716866909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_80
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 848
+        width: 11
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 521ea21b8bf79ba90800000000000000
+      internalID: -7297661289954090715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_81
+      rect:
+        serializedVersion: 2
+        x: 1606
+        y: 847
+        width: 10
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fef44423382155de0800000000000000
+      internalID: -1345148559006871569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_82
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 848
+        width: 11
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb01f36bb410fdc90800000000000000
+      internalID: -7142989059294555970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_83
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 847
+        width: 10
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bac1bf3a3ca330e0800000000000000
+      internalID: -2291298419224753480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_84
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 848
+        width: 11
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 467f4004f2dfb0540800000000000000
+      internalID: 4975348592740202340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_85
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 591
+        width: 50
+        height: 94
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe86b29f36ca05df0800000000000000
+      internalID: -193465238594819857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_86
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 591
+        width: 50
+        height: 94
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fca934b6d8b6fed0800000000000000
+      internalID: -2380512120732537613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_87
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 591
+        width: 59
+        height: 94
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63a79d06807fcb940800000000000000
+      internalID: 5313393275747007030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_88
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 591
+        width: 50
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cce0c0d142417c40800000000000000
+      internalID: 5508256669693439177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_89
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 591
+        width: 49
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8f9d488ee7a57a80800000000000000
+      internalID: -8469678881269506166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_90
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 592
+        width: 49
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da31b37f0d2b09f4fb200ed273292805
+      internalID: -856106619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_91
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 593
+        width: 74
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88fc74e535e0263429eebb2b235a0912
+      internalID: -1794876869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_92
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 658
+        width: 42
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afaf50daf41261a47af67de3f8b8ec7f
+      internalID: -1638786199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_93
+      rect:
+        serializedVersion: 2
+        x: 1823
+        y: 593
+        width: 74
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a189a9cf1ec4b4cab727c9e97f7b88
+      internalID: 1601789575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_94
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 658
+        width: 42
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff0a707116548d14cbbe6dafcd72b89e
+      internalID: -1669681022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_95
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 593
+        width: 74
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a357cacb26b6ad42960b3954b6d8734
+      internalID: 797129360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_96
+      rect:
+        serializedVersion: 2
+        x: 2122
+        y: 658
+        width: 42
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dee2c80c3294ee42863d12354237e5f
+      internalID: -174708186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_97
+      rect:
+        serializedVersion: 2
+        x: 2316
+        y: 592
+        width: 85
+        height: 77
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7239cb12762f1104eb2c5305bac9ab6b
+      internalID: -674223359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_98
+      rect:
+        serializedVersion: 2
+        x: 2572
+        y: 592
+        width: 85
+        height: 77
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd2f7ee3db044a5499de1ad3826d38dd
+      internalID: 1706235243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_99
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 335
+        width: 85
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca46a7f1fafcd343a5f383532e877de
+      internalID: -1200143131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_100
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 336
+        width: 85
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ca8a08f18eae046ae3d7c25bd1def2
+      internalID: 445106680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_101
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 339
+        width: 89
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f008ab199633e64a887dfc142005201
+      internalID: -1844840706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_102
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 397
+        width: 27
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee134113e1d2af4ab4a2d7d6a42ec75
+      internalID: 760908784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_103
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 339
+        width: 89
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c858e9a6dc377b42b54990a733b8f4c
+      internalID: -1416209100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_104
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 397
+        width: 27
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2e03d2987539f049ad382b9a062ffd8
+      internalID: 913298867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_105
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 338
+        width: 93
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 712038c4b3923f1469f1d217e8264dc5
+      internalID: -1003971200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_106
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 338
+        width: 93
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93df1cfc44f2f5245b2ac410ee32070e
+      internalID: -2004850346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_107
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 338
+        width: 93
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed04022b65e2226478421f184f1c2919
+      internalID: -1270574817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_108
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 79
+        width: 50
+        height: 116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed6730603161e64a9e46553e8eed659
+      internalID: 856917639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_109
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 79
+        width: 50
+        height: 116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4a56c972d7fbe4d86fac9caca1f4ff
+      internalID: 1133408855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_110
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 79
+        width: 56
+        height: 104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b98aa4dfe1f1c47b7f28eacd266d25
+      internalID: 1944939262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zweihander_Spritesheet_Player_111
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 79
+        width: 85
+        height: 83
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd36c62a45f5fc546b2d337f5dc17e86
+      internalID: -1692315300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: fc88f73eef13cbe47befbe9706e1ab81
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Zweihander_Spritesheet_Player_0: -510582360839387881
+      Zweihander_Spritesheet_Player_1: -4443889442892720809
+      Zweihander_Spritesheet_Player_10: 8756139908186137522
+      Zweihander_Spritesheet_Player_100: 445106680
+      Zweihander_Spritesheet_Player_101: -1844840706
+      Zweihander_Spritesheet_Player_102: 760908784
+      Zweihander_Spritesheet_Player_103: -1416209100
+      Zweihander_Spritesheet_Player_104: 913298867
+      Zweihander_Spritesheet_Player_105: -1003971200
+      Zweihander_Spritesheet_Player_106: -2004850346
+      Zweihander_Spritesheet_Player_107: -1270574817
+      Zweihander_Spritesheet_Player_108: 856917639
+      Zweihander_Spritesheet_Player_109: 1133408855
+      Zweihander_Spritesheet_Player_11: -846739491622932113
+      Zweihander_Spritesheet_Player_110: 1944939262
+      Zweihander_Spritesheet_Player_111: -1692315300
+      Zweihander_Spritesheet_Player_12: 7640009688029840676
+      Zweihander_Spritesheet_Player_13: -8856315617750589969
+      Zweihander_Spritesheet_Player_14: 993958638774073063
+      Zweihander_Spritesheet_Player_15: -3737992085852569650
+      Zweihander_Spritesheet_Player_16: -7488054116999160661
+      Zweihander_Spritesheet_Player_17: 3974315873874802826
+      Zweihander_Spritesheet_Player_18: 859257835371686119
+      Zweihander_Spritesheet_Player_19: -6451011950319045215
+      Zweihander_Spritesheet_Player_2: 9139455674340901053
+      Zweihander_Spritesheet_Player_20: 650009913999991603
+      Zweihander_Spritesheet_Player_21: 2490895599682999890
+      Zweihander_Spritesheet_Player_22: 1376609612640812391
+      Zweihander_Spritesheet_Player_23: 1068830754783319075
+      Zweihander_Spritesheet_Player_24: -1324258198301765761
+      Zweihander_Spritesheet_Player_25: -512924871010776128
+      Zweihander_Spritesheet_Player_26: -4937036529921038429
+      Zweihander_Spritesheet_Player_27: -112279069019682148
+      Zweihander_Spritesheet_Player_28: 4074744124809590711
+      Zweihander_Spritesheet_Player_29: 4137785045173229448
+      Zweihander_Spritesheet_Player_3: 797384778864886043
+      Zweihander_Spritesheet_Player_30: -5424553473840636756
+      Zweihander_Spritesheet_Player_31: 8165588006081413269
+      Zweihander_Spritesheet_Player_32: 4983571694087103406
+      Zweihander_Spritesheet_Player_33: 5676288544808764080
+      Zweihander_Spritesheet_Player_34: 8680347084410252583
+      Zweihander_Spritesheet_Player_35: 300230250064714006
+      Zweihander_Spritesheet_Player_36: -7280301677147855096
+      Zweihander_Spritesheet_Player_37: 2568433863637165515
+      Zweihander_Spritesheet_Player_38: 1077910083578250392
+      Zweihander_Spritesheet_Player_39: 8352827058070816179
+      Zweihander_Spritesheet_Player_4: 896789856188735976
+      Zweihander_Spritesheet_Player_40: -6695464504404883030
+      Zweihander_Spritesheet_Player_41: -4144423236996091867
+      Zweihander_Spritesheet_Player_42: 1630714580559438651
+      Zweihander_Spritesheet_Player_43: -9100882457658962515
+      Zweihander_Spritesheet_Player_44: 2662779954374090507
+      Zweihander_Spritesheet_Player_45: -1472930902710320891
+      Zweihander_Spritesheet_Player_46: -2345444491961166189
+      Zweihander_Spritesheet_Player_47: 6005116736365581997
+      Zweihander_Spritesheet_Player_48: -7954721698347992965
+      Zweihander_Spritesheet_Player_49: 6493649965533781712
+      Zweihander_Spritesheet_Player_5: -9160496550443389144
+      Zweihander_Spritesheet_Player_50: -1109231935647577823
+      Zweihander_Spritesheet_Player_51: 8055813204317268136
+      Zweihander_Spritesheet_Player_52: -8272020353745558238
+      Zweihander_Spritesheet_Player_53: -3308805725814728509
+      Zweihander_Spritesheet_Player_54: 643049874042018595
+      Zweihander_Spritesheet_Player_55: -3682618074516257609
+      Zweihander_Spritesheet_Player_56: 3053816095303591275
+      Zweihander_Spritesheet_Player_57: -8992644829924846337
+      Zweihander_Spritesheet_Player_58: 3199752573451217239
+      Zweihander_Spritesheet_Player_59: -3294862171254330867
+      Zweihander_Spritesheet_Player_6: -2672689021422875628
+      Zweihander_Spritesheet_Player_60: 318978556777679761
+      Zweihander_Spritesheet_Player_61: 794358614531295553
+      Zweihander_Spritesheet_Player_62: -4724831715911734328
+      Zweihander_Spritesheet_Player_63: 8710119771291777032
+      Zweihander_Spritesheet_Player_64: 7664945103069365404
+      Zweihander_Spritesheet_Player_65: -3471554130785789838
+      Zweihander_Spritesheet_Player_66: 5300454674525819587
+      Zweihander_Spritesheet_Player_67: 5333232461913138472
+      Zweihander_Spritesheet_Player_68: 7616171428728057583
+      Zweihander_Spritesheet_Player_69: 8870805527139649021
+      Zweihander_Spritesheet_Player_7: -6143388322080500522
+      Zweihander_Spritesheet_Player_70: 4128866805670165327
+      Zweihander_Spritesheet_Player_71: -268270557514014012
+      Zweihander_Spritesheet_Player_72: 2787997654089724590
+      Zweihander_Spritesheet_Player_73: 850045130298164659
+      Zweihander_Spritesheet_Player_74: 2140403948536702835
+      Zweihander_Spritesheet_Player_75: -7603172447139603554
+      Zweihander_Spritesheet_Player_76: 6829759659751368460
+      Zweihander_Spritesheet_Player_77: -8164018857523991064
+      Zweihander_Spritesheet_Player_78: -8376705021388445533
+      Zweihander_Spritesheet_Player_79: 6046066910716866909
+      Zweihander_Spritesheet_Player_8: 4448919226370330949
+      Zweihander_Spritesheet_Player_80: -7297661289954090715
+      Zweihander_Spritesheet_Player_81: -1345148559006871569
+      Zweihander_Spritesheet_Player_82: -7142989059294555970
+      Zweihander_Spritesheet_Player_83: -2291298419224753480
+      Zweihander_Spritesheet_Player_84: 4975348592740202340
+      Zweihander_Spritesheet_Player_85: -193465238594819857
+      Zweihander_Spritesheet_Player_86: -2380512120732537613
+      Zweihander_Spritesheet_Player_87: 5313393275747007030
+      Zweihander_Spritesheet_Player_88: 5508256669693439177
+      Zweihander_Spritesheet_Player_89: -8469678881269506166
+      Zweihander_Spritesheet_Player_9: 4739085107970154361
+      Zweihander_Spritesheet_Player_90: -856106619
+      Zweihander_Spritesheet_Player_91: -1794876869
+      Zweihander_Spritesheet_Player_92: -1638786199
+      Zweihander_Spritesheet_Player_93: 1601789575
+      Zweihander_Spritesheet_Player_94: -1669681022
+      Zweihander_Spritesheet_Player_95: 797129360
+      Zweihander_Spritesheet_Player_96: -174708186
+      Zweihander_Spritesheet_Player_97: -674223359
+      Zweihander_Spritesheet_Player_98: 1706235243
+      Zweihander_Spritesheet_Player_99: -1200143131
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
