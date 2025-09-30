@@ -449,11 +449,11 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.9, y: 3, z: -10}
+  m_LocalPosition: {x: 0.1, y: 3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 6676746550204815071}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &584733311
 GameObject:
@@ -1696,11 +1696,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4825728396382825372, guid: 11823f2ee1f937d48b9741fa15157884, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 519420032}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 9074775790662725853, guid: 11823f2ee1f937d48b9741fa15157884, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6676746550204815076}
+    - targetCorrespondingSourceObject: {fileID: 9074775790662725853, guid: 11823f2ee1f937d48b9741fa15157884, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6676746550204815077}
   m_SourcePrefab: {fileID: 100100000, guid: 11823f2ee1f937d48b9741fa15157884, type: 3}
 --- !u!114 &6676746550204815062 stripped
 MonoBehaviour:
@@ -1713,6 +1719,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &6676746550204815071 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4825728396382825372, guid: 11823f2ee1f937d48b9741fa15157884, type: 3}
+  m_PrefabInstance: {fileID: 6676746550204815061}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &6676746550204815076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1727,9 +1738,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max: 100
   applyKnockback: 1
-  knockbackScale: 4
+  knockbackScale: 2
   useInvulnerability: 1
-  invulnSeconds: 0.15
+  invulnSeconds: 0.5
+--- !u!114 &6676746550204815077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400133492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43257776dd1f47749ab407bcd56507ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers: []
+  flashColor: {r: 1, g: 0, b: 0, a: 0.35}
+  flashOn: 0.1
+  flashOff: 0.06
+  useBlink: 1
+  animator: {fileID: 0}
+  hurtTrigger: Hurt
 --- !u!1001 &6715424003127179429
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2059,7 +2089,6 @@ SceneRoots:
   - {fileID: 1317925150}
   - {fileID: 1750315053}
   - {fileID: 33863013}
-  - {fileID: 519420032}
   - {fileID: 584733313}
   - {fileID: 667090872}
   - {fileID: 1073386731}

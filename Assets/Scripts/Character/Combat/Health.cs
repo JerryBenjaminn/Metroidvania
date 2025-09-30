@@ -9,12 +9,16 @@ public class Health : MonoBehaviour, IHealth, IDamageable
 
     [Header("Damage Response")]
     [SerializeField] bool applyKnockback = true;
-    [SerializeField] float knockbackScale = 1f;         // skaalaa kontaktista tulevaa voimaa
+    [SerializeField] float knockbackScale = 1f;
     [SerializeField] bool useInvulnerability = true;
-    [SerializeField] float invulnSeconds = 0.15f;       // pieni i-frame ettei ContactDamage tikit‰ liian tihe‰‰n
+    [SerializeField] float invulnSeconds = 0.15f;
 
     public event Action OnDeath;
-    public event Action<float, float> OnHealthChanged; // current, max
+    public event Action<float, float> OnHealthChanged;          // current, max
+    public event Action<float, Vector2> OnDamaged;             // amount, hitDir  <-- UUSI
+
+    public float InvulnSeconds => invulnSeconds;               // <-- UUSI
+    public bool IsInvulnerable => invuln;                      // <-- UUSI
 
     Rigidbody2D rb;
     bool invuln;
@@ -31,7 +35,6 @@ public class Health : MonoBehaviour, IHealth, IDamageable
         OnHealthChanged?.Invoke(Current, Max);
     }
 
-    // IDamageable
     public void ApplyDamage(float amount, Vector2 hitDir)
     {
         if (Current <= 0) return;
@@ -40,11 +43,11 @@ public class Health : MonoBehaviour, IHealth, IDamageable
         Current = Mathf.Max(0, Current - amount);
         OnHealthChanged?.Invoke(Current, Max);
 
+        // kerro kuittauksena ett‰ nyt sattui
+        OnDamaged?.Invoke(amount, hitDir);                     // <-- UUSI
+
         if (applyKnockback && rb)
-        {
-            // ContactDamage antaa jo valmiiksi suunta * voimakkuus skaalataan vain
             rb.AddForce(hitDir * knockbackScale, ForceMode2D.Impulse);
-        }
 
         if (Current <= 0) { Kill(); return; }
 
