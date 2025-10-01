@@ -15,18 +15,18 @@ MonoBehaviour:
   abilityName: Melee Slash
   icon: {fileID: 0}
   cooldown: 0.2
-  boxSize: {x: 2.18, y: 0.58}
+  boxSize: {x: 1.75, y: 0.3}
   boxOffset: {x: 1.25, y: -0.78}
   targetMask:
     serializedVersion: 2
     m_Bits: 1024
   windup: 0.15
   active: 0.05
-  recovery: 0.5
+  recovery: 0.4
   damage: 12
   knockback: 12
-  selfRecoil: 1.5
-  victimHitpause: 0.1
+  selfRecoil: 15
+  victimHitpause: 0.05
   selfHitpause: 0.05
   cameraShakeAmp: 2
   attackTrigger: Attack
