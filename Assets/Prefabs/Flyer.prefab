@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 4339300324227955537}
   - component: {fileID: 8688148566911123841}
   - component: {fileID: 8305185745121380}
-  m_Layer: 0
+  - component: {fileID: 3098018834106950253}
+  m_Layer: 10
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,6 +111,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3098018834106950253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6416460499536450832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4c2f5b52f8c444e88d45e26bb7ccb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6473553198220576203
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +137,7 @@ GameObject:
   - component: {fileID: 1833969241553976620}
   - component: {fileID: 7742909896415516757}
   - component: {fileID: 7694431901016814884}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Flyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,6 +254,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   max: 100
+  applyKnockback: 1
+  knockbackScale: 1
+  useInvulnerability: 1
+  invulnSeconds: 0.15
 --- !u!114 &7694431901016814884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,17 +270,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b2e6ed7ce6cf7449e1e111afafd418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contactDamage: 10
+  animator: {fileID: 0}
+  dieTrigger: Die
+  destroyDelay: 0.8
+  collidersToDisable: []
+  contactDamage: {fileID: 0}
   detectRange: 7
   losObstacles:
     serializedVersion: 2
     m_Bits: 64
   playerTag: Player
-  hoverAmplitude: 0.3
-  hoverFreq: 1.5
-  maxSpeed: 5
+  hoverAmplitude: 1.5
+  hoverFreq: 1
+  maxSpeed: 3
   steer: 4
-  swoopInterval: 1.2
+  swoopInterval: 1
   swoopBoost: 1.4
   drag: 0.2
   sr: {fileID: 0}

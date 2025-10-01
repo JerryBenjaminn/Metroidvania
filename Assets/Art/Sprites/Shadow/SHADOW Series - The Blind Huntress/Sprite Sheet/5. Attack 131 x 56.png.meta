@@ -1,46 +1,73 @@
 fileFormatVersion: 2
-guid: f70fa7e6726ae1846b94a0567db736c7
+guid: 640a2454908bebc44b8c712792d0fec1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6991849013916550155
-    second: Death_0
+      213: -19073062547071739
+    second: 5. Attack 131 x 56_0
   - first:
-      213: -276728812324164698
-    second: Death_1
+      213: -4894337481457450197
+    second: 5. Attack 131 x 56_1
   - first:
-      213: 3156895337291164288
-    second: Death_2
+      213: 373222667339541996
+    second: 5. Attack 131 x 56_2
   - first:
-      213: 1400002288684528572
-    second: Death_3
+      213: 4659223821559019240
+    second: 5. Attack 131 x 56_3
   - first:
-      213: -1891625820773287384
-    second: Death_4
+      213: 658678907757527501
+    second: 5. Attack 131 x 56_4
   - first:
-      213: -5789737788129074030
-    second: Death_5
+      213: 9187138342068808669
+    second: 5. Attack 131 x 56_5
   - first:
-      213: 3968659893341466949
-    second: Death_6
+      213: 8116540919482319168
+    second: 5. Attack 131 x 56_6
   - first:
-      213: 6495761399759928590
-    second: Death_7
+      213: -5911271788880919984
+    second: 5. Attack 131 x 56_7
   - first:
-      213: 4800267807231483719
-    second: Death_8
+      213: 4613803453294131492
+    second: 5. Attack 131 x 56_8
   - first:
-      213: -6126746645354384401
-    second: Death_9
+      213: 253900573125892848
+    second: 5. Attack 131 x 56_9
   - first:
-      213: 2990493390978864817
-    second: Death_10
+      213: 1567631419914147087
+    second: 5. Attack 131 x 56_10
   - first:
-      213: -2786331238167018718
-    second: Death_11
+      213: 23089410826577975
+    second: 5. Attack 131 x 56_11
   - first:
-      213: -4444752178724111745
-    second: Death_12
+      213: -5637612120116941185
+    second: 5. Attack 131 x 56_12
+  - first:
+      213: 1624853246204233412
+    second: 5. Attack 131 x 56_13
+  - first:
+      213: -2714974177703524080
+    second: 5. Attack 131 x 56_14
+  - first:
+      213: -5425225236488050941
+    second: 5. Attack 131 x 56_15
+  - first:
+      213: 127684885963166052
+    second: 5. Attack 131 x 56_16
+  - first:
+      213: -5195586140175137722
+    second: 5. Attack 131 x 56_17
+  - first:
+      213: 5665075888316191386
+    second: 5. Attack 131 x 56_18
+  - first:
+      213: -539847320057064516
+    second: 5. Attack 131 x 56_19
+  - first:
+      213: -7029859580874044477
+    second: 5. Attack 131 x 56_20
+  - first:
+      213: -5728063235203234124
+    second: 5. Attack 131 x 56_21
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -87,7 +114,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 28
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -149,35 +176,35 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Death_0
+      name: 5. Attack 131 x 56_13
       rect:
         serializedVersion: 2
-        x: 60
-        y: 47
-        width: 43
-        height: 53
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 533
+        y: 3
+        width: 101
+        height: 33
+      alignment: 9
+      pivot: {x: 0.2026343, y: 0.018960679}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b0449ad32a9080160800000000000000
-      internalID: 6991849013916550155
+      spriteID: 4c6c4282b63ac8610800000000000000
+      internalID: 1624853246204233412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_6
+      name: 5. Attack 131 x 56_17
       rect:
         serializedVersion: 2
-        x: 206
-        y: 49
-        width: 51
-        height: 44
+        x: 1252
+        y: 5
+        width: 4
+        height: 6
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,52 +213,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54135f86523831730800000000000000
-      internalID: 3968659893341466949
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Death_11
-      rect:
-        serializedVersion: 2
-        x: 354
-        y: 49
-        width: 54
-        height: 23
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2230b726086f459d0800000000000000
-      internalID: -2786331238167018718
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Death_12
-      rect:
-        serializedVersion: 2
-        x: 502
-        y: 49
-        width: 56
-        height: 13
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f7a718851711152c0800000000000000
-      internalID: -4444752178724111745
+      spriteID: 6440be2dee195e7b0800000000000000
+      internalID: -5195586140175137722
       vertices: []
       indices: 
       edges: []
@@ -240,7 +223,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d62f2542ed3b3f24d9d6bb9b33a0037f
+    spriteID: 87d63ec22ddc11043a8e57645877424c
     internalID: 0
     vertices: []
     indices: 
@@ -250,19 +233,28 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Death_0: 6991849013916550155
-      Death_1: -276728812324164698
-      Death_10: 2990493390978864817
-      Death_11: -2786331238167018718
-      Death_12: -4444752178724111745
-      Death_2: 3156895337291164288
-      Death_3: 1400002288684528572
-      Death_4: -1891625820773287384
-      Death_5: -5789737788129074030
-      Death_6: 3968659893341466949
-      Death_7: 6495761399759928590
-      Death_8: 4800267807231483719
-      Death_9: -6126746645354384401
+      5. Attack 131 x 56_0: -19073062547071739
+      5. Attack 131 x 56_1: -4894337481457450197
+      5. Attack 131 x 56_10: 1567631419914147087
+      5. Attack 131 x 56_11: 23089410826577975
+      5. Attack 131 x 56_12: -5637612120116941185
+      5. Attack 131 x 56_13: 1624853246204233412
+      5. Attack 131 x 56_14: -2714974177703524080
+      5. Attack 131 x 56_15: -5425225236488050941
+      5. Attack 131 x 56_16: 127684885963166052
+      5. Attack 131 x 56_17: -5195586140175137722
+      5. Attack 131 x 56_18: 5665075888316191386
+      5. Attack 131 x 56_19: -539847320057064516
+      5. Attack 131 x 56_2: 373222667339541996
+      5. Attack 131 x 56_20: -7029859580874044477
+      5. Attack 131 x 56_21: -5728063235203234124
+      5. Attack 131 x 56_3: 4659223821559019240
+      5. Attack 131 x 56_4: 658678907757527501
+      5. Attack 131 x 56_5: 9187138342068808669
+      5. Attack 131 x 56_6: 8116540919482319168
+      5. Attack 131 x 56_7: -5911271788880919984
+      5. Attack 131 x 56_8: 4613803453294131492
+      5. Attack 131 x 56_9: 253900573125892848
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

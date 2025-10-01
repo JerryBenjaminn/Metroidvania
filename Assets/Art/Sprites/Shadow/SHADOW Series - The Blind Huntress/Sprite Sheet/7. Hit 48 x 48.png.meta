@@ -1,46 +1,19 @@
 fileFormatVersion: 2
-guid: f70fa7e6726ae1846b94a0567db736c7
+guid: 20be731e303971344b138726a8ae0008
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6991849013916550155
-    second: Death_0
+      213: -4896029978405842223
+    second: 7. Hit 48 x 48_0
   - first:
-      213: -276728812324164698
-    second: Death_1
+      213: -1816359345778609094
+    second: 7. Hit 48 x 48_1
   - first:
-      213: 3156895337291164288
-    second: Death_2
+      213: 1471818798318698851
+    second: 7. Hit 48 x 48_2
   - first:
-      213: 1400002288684528572
-    second: Death_3
-  - first:
-      213: -1891625820773287384
-    second: Death_4
-  - first:
-      213: -5789737788129074030
-    second: Death_5
-  - first:
-      213: 3968659893341466949
-    second: Death_6
-  - first:
-      213: 6495761399759928590
-    second: Death_7
-  - first:
-      213: 4800267807231483719
-    second: Death_8
-  - first:
-      213: -6126746645354384401
-    second: Death_9
-  - first:
-      213: 2990493390978864817
-    second: Death_10
-  - first:
-      213: -2786331238167018718
-    second: Death_11
-  - first:
-      213: -4444752178724111745
-    second: Death_12
+      213: -9019200107402134408
+    second: 7. Hit 48 x 48_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -73,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -87,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 28
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -149,89 +122,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Death_0
+      name: 7. Hit 48 x 48_0
       rect:
         serializedVersion: 2
-        x: 60
-        y: 47
-        width: 43
-        height: 53
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 16
+        y: 4
+        width: 17
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b0449ad32a9080160800000000000000
-      internalID: 6991849013916550155
+      spriteID: 1d2d477ccaecd0cb0800000000000000
+      internalID: -4896029978405842223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_6
+      name: 7. Hit 48 x 48_1
       rect:
         serializedVersion: 2
-        x: 206
-        y: 49
-        width: 51
-        height: 44
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 64
+        y: 4
+        width: 17
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54135f86523831730800000000000000
-      internalID: 3968659893341466949
+      spriteID: a34b76a6ccefac6e0800000000000000
+      internalID: -1816359345778609094
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_11
+      name: 7. Hit 48 x 48_2
       rect:
         serializedVersion: 2
-        x: 354
-        y: 49
-        width: 54
-        height: 23
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 110
+        y: 4
+        width: 19
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2230b726086f459d0800000000000000
-      internalID: -2786331238167018718
+      spriteID: 36147872663fc6410800000000000000
+      internalID: 1471818798318698851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_12
+      name: 7. Hit 48 x 48_3
       rect:
         serializedVersion: 2
-        x: 502
-        y: 49
-        width: 56
-        height: 13
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 160
+        y: 4
+        width: 17
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f7a718851711152c0800000000000000
-      internalID: -4444752178724111745
+      spriteID: 87c7120c94d55d280800000000000000
+      internalID: -9019200107402134408
       vertices: []
       indices: 
       edges: []
@@ -240,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d62f2542ed3b3f24d9d6bb9b33a0037f
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -249,20 +222,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Death_0: 6991849013916550155
-      Death_1: -276728812324164698
-      Death_10: 2990493390978864817
-      Death_11: -2786331238167018718
-      Death_12: -4444752178724111745
-      Death_2: 3156895337291164288
-      Death_3: 1400002288684528572
-      Death_4: -1891625820773287384
-      Death_5: -5789737788129074030
-      Death_6: 3968659893341466949
-      Death_7: 6495761399759928590
-      Death_8: 4800267807231483719
-      Death_9: -6126746645354384401
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -47,6 +47,11 @@ public class PlayerInputController : MonoBehaviour
         if (ctx.started) interactor?.StartInteract();
         if (ctx.canceled) interactor?.CancelInteract();
     }
+    public void OnAttack(InputAction.CallbackContext ctx)
+    {
+        if (ctx.started) GetComponent<AbilityController>()?.TriggerAbility( /* index */ 0);
+    }
+
 
     void Update() {
         motor.SetMove(moveInput.x);
