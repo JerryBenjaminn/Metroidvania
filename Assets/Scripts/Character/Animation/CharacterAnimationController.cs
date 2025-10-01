@@ -28,7 +28,8 @@ public class CharacterAnimationController : MonoBehaviour
     void HandleMovement(Vector2 vel, bool grounded) {
         float speedXAbs = Mathf.Abs(vel.x);
         bool moving = Mathf.Abs(vel.x) > moveAnimThreshold;
-        if (moving) sr.flipX = vel.x < -0.01f;
+        //if (moving) sr.flipX = vel.x < -0.01f;
+        sr.flipX = motor.Facing < 0;
 
         animator.SetBool("IsGrounded", grounded);
         animator.SetBool("IsMoving", moving);

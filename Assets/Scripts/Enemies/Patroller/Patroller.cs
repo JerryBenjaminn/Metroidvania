@@ -15,6 +15,10 @@ public class Patroller : EnemyBase
     [Header("Visuals")]
     public SpriteRenderer sr;
 
+    [Header("Hurt Reaction")]
+    public float hurtLock = 0.10f;   // kuinka kauan oma liike on pois pelistä osumasta
+    float hurtTimer;
+
     int dir; // -1 vasen, +1 oikea
 
     protected override void Start()
@@ -46,6 +50,20 @@ public class Patroller : EnemyBase
 
         // flippi
         if (sr) sr.flipX = dir < 0;
+    }
+    void OnEnable()
+    {
+        if (!health) health = GetComponent<Health>();
+        if (health) health.OnDamaged += OnDamaged;
+    }
+    void OnDisable()
+    {
+        if (health) health.OnDamaged -= OnDamaged;
+    }
+    void OnDamaged(float amount, Vector2 dir)
+    {
+        // käynnistä/refreshaa hurt lock
+        hurtTimer = Mathf.Max(hurtTimer, hurtLock);
     }
 
     void OnDrawGizmosSelected()

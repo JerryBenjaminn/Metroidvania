@@ -36,7 +36,14 @@ public class CharacterMotor : ActorBase
 
     float targetX;
 
-    public void SetMove(float x) => targetX = Mathf.Clamp(x, -1f, 1f);
+    public int Facing { get; private set; } = 1;
+    public void SetMove(float x)
+    {
+        targetX = Mathf.Clamp(x, -1f, 1f);
+        // päivitä facing vain kun syöte on oikeasti suuntainen
+        if (Mathf.Abs(targetX) > 0.1f)
+            Facing = targetX > 0 ? 1 : -1;
+    }
 
     // Vanhan API:n yhteensopivuus: jos joku kutsuu tätä, ohjaa puskuriin
     public void RequestJump() => QueueJump();
@@ -96,6 +103,11 @@ public class CharacterMotor : ActorBase
 
         // 6) Ilmahyppyjen resetointi maassa
         if (IsGrounded) AirJumpsUsed = 0;
+
+        // Jos ei syötettä ja nopeus lähes nolla, napsauta x-velocity täsmälleen nollaan
+        if (Mathf.Abs(targetX) < 0.001f && Mathf.Abs(rb.linearVelocity.x) < 0.05f)
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+
 
         // 7) Event ulos animaatiolle
         OnMovement?.Invoke(rb.linearVelocity, IsGrounded);
