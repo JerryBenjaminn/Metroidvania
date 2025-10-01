@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8702430084159399980, guid: 7caf5ef77b1c86b45b148e8cc63ff023, type: 3}
+  m_Sprite: {fileID: 4255070246054394469, guid: 3f25e6c89897ebe4cacd6b5ac100b969, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -330,6 +330,7 @@ GameObject:
   - component: {fileID: 5085076225480653624}
   - component: {fileID: 8860672904435782440}
   - component: {fileID: 4865045869428173058}
+  - component: {fileID: 7471678449952867376}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -415,8 +416,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.033200502, y: 0.31747627}
-  m_Size: {x: 1.0370135, y: 2.8858013}
+  m_Offset: {x: -0.0014874935, y: -0.5058924}
+  m_Size: {x: 0.47264242, y: 1.239064}
   m_Direction: 0
 --- !u!114 &1377594154248498280
 MonoBehaviour:
@@ -555,6 +556,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 0faca181-4ff1-4876-9421-7a26a08cbbe7
     m_ActionName: 'Player/Interact[/DualSenseGamepadHID/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5702099993572567927}
+        m_TargetAssemblyTypeName: PlayerInputController, Assembly-CSharp
+        m_MethodName: OnAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: eb0f141b-2a1f-422a-9264-0d43092102b3
+    m_ActionName: 'Player/Attack[/DualSenseGamepadHID/buttonWest]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -630,11 +647,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin: {fileID: 159567034771147113}
-  radius: 0.9
+  radius: 1.32
   interactableMask:
     serializedVersion: 2
     m_Bits: 768
-  preferFacingDirection: 1
+  preferFacingDirection: 0
   cooldown: 0.15
   animator: {fileID: 3063019151869941754}
   interactTrigger: Interact
@@ -699,3 +716,18 @@ MonoBehaviour:
   rb: {fileID: 6755609540772314792}
   colliders:
   - {fileID: 2878802030802580824}
+--- !u!114 &7471678449952867376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9074775790662725853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c0d85bf687ac54dbc5c4f0f3719116, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilities:
+  - {fileID: 11400000, guid: ca60075d401417e45b4d3d8aa510794c, type: 2}
+  unlocked: 01

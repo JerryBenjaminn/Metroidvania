@@ -20,9 +20,9 @@ MonoBehaviour:
   targetMask:
     serializedVersion: 2
     m_Bits: 1024
-  windup: 0.06
-  active: 0.5
-  recovery: 0.12
+  windup: 0
+  active: 0.2
+  recovery: 0
   damage: 12
-  knockback: 10
+  knockback: 12
   attackTrigger: Attack
