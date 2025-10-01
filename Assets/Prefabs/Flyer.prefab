@@ -137,6 +137,8 @@ GameObject:
   - component: {fileID: 1833969241553976620}
   - component: {fileID: 7742909896415516757}
   - component: {fileID: 7694431901016814884}
+  - component: {fileID: 2871994355437654778}
+  - component: {fileID: 3677910867840851147}
   m_Layer: 10
   m_Name: Flyer
   m_TagString: Untagged
@@ -270,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b2e6ed7ce6cf7449e1e111afafd418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 8305185745121380}
   dieTrigger: Die
   destroyDelay: 0.8
   collidersToDisable: []
@@ -288,3 +290,36 @@ MonoBehaviour:
   swoopBoost: 1.4
   drag: 0.2
   sr: {fileID: 0}
+--- !u!114 &2871994355437654778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6473553198220576203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29bab5fb551001d408728e78c69333fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 8305185745121380}
+  rb: {fileID: 6452918347439128491}
+--- !u!114 &3677910867840851147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6473553198220576203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43257776dd1f47749ab407bcd56507ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers: []
+  flashColor: {r: 1, g: 0, b: 0, a: 0.35}
+  flashOn: 0.06
+  flashOff: 0.06
+  useBlink: 1
+  animator: {fileID: 0}
+  hurtTrigger: Hurt

@@ -29,6 +29,9 @@ public class CharacterMotor : ActorBase
     public bool facingLocked;
     float facingLockTimer;
 
+    [Header("Control Locks")]
+    public float moveLockTimer;
+
     // Sisäiset laskurit
     float coyoteCounter;
     float jumpBufferCounter;
@@ -68,11 +71,14 @@ public class CharacterMotor : ActorBase
         if (jumpBufferCounter > 0f) jumpBufferCounter -= Time.fixedDeltaTime;
 
         // 3) Vaakaliike
-        float desired = targetX * moveSpeed;
-        float diff = desired - rb.linearVelocity.x;
-        float a = Mathf.Abs(desired) > 0.01f ? accel : decel;
-        float ax = Mathf.Clamp(diff * a, -a, a);
-        rb.AddForce(new Vector2(ax, 0), ForceMode2D.Force);
+        if(moveLockTimer <= 0f)
+        {
+            float desired = targetX * moveSpeed;
+            float diff = desired - rb.linearVelocity.x;
+            float a = Mathf.Abs(desired) > 0.01f ? accel : decel;
+            float ax = Mathf.Clamp(diff * a, -a, a);
+            rb.AddForce(new Vector2(ax, 0), ForceMode2D.Force);
+        }
 
         // 4) Hyppy puskuroinnilla + coyote + ilmahyppy
         bool canJumpNow = (IsGrounded || coyoteCounter > 0f || AirJumpsUsed < maxAirJumps);
@@ -94,7 +100,7 @@ public class CharacterMotor : ActorBase
         float gravityMult = 1f;
 
         if (velY > 0.01f) {
-            // Noustessa: jos nappi irti → leikkaa hyppyä
+            // Noustessa: jos nappi irti leikkaa hyppyä
             gravityMult = jumpHeld ? riseGravityMultiplier : lowJumpGravityMultiplier;
         } else if (velY < -0.01f) {
             // Laskiessa lisää painoa
@@ -118,6 +124,7 @@ public class CharacterMotor : ActorBase
             if (facingLockTimer <= 0f) { facingLocked = false; facingLockTimer = 0f; }
         }
 
+        if (moveLockTimer > 0f) { moveLockTimer -= Time.fixedDeltaTime; }
 
         // 7) Event ulos animaatiolle
         OnMovement?.Invoke(rb.linearVelocity, IsGrounded);
@@ -149,5 +156,9 @@ public class CharacterMotor : ActorBase
     {
         facingLocked = false;
         facingLockTimer = 0f;
+    }
+    public void Lockmove(float seconds)
+    {
+        moveLockTimer = Mathf.Max(moveLockTimer, seconds);
     }
 }

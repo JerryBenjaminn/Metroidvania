@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b4dda6e64f136d49b75c75e2dfce5fc, type: 3}
+  m_Name: New Dash Ability
+  m_EditorClassIdentifier: 
+  abilityName: Dash
+  icon: {fileID: 0}
+  cooldown: 0.2
+  dashSpeed: 14
+  dashTime: 0.15
+  lockFacingDuringDash: 1
+  lockMoveDuringDash: 1
+  zeroGravityDuringDash: 1
+  preserveYInAir: 0
+  aimDeadzoneX: 0.25

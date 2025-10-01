@@ -15,20 +15,33 @@ MonoBehaviour:
   abilityName: Melee Slash
   icon: {fileID: 0}
   cooldown: 0.2
-  boxSize: {x: 1.75, y: 0.3}
-  boxOffset: {x: 1.25, y: -0.78}
+  fwdBoxSize: {x: 2, y: 0.2}
+  fwdBoxOffset: {x: 1, y: -0.5}
+  upBoxSize: {x: 0.2, y: 1}
+  upBoxOffset: {x: 0, y: 0.9}
+  downBoxSize: {x: 0.2, y: 1}
+  downBoxOffset: {x: 0, y: -1.5}
   targetMask:
     serializedVersion: 2
     m_Bits: 1024
-  windup: 0.15
+  windup: 0.25
   active: 0.05
-  recovery: 0.4
+  recovery: 0.2
   damage: 12
-  knockback: 12
-  selfRecoil: 15
+  knockbackFwd: 8
+  knockbackUp: 8
+  knockbackDown: 8
+  enablePogo: 1
+  pogoUpVelocity: 100
+  pogoMinAirSpeedY: -1
+  selfRecoilFwd: 10
+  selfRecoilUp: 10
+  selfRecoilDown: 10
   victimHitpause: 0.05
   selfHitpause: 0.05
   cameraShakeAmp: 2
-  attackTrigger: Attack
+  trigForward: Attack
+  trigUp: AttackUp
+  trigDown: AttackDown
   lockFacingDuringAttack: 1
   includeRecoveryInLock: 1

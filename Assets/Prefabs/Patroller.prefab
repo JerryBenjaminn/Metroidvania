@@ -137,6 +137,8 @@ GameObject:
   - component: {fileID: 4547012721214634539}
   - component: {fileID: 4826552994650486094}
   - component: {fileID: 3573132038285155283}
+  - component: {fileID: 937056190176889832}
+  - component: {fileID: 6941506344422550368}
   m_Layer: 10
   m_Name: Patroller
   m_TagString: Untagged
@@ -238,7 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  knockback: 6
+  knockback: 2
   tickCooldown: 0.35
   targetMask:
     serializedVersion: 2
@@ -272,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd82f73f3437049478ae76846274486b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 7144914818698022475}
   dieTrigger: Die
   destroyDelay: 0.8
   collidersToDisable: []
@@ -289,6 +291,40 @@ MonoBehaviour:
   wallProbeDistance: 0.25
   startFacingRight: 1
   sr: {fileID: 0}
+  hurtLock: 0.1
+--- !u!114 &937056190176889832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7629233035588187175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29bab5fb551001d408728e78c69333fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 7144914818698022475}
+  rb: {fileID: 8328566880308283562}
+--- !u!114 &6941506344422550368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7629233035588187175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43257776dd1f47749ab407bcd56507ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers: []
+  flashColor: {r: 1, g: 0, b: 0, a: 0.35}
+  flashOn: 0.06
+  flashOff: 0.06
+  useBlink: 1
+  animator: {fileID: 0}
+  hurtTrigger: Hurt
 --- !u!1 &8134306139653272931
 GameObject:
   m_ObjectHideFlags: 0

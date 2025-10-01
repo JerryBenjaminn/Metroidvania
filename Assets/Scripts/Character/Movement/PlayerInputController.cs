@@ -8,16 +8,20 @@ public class PlayerInputController : MonoBehaviour
     AbilityController abilities;
     Vector2 moveInput;
     Interactor interactor;
+    AimInput aim;
 
     void Awake() {
         motor = GetComponent<CharacterMotor>();
         abilities = GetComponent<AbilityController>();
         interactor = GetComponent<Interactor>();
+        aim = GetComponent<AimInput>();
     }
 
     // PlayerInput → Unity Events kutsuu näitä nimiä automaattisesti:
     public void OnMove(InputAction.CallbackContext ctx) {
         moveInput = ctx.ReadValue<Vector2>();
+        motor.SetMove(moveInput.x);
+        aim?.SetAim(moveInput);
     }
 
     public void OnJump(InputAction.CallbackContext ctx)
