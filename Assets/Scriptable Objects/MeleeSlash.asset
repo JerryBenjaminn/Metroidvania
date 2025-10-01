@@ -20,9 +20,9 @@ MonoBehaviour:
   targetMask:
     serializedVersion: 2
     m_Bits: 1024
-  windup: 0.1
-  active: 0.2
-  recovery: 0
+  windup: 0.15
+  active: 0.05
+  recovery: 0.5
   damage: 12
   knockback: 12
   selfRecoil: 1.5
@@ -30,3 +30,5 @@ MonoBehaviour:
   selfHitpause: 0.05
   cameraShakeAmp: 2
   attackTrigger: Attack
+  lockFacingDuringAttack: 1
+  includeRecoveryInLock: 1

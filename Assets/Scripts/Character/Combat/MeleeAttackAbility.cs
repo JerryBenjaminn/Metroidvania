@@ -26,11 +26,25 @@ public class MeleeAttackAbility : Ability
     public float cameraShakeAmp = 0.6f;     // 0 jos et halua
     public string attackTrigger = "Attack"; // tyhjä jos ei animaatiota
 
+    public bool lockFacingDuringAttack = true;
+    public bool includeRecoveryInLock = true;
+
+
+
     public override bool CanUse(IAbilityUser user) => true;
 
     public override IEnumerator Execute(IAbilityUser user)
     {
         var comp = (Component)user;
+        var motor = user.Motor;
+
+        // lukitaan facing
+        if (lockFacingDuringAttack && motor != null)
+        {
+            float lockTime = windup + active + (includeRecoveryInLock ? recovery : 0f);
+            motor.LockFacing(lockTime);
+        }
+
         if (!comp) yield break;
 
         var animator = comp.GetComponentInChildren<Animator>();

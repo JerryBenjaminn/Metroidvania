@@ -213,8 +213,30 @@
                 },
                 {
                     "name": "",
+                    "id": "f35f02e2-e753-4cf9-a6fa-4aac49f16e89",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "a94316b0-518d-49ce-9b25-548643c004ef",
                     "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "79e6320b-e1be-4c91-8cf0-08ff95f66e14",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -236,7 +258,7 @@
                 {
                     "name": "",
                     "id": "186fec13-a1c9-4236-b169-e4c5c09fe4fd",
-                    "path": "<Keyboard>/e",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -25,6 +25,10 @@ public class CharacterMotor : ActorBase
     public float coyoteTime = 0.10f;             // reunan jälkeen sallittu hyppy
     public float jumpBufferTime = 0.10f;         // puskurointi ennen maahanosumaa
 
+    [Header("Facing Lock")]
+    public bool facingLocked;
+    float facingLockTimer;
+
     // Sisäiset laskurit
     float coyoteCounter;
     float jumpBufferCounter;
@@ -40,8 +44,8 @@ public class CharacterMotor : ActorBase
     public void SetMove(float x)
     {
         targetX = Mathf.Clamp(x, -1f, 1f);
-        // päivitä facing vain kun syöte on oikeasti suuntainen
-        if (Mathf.Abs(targetX) > 0.1f)
+        //Päivitä vain jos ei lukossa
+        if (!facingLocked && Mathf.Abs(targetX) > 0.1f)
             Facing = targetX > 0 ? 1 : -1;
     }
 
@@ -108,6 +112,12 @@ public class CharacterMotor : ActorBase
         if (Mathf.Abs(targetX) < 0.001f && Mathf.Abs(rb.linearVelocity.x) < 0.05f)
             rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
 
+        if (facingLocked)
+        {
+            facingLockTimer -= Time.fixedDeltaTime;
+            if (facingLockTimer <= 0f) { facingLocked = false; facingLockTimer = 0f; }
+        }
+
 
         // 7) Event ulos animaatiolle
         OnMovement?.Invoke(rb.linearVelocity, IsGrounded);
@@ -126,5 +136,18 @@ public class CharacterMotor : ActorBase
     public void ReleaseJump()
     {
         jumpHeld = false;
+    }
+
+    public void LockFacing(float seconds)
+    {
+        if (seconds <= 0f) return;
+        facingLocked = true;
+        facingLockTimer = Mathf.Max(facingLockTimer, seconds);
+    }
+
+    public void UnlockFacing()
+    {
+        facingLocked = false;
+        facingLockTimer = 0f;
     }
 }
