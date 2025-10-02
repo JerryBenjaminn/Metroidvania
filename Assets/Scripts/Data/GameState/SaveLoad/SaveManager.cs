@@ -12,6 +12,7 @@ public class SaveManager : MonoBehaviour
     public bool HasActiveSlot => CurrentSlot >= 0;
     public bool IsLoading { get; private set; }
     public bool SavesDisabled { get; set; } // esim. p‰‰valikossa true
+    public int slotCount = 3;
 
     void Awake()
     {

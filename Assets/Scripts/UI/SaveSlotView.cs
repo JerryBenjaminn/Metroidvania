@@ -13,8 +13,6 @@ public class SaveSlotView : MonoBehaviour
     [SerializeField] Button primaryButton; // Continue / New
     [SerializeField] Button deleteButton;
 
-    void OnEnable() { Refresh(); }
-
     public void Refresh()
     {
         var sm = SaveManager.Instance;
@@ -32,30 +30,34 @@ public class SaveSlotView : MonoBehaviour
                     s.savedAtUtc.ToLocalTime().ToString("yyyy-MM-dd HH:mm");
                 subText.text = $"{s.scene} | HP {s.hp:0} | Abilities {s.abilityCount} | {local}";
             }
-            primaryButton.GetComponentInChildren<TMP_Text>().text = "Continue";
-            primaryButton.onClick.RemoveAllListeners();
-            primaryButton.onClick.AddListener(() => OnContinue());
+            SetPrimary("Continue", OnContinue);
             deleteButton.interactable = true;
         }
         else
         {
             if (titleText) titleText.text = $"Slot {slotIndex + 1} — New Game";
             if (subText) subText.text = s.exists ? "Corrupted/Unknown save" : "Empty";
-            primaryButton.GetComponentInChildren<TMP_Text>().text = "New Game";
-            primaryButton.onClick.RemoveAllListeners();
-            primaryButton.onClick.AddListener(() => OnNewGame());
-            deleteButton.interactable = s.exists; // voi poistaa korruptoidunkin
+            SetPrimary("New Game", OnNewGame);
+            deleteButton.interactable = s.exists;
         }
 
         deleteButton.onClick.RemoveAllListeners();
-        deleteButton.onClick.AddListener(() => OnDelete());
+        deleteButton.onClick.AddListener(OnDelete);
+    }
+
+    void SetPrimary(string label, System.Action action)
+    {
+        var txt = primaryButton.GetComponentInChildren<TMP_Text>();
+        if (txt) txt.text = label;
+        primaryButton.onClick.RemoveAllListeners();
+        primaryButton.onClick.AddListener(() => action());
     }
 
     void OnNewGame()
     {
         var sm = SaveManager.Instance; if (!sm) return;
         primaryButton.interactable = false;
-        sm.SavesDisabled = true; // ollaan valikossa
+        sm.SavesDisabled = true;
         GameManager.Instance.NewGame(slotIndex, startScene, startPosition);
     }
 
@@ -63,7 +65,7 @@ public class SaveSlotView : MonoBehaviour
     {
         var sm = SaveManager.Instance; if (!sm) return;
         primaryButton.interactable = false;
-        sm.SavesDisabled = true; // valikossa, estä tallennus
+        sm.SavesDisabled = true;
         GameManager.Instance.LoadGame(slotIndex);
     }
 
@@ -74,4 +76,3 @@ public class SaveSlotView : MonoBehaviour
         Refresh();
     }
 }
-
