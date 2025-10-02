@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  knockback: 6
+  knockback: 5
   tickCooldown: 0.35
   targetMask:
     serializedVersion: 2

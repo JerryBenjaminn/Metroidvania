@@ -34,7 +34,7 @@ MonoBehaviour:
   enablePogo: 1
   pogoUpVelocity: 100
   pogoMinAirSpeedY: -1
-  selfRecoilFwd: 10
+  selfRecoilFwd: 100
   selfRecoilUp: 10
   selfRecoilDown: 10
   victimHitpause: 0.05

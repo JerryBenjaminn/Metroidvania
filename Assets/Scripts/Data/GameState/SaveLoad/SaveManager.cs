@@ -9,6 +9,8 @@ public class SaveManager : MonoBehaviour
     public static SaveManager Instance { get; private set; }
     public int CurrentSlot { get; private set; } = -1;
     public bool HasActiveSlot => CurrentSlot >= 0;
+    public bool IsLoading { get; private set; }
+    public bool SavesDisabled { get; set; } // esim. päävalikossa true
 
     void Awake()
     {
@@ -33,11 +35,12 @@ public class SaveManager : MonoBehaviour
 
     public void SaveNow()
     {
-        if (!HasActiveSlot) { Debug.LogWarning("No active save slot."); return; }
+        if (!HasActiveSlot) return;
+        if (IsLoading) return;              // älä tallenna kun luetaan!
+        if (SavesDisabled) return;          // älä tallenna päävalikossa
         var data = Capture();
-        var json = JsonUtility.ToJson(data, prettyPrint: true);
-        File.WriteAllText(PathForSlot(CurrentSlot), json);
-        Debug.Log($"[Save] Wrote {PathForSlot(CurrentSlot)}");
+        var json = JsonUtility.ToJson(data, true);
+        WriteJsonAtomic(CurrentSlot, json);
     }
 
     public void NewGame(int slot, string startScene, Vector3 startPos)
@@ -45,17 +48,28 @@ public class SaveManager : MonoBehaviour
         SetActiveSlot(slot);
         DeleteSlot(slot); // varmistetaan puhdas aloitus
         // Lataa aloitusscene ja spawnaa pelaaja sinne
-        GameManager.Instance.StartCoroutine(CoLoadSceneAndPlace(startScene, startPos, new SaveFile()));
+        GameManager.Instance.StartCoroutine(CoLoadSceneAndPlace(startScene, startPos, writeInitialSave: true));
     }
 
+    // SaveManager.cs
     public void LoadSlot(int slot)
     {
-        if (!HasSave(slot)) { Debug.LogWarning($"No save in slot {slot}"); return; }
-        SetActiveSlot(slot);
-        var json = File.ReadAllText(PathForSlot(slot));
+        var path = PathForSlot(slot);
+        if (!File.Exists(path)) { Debug.LogWarning($"[Save] No save in slot {slot}"); return; }
+
+        var json = File.ReadAllText(path);
         var data = JsonUtility.FromJson<SaveFile>(json);
-        GameManager.Instance.StartCoroutine(CoLoadSceneAndApply(data));
+        if (data == null || string.IsNullOrEmpty(data.scene) || !Application.CanStreamedLevelBeLoaded(data.scene))
+        {
+            Debug.LogWarning($"[Save] Invalid save in slot {slot}"); return;
+        }
+
+        SetActiveSlot(slot);
+        IsLoading = true;           // LUKKO PÄÄLLE
+        StartCoroutine(CoLoadSceneAndApply(data));
     }
+
+
 
     // ---------- Capture & Apply ----------
     SaveFile Capture()
@@ -91,10 +105,6 @@ public class SaveManager : MonoBehaviour
 var all = GameObject.FindObjectsOfType<SaveableEntity>(true);
 #endif
 
-
-
-
-
         data.entities = new List<EntityRecord>(all.Length);
         foreach (var e in all)
         {
@@ -121,6 +131,7 @@ var all = GameObject.FindObjectsOfType<SaveableEntity>(true);
 
     IEnumerator CoLoadSceneAndApply(SaveFile data)
     {
+        Debug.Log("[Save] Applying save...");
         // 1) Lataa scene tarvittaessa
         var active = SceneManager.GetActiveScene().name;
         if (data.scene != active)
@@ -134,8 +145,14 @@ var all = GameObject.FindObjectsOfType<SaveableEntity>(true);
         if (player && data.player != null)
         {
             player.position = data.player.pos;
+
             var hp = player.GetComponent<Health>();
-            if (hp != null) { hp.Heal(hp.Max); hp.ApplyDamage(hp.Max - data.player.health, Vector2.zero); }
+
+            if (hp)
+            {
+                hp.SetHealthFromSave(data.player.health);
+                hp.ForceInvulnerability(0.25f);
+            }
 
             var ac = player.GetComponent<AbilityController>();
             if (ac != null && data.unlockedAbilities != null)
@@ -180,19 +197,53 @@ var ents = GameObject.FindObjectsOfType<SaveableEntity>(true);
                 if (stateObj != null) target.RestoreState(stateObj);
             }
         }
+        Debug.Log("[Save] Scene loaded, placing player, restoring entities");
+        IsLoading = false;
+        SavesDisabled = false;
     }
 
-    IEnumerator CoLoadSceneAndPlace(string sceneName, Vector3 pos, SaveFile empty)
+    IEnumerator CoLoadSceneAndPlace(string sceneName, Vector3 pos, bool writeInitialSave)
     {
         var op = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
         while (!op.isDone) yield return null;
 
         var player = GameManager.Instance.Player;
         if (player) player.position = pos;
-        // kirjoita puhdas save heti jos haluat
-        var json = JsonUtility.ToJson(empty, true);
-        File.WriteAllText(PathForSlot(CurrentSlot), json);
+
+        if (writeInitialSave)
+        {
+            // anna framesta hengähdys että kaikki ehtii rekisteröityä
+            yield return null;
+            var data = Capture();
+            var json = JsonUtility.ToJson(data, true);
+            WriteJsonAtomic(CurrentSlot, json);  // katso metodi alla
+        }
     }
+    void WriteJsonAtomic(int slot, string json)
+    {
+        var path = PathForSlot(slot);
+        var tmp = path + ".tmp";
+        File.WriteAllText(tmp, json);
+        if (File.Exists(path)) File.Delete(path);
+        File.Move(tmp, path);
+    }
+    // SaveManager.cs
+    public bool HasValidSave(int slot)
+    {
+        var path = PathForSlot(slot);
+        if (!File.Exists(path)) return false;
+        try
+        {
+            var json = File.ReadAllText(path);
+            var data = JsonUtility.FromJson<SaveFile>(json);
+            return data != null
+                && !string.IsNullOrEmpty(data.scene)
+                && Application.CanStreamedLevelBeLoaded(data.scene);
+        }
+        catch { return false; }
+    }
+
+
 
     // ---------- Data types ----------
     [System.Serializable]

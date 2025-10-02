@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2014153932598124878}
   - component: {fileID: 5242134337271830788}
   - component: {fileID: 3205652187525348257}
+  - component: {fileID: -3465864001042710208}
   m_Layer: 9
   m_Name: AbilityPrefab
   m_TagString: Untagged
@@ -162,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ability: {fileID: 11400000, guid: 644ebca2b46ce3f4b8c293d1f34c6d7f, type: 2}
-  saveId: 1
+  saveId: 0
   animator: {fileID: 0}
   trigger: Pickup
   sfx: {fileID: 0}
@@ -180,3 +181,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 22afa56a-46ec-4c06-ba6b-f15204aa9933
+--- !u!114 &-3465864001042710208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7119986750735377477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed8870d69808b4469404e6396a8270a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

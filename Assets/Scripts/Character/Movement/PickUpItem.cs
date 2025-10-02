@@ -14,7 +14,7 @@ public class PickupItem : MonoBehaviour, IInteractable
     {
         Debug.Log($"Picked up: {itemName}");
         // TODO: lis‰‰ inventaariin
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     SpriteRenderer sr;

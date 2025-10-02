@@ -23,9 +23,15 @@ public class MenuController : MonoBehaviour
 
     void Refresh()
     {
-        bool has = SaveManager.Instance.HasSave(slot);
+        bool has = SaveManager.Instance.HasValidSave(slot);
         if (statusText) statusText.text = $"Slot {slot}: " + (has ? "Save found" : "Empty");
         loadBtn.interactable = has;
         delBtn.interactable = has;
+    }
+
+    void OnEnable()
+    {
+        // Est‰ kaikki tallennukset p‰‰valikossa
+        if (SaveManager.Instance) SaveManager.Instance.SavesDisabled = true;
     }
 }

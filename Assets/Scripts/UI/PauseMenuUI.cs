@@ -18,7 +18,12 @@ public class PauseMenuUI : MonoBehaviour
     }
     public void OnQuitToMenu()
     {
-        Time.timeScale = 1f; // varmuus ettei j‰‰dyt‰ p‰‰valikkoa
+        // jos slot ei ole asetettu, ‰l‰ s‰ik‰yt‰ k‰ytt‰j‰‰ ñ ‰l‰ tallenna
+        if (SaveManager.Instance.HasActiveSlot)
+            GameManager.Instance.SaveGame();
+
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
+
 }

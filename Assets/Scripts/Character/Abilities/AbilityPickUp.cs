@@ -45,11 +45,12 @@ public class AbilityPickup : MonoBehaviour, IInteractable
             if (sfx && clip) sfx.PlayOneShot(clip);
             if (animator && !string.IsNullOrEmpty(trigger)) animator.SetTrigger(trigger);
 
-            if (!string.IsNullOrEmpty(saveId))
+           /* if (!string.IsNullOrEmpty(saveId))
             {
                 PlayerPrefs.SetInt($"pickup_{saveId}", 1);
                 PlayerPrefs.Save();
             }
+           */
 
             // voit Destroytaa, tai piilottaa jos haluat audion loppuun
             //Destroy(gameObject);

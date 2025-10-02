@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using System.Collections;
 
 public class Health : MonoBehaviour, IHealth, IDamageable
 {
@@ -28,6 +29,19 @@ public class Health : MonoBehaviour, IHealth, IDamageable
         Current = max;
         rb = GetComponent<Rigidbody2D>();
     }
+    // Health.cs
+    public void SetHealthFromSave(float value)
+    {
+        Current = Mathf.Clamp(value, 0, Max);
+        OnHealthChanged?.Invoke(Current, Max); // EI OnDamaged-kutsua
+    }
+    public void ForceInvulnerability(float seconds)
+    {
+        if (seconds <= 0) return;
+        StopAllCoroutines();
+        StartCoroutine(CoForceIFrames(seconds));
+    }
+    IEnumerator CoForceIFrames(float t) { invuln = true; yield return new WaitForSeconds(t); invuln = false; }
 
     public void Heal(float amount)
     {

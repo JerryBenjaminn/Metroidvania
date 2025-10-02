@@ -203,7 +203,7 @@ Transform:
   m_GameObject: {fileID: 7958411388083712392}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.881839, y: -3.5800004, z: -5}
+  m_LocalPosition: {x: -0.061838627, y: 0.7899995, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -637,8 +637,8 @@ MonoBehaviour:
   groundCheckRadius: 0.1
   groundCheck: {fileID: 7186152266802875939}
   baseGravityScale: 3
-  fallGravityMultiplier: 1.8
-  lowJumpGravityMultiplier: 2.5
+  fallGravityMultiplier: 1
+  lowJumpGravityMultiplier: 5
   riseGravityMultiplier: 1
   coyoteTime: 0.1
   jumpBufferTime: 0.1
@@ -708,9 +708,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max: 100
   applyKnockback: 1
-  knockbackScale: 2
+  knockbackScale: 0.5
   useInvulnerability: 1
-  invulnSeconds: 0.5
+  invulnSeconds: 1
 --- !u!114 &8860672904435782440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -769,7 +769,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilities:
   - {fileID: 11400000, guid: ca60075d401417e45b4d3d8aa510794c, type: 2}
-  unlocked: 01
+  - {fileID: 11400000, guid: 644ebca2b46ce3f4b8c293d1f34c6d7f, type: 2}
+  unlocked: 0100
 --- !u!114 &2050776202855113019
 MonoBehaviour:
   m_ObjectHideFlags: 0
