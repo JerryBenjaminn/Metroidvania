@@ -28,7 +28,7 @@ MonoBehaviour:
   active: 0.05
   recovery: 0.2
   damage: 12
-  knockbackFwd: 8
+  knockbackFwd: 12
   knockbackUp: 8
   knockbackDown: 8
   enablePogo: 1

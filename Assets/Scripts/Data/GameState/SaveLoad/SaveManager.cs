@@ -4,6 +4,7 @@ using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 
+
 public class SaveManager : MonoBehaviour
 {
     public static SaveManager Instance { get; private set; }
@@ -35,20 +36,31 @@ public class SaveManager : MonoBehaviour
 
     public void SaveNow()
     {
-        if (!HasActiveSlot) return;
-        if (IsLoading) return;              // älä tallenna kun luetaan!
-        if (SavesDisabled) return;          // älä tallenna päävalikossa
+        if (!HasActiveSlot) { Debug.LogWarning("[Save] skipped: no active slot"); return; }
+        if (IsLoading) { Debug.Log("[Save] skipped: loading"); return; }
+        if (SavesDisabled) { Debug.Log("[Save] skipped: disabled"); return; }
+
         var data = Capture();
         var json = JsonUtility.ToJson(data, true);
         WriteJsonAtomic(CurrentSlot, json);
+        Debug.Log("[Save] wrote slot " + CurrentSlot);
     }
+
 
     public void NewGame(int slot, string startScene, Vector3 startPos)
     {
         SetActiveSlot(slot);
-        DeleteSlot(slot); // varmistetaan puhdas aloitus
-        // Lataa aloitusscene ja spawnaa pelaaja sinne
-        GameManager.Instance.StartCoroutine(CoLoadSceneAndPlace(startScene, startPos, writeInitialSave: true));
+
+        // Aloitetaan puhtaalta pöydältä (jos haluat pitää vanhan saven, jätä Delete pois)
+        DeleteSlot(slot);
+
+        // Valikko-tilassa: estä tallennus siirtymän aikana
+        IsLoading = true;
+        SavesDisabled = true;
+
+        GameManager.Instance.StartCoroutine(
+            CoLoadSceneAndPlace(startScene, startPos, writeInitialSave: true)
+        );
     }
 
     // SaveManager.cs
@@ -78,6 +90,7 @@ public class SaveManager : MonoBehaviour
         var scene = SceneManager.GetActiveScene();
         data.scene = scene.name;
         data.version = 1;
+        data.savedAtUtcTicks = System.DateTime.UtcNow.Ticks;
 
         // Pelaaja
         var player = GameManager.Instance.Player;
@@ -204,20 +217,25 @@ var ents = GameObject.FindObjectsOfType<SaveableEntity>(true);
 
     IEnumerator CoLoadSceneAndPlace(string sceneName, Vector3 pos, bool writeInitialSave)
     {
-        var op = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+        var op = UnityEngine.SceneManagement.SceneManager
+            .LoadSceneAsync(sceneName, UnityEngine.SceneManagement.LoadSceneMode.Single);
         while (!op.isDone) yield return null;
 
         var player = GameManager.Instance.Player;
         if (player) player.position = pos;
 
+        // anna yhden framen asettua ennen ensimmäistä saven ottoa
         if (writeInitialSave)
         {
-            // anna framesta hengähdys että kaikki ehtii rekisteröityä
             yield return null;
             var data = Capture();
             var json = JsonUtility.ToJson(data, true);
-            WriteJsonAtomic(CurrentSlot, json);  // katso metodi alla
+            WriteJsonAtomic(CurrentSlot, json);
         }
+
+        // TÄRKEÄ: nyt ollaan gameplay-scenessä sallitaan tallennus
+        IsLoading = false;
+        SavesDisabled = false;
     }
     void WriteJsonAtomic(int slot, string json)
     {
@@ -228,7 +246,7 @@ var ents = GameObject.FindObjectsOfType<SaveableEntity>(true);
         File.Move(tmp, path);
     }
     // SaveManager.cs
-    public bool HasValidSave(int slot)
+    /*public bool HasValidSave(int slot)
     {
         var path = PathForSlot(slot);
         if (!File.Exists(path)) return false;
@@ -241,7 +259,7 @@ var ents = GameObject.FindObjectsOfType<SaveableEntity>(true);
                 && Application.CanStreamedLevelBeLoaded(data.scene);
         }
         catch { return false; }
-    }
+    }*/
 
 
 
@@ -254,7 +272,54 @@ var ents = GameObject.FindObjectsOfType<SaveableEntity>(true);
         public PlayerState player;
         public List<string> unlockedAbilities;
         public List<EntityRecord> entities;
+
+        //Metadata
+        public long savedAtUtcTicks; //aikaleima
     }
+
+    [System.Serializable]
+    public struct SaveSummary
+    {
+        public bool exists;
+        public bool valid;
+        public string scene;
+        public float hp;
+        public int abilityCount;
+        public System.DateTime savedAtUtc;
+    }
+
+    public SaveSummary GetSummary(int slot)
+    {
+        var sum = new SaveSummary { exists = false, valid = false, scene = "", hp = 0, abilityCount = 0, savedAtUtc = System.DateTime.MinValue };
+
+        var path = PathForSlot(slot);
+        if (!System.IO.File.Exists(path)) return sum;
+
+        sum.exists = true;
+        try
+        {
+            var json = System.IO.File.ReadAllText(path);
+            var data = JsonUtility.FromJson<SaveFile>(json);
+            if (data == null || string.IsNullOrEmpty(data.scene)) return sum;
+            if (!Application.CanStreamedLevelBeLoaded(data.scene)) return sum;
+
+            sum.valid = true;
+            sum.scene = data.scene;
+            sum.hp = data.player != null ? data.player.health : 0;
+            sum.abilityCount = data.unlockedAbilities != null ? data.unlockedAbilities.Count : 0;
+            sum.savedAtUtc = data.savedAtUtcTicks != 0
+                ? new System.DateTime(data.savedAtUtcTicks, System.DateTimeKind.Utc)
+                : System.DateTime.MinValue;
+
+            return sum;
+        }
+        catch
+        {
+            return sum; // exists = true, valid = false
+        }
+    }
+    public bool HasValidSave(int slot) => GetSummary(slot).valid;
+
 
     [System.Serializable]
     public class PlayerState
