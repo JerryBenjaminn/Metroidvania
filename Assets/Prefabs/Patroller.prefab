@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 3573132038285155283}
   - component: {fileID: 937056190176889832}
   - component: {fileID: 6941506344422550368}
+  - component: {fileID: 4844839470893423974}
   m_Layer: 10
   m_Name: Patroller
   m_TagString: Untagged
@@ -325,6 +326,19 @@ MonoBehaviour:
   useBlink: 1
   animator: {fileID: 0}
   hurtTrigger: Hurt
+--- !u!114 &4844839470893423974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7629233035588187175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2630d7a534917e249948eaee647d2615, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 387867d1-f731-4986-80ca-71522ff4c40a
 --- !u!1 &8134306139653272931
 GameObject:
   m_ObjectHideFlags: 0

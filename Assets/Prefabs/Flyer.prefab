@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 7694431901016814884}
   - component: {fileID: 2871994355437654778}
   - component: {fileID: 3677910867840851147}
+  - component: {fileID: 9191506334983010131}
   m_Layer: 10
   m_Name: Flyer
   m_TagString: Untagged
@@ -323,3 +324,16 @@ MonoBehaviour:
   useBlink: 1
   animator: {fileID: 0}
   hurtTrigger: Hurt
+--- !u!114 &9191506334983010131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6473553198220576203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2630d7a534917e249948eaee647d2615, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: c1110e6d-8a1e-4e7a-bbee-d9265caa990b

@@ -60,5 +60,33 @@ public class AbilityController : MonoBehaviour, IAbilityUser
         Debug.Log($"Unlocked ability: {ability.name} (index {i})");
         return true;
     }
+    public List<string> GetUnlockedAbilityNames()
+    {
+        var list = new List<string>();
+        for (int i = 0; i < abilities.Count; i++)
+            if (i < unlocked.Length && unlocked[i] && abilities[i])
+                list.Add(abilities[i].name);
+        return list;
+    }
+
+    public void SetUnlockedByNames(List<string> names)
+    {
+        for (int i = 0; i < abilities.Count; i++)
+        {
+            bool on = abilities[i] && names.Contains(abilities[i].name);
+            if (i < unlocked.Length) unlocked[i] = on;
+        }
+    }
+
+    public bool UnlockByName(string abilityName)
+    {
+        for (int i = 0; i < abilities.Count; i++)
+        {
+            var a = abilities[i];
+            if (a && a.name == abilityName)
+                return Unlock(a);
+        }
+        return false;
+    }
 }
 

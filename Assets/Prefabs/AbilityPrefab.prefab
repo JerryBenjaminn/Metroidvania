@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3494369662795952356}
   - component: {fileID: 2014153932598124878}
   - component: {fileID: 5242134337271830788}
+  - component: {fileID: 3205652187525348257}
   m_Layer: 9
   m_Name: AbilityPrefab
   m_TagString: Untagged
@@ -166,3 +167,16 @@ MonoBehaviour:
   trigger: Pickup
   sfx: {fileID: 0}
   clip: {fileID: 0}
+--- !u!114 &3205652187525348257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7119986750735377477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2630d7a534917e249948eaee647d2615, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 22afa56a-46ec-4c06-ba6b-f15204aa9933

@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8600330471261598750}
   - component: {fileID: 1965213283757319011}
   - component: {fileID: 759418717737208562}
+  - component: {fileID: 5987434934074720667}
+  - component: {fileID: 5883063183800479}
   m_Layer: 6
   m_Name: Door
   m_TagString: Untagged
@@ -101,12 +103,38 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   openSfx: {fileID: 0}
   closeSfx: {fileID: 0}
+  autoDeselectBeforeHide: 1
   OnOpened:
     m_PersistentCalls:
       m_Calls: []
   OnClosed:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5987434934074720667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824523302132507312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2630d7a534917e249948eaee647d2615, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2115603a-b2ae-4db2-b10d-a4c5a49e623d
+--- !u!114 &5883063183800479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824523302132507312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc96dd87f9237de4886df60f15106f22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7444892407780362035
 GameObject:
   m_ObjectHideFlags: 0

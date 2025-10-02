@@ -52,7 +52,9 @@ public class AbilityPickup : MonoBehaviour, IInteractable
             }
 
             // voit Destroytaa, tai piilottaa jos haluat audion loppuun
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
+            SaveManager.Instance?.SaveNow();
         }
         else
         {
