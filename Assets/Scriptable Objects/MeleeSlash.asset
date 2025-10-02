@@ -19,8 +19,8 @@ MonoBehaviour:
   fwdBoxOffset: {x: 1, y: -0.5}
   upBoxSize: {x: 0.2, y: 1}
   upBoxOffset: {x: 0, y: 0.9}
-  downBoxSize: {x: 0.2, y: 1}
-  downBoxOffset: {x: 0, y: -1.5}
+  downBoxSize: {x: 0.2, y: 1.5}
+  downBoxOffset: {x: 0, y: -2}
   targetMask:
     serializedVersion: 2
     m_Bits: 1024

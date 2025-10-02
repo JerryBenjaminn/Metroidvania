@@ -191,6 +191,17 @@
                 },
                 {
                     "name": "",
+                    "id": "4aad111e-80b1-4b9d-9a6e-8c32e7e12482",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Ability2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "ad6123d7-b894-4112-bea4-231d7a3f04a9",
                     "path": "<Gamepad>/leftTrigger",
                     "interactions": "",

@@ -39,5 +39,26 @@ public class AbilityController : MonoBehaviour, IAbilityUser
             if (abilities[i] && abilities[i].abilityName == abilityName)
                 unlocked[i] = true;
     }
+    // AbilityController.cs (lisäykset)
+    public event System.Action<Ability, int> OnAbilityUnlocked;
+
+    public int IndexOf(Ability ability) => abilities != null ? abilities.IndexOf(ability) : -1;
+
+    public bool IsUnlocked(Ability ability)
+    {
+        int i = IndexOf(ability);
+        return i >= 0 && i < unlocked.Length && unlocked[i];
+    }
+
+    public bool Unlock(Ability ability)
+    {
+        int i = IndexOf(ability);
+        if (i < 0) { Debug.LogWarning($"[{name}] Ability {ability?.name} ei ole listassa."); return false; }
+        if (unlocked[i]) return false;
+        unlocked[i] = true;
+        OnAbilityUnlocked?.Invoke(ability, i);
+        Debug.Log($"Unlocked ability: {ability.name} (index {i})");
+        return true;
+    }
 }
 
