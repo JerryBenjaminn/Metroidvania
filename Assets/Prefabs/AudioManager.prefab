@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4567737753080033845}
   - component: {fileID: 1652283099517315746}
+  - component: {fileID: 7502341035854759608}
+  - component: {fileID: 6037692584243228651}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -50,4 +52,33 @@ MonoBehaviour:
   uiGroup: {fileID: 6156892262592835696, guid: 8a17f4e06bfc7ba4ca20029d92dd05ed, type: 2}
   sfxPoolSize: 16
   dontDestroyOnLoad: 1
-  defaultMusicFade: 0.6
+  defaultMusicFade: 2
+--- !u!114 &7502341035854759608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3951600894403251667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 192218147efc944499a7f4c74f7b0f70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelMusic: {fileID: 8300000, guid: 1434593912fa9a9488dec1931284eea5, type: 3}
+  fade: 2
+--- !u!114 &6037692584243228651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3951600894403251667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 260220a0a1094a64bb236a83a6e0cd4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 1434593912fa9a9488dec1931284eea5, type: 3}
+  fade: 0.6
+  loop: 1

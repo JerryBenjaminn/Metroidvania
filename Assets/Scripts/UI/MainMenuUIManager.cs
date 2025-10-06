@@ -102,6 +102,7 @@ public class MainMenuUIManager : MonoBehaviour
         // sulje Slots, avaa Main
         saveSlotsPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
+        optionsPanel.SetActive(false);
 
         // aseta ohjainfokus takaisin Start Gameen (tai mihin haluat)
         SelectFirst(mainFirstSelected);

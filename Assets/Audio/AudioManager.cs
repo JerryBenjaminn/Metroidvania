@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Audio;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -175,4 +176,31 @@ public class AudioManager : MonoBehaviour
         if (from) { from.volume = 0f; if (stopAtEnd) from.Stop(); }
         if (to) to.volume = toVol;
     }
+    void OnEnable() { SceneManager.sceneLoaded += OnSceneLoaded; }
+    void OnDisable() { SceneManager.sceneLoaded -= OnSceneLoaded; }
+
+    [System.Serializable]
+    public struct SceneMusic
+    {
+        public string sceneName;
+        public AudioClip clip;
+        public float fade;
+        public bool loop;
+    }
+    public SceneMusic[] sceneMusic; // aseta Inspectorissa
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        for (int i = 0; i < sceneMusic.Length; i++)
+        {
+            if (sceneMusic[i].sceneName == scene.name && sceneMusic[i].clip)
+            {
+                PlayMusic(sceneMusic[i].clip, sceneMusic[i].fade, sceneMusic[i].loop);
+                return;
+            }
+        }
+        StopMusic(0.3f);
+    }
+
+
 }
