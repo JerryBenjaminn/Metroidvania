@@ -5044,7 +5044,7 @@ PrefabInstance:
     - target: {fileID: 1652283099517315746, guid: f143401a3b8ee0b46a97bf40a880e359, type: 3}
       propertyPath: sceneMusic.Array.data[1].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 2bb802ac4a435714bbd78c7ad434739f, type: 3}
+      objectReference: {fileID: 8300000, guid: ee71f32fc4ded344b9cd616b308599d8, type: 3}
     - target: {fileID: 1652283099517315746, guid: f143401a3b8ee0b46a97bf40a880e359, type: 3}
       propertyPath: sceneMusic.Array.data[1].loop
       value: 1

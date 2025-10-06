@@ -55,6 +55,11 @@ public class MeleeAttackAbility : Ability
     public bool lockFacingDuringAttack = true;
     public bool includeRecoveryInLock = true;
 
+    [Header("SFX")]
+    public SoundEvent swingWhiffSfx;
+    public SoundEvent hitEnemySfx;
+    public bool playWhiffAtActivate = true;
+
     public override bool CanUse(IAbilityUser user) => true;
 
     public override IEnumerator Execute(IAbilityUser user)
@@ -90,6 +95,9 @@ public class MeleeAttackAbility : Ability
             if (!string.IsNullOrEmpty(trig)) animator.SetTrigger(trig);
         }
 
+        var router = comp.GetComponent<MeleeAttackSfxRouter>();
+        if (router) router.currentSwing = swingWhiffSfx;
+
         if (windup > 0) yield return new WaitForSeconds(windup);
 
         float facing = sr && sr.flipX ? -1f : (motor != null ? motor.Facing : Mathf.Sign(comp.transform.localScale.x));
@@ -98,9 +106,11 @@ public class MeleeAttackAbility : Ability
         var hitOnce = new HashSet<GameObject>();
         float end = Time.time + Mathf.Max(0.01f, active);
         bool anyHit = false;
+        bool hitPlayed = false;
 
         while (Time.time < end)
         {
+
             Vector2 center; Vector2 size;
             switch (dir)
             {
@@ -124,7 +134,7 @@ public class MeleeAttackAbility : Ability
             Debug.DrawLine(center + new Vector2(size.x / 2, size.y / 2), center + new Vector2(-size.x / 2, size.y / 2), Color.red, 0.02f);
             Debug.DrawLine(center + new Vector2(-size.x / 2, size.y / 2), center + new Vector2(-size.x / 2, -size.y / 2), Color.red, 0.02f);
 #endif
-
+            
             var hits = Physics2D.OverlapBoxAll(center, size, 0f, targetMask);
             foreach (var h in hits)
             {
@@ -133,10 +143,11 @@ public class MeleeAttackAbility : Ability
 
                 anyHit = true;
                 hitOnce.Add(h.gameObject);
-
+               
                 // knockback-suunta
                 Vector2 kbDir;
                 float kbPow;
+
                 switch (dir)
                 {
                     case SlashDir.Up:
@@ -151,6 +162,12 @@ public class MeleeAttackAbility : Ability
                         kbDir = new Vector2(facing, 0f);
                         kbPow = knockbackFwd;
                         break;
+                }
+
+                if (hitEnemySfx && !hitPlayed)
+                {
+                    AudioManager.Instance.Play(hitEnemySfx, comp.transform.position);
+                    hitPlayed = true;
                 }
 
                 if (h.TryGetComponent<IDamageable>(out var dmg))
