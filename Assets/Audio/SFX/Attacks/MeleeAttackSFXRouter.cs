@@ -7,6 +7,6 @@ public class MeleeAttackSfxRouter : MonoBehaviour
     public void SfxSwing()
     {
         if (currentSwing) AudioManager.Instance.Play(currentSwing, transform.position);
-        currentSwing = null; // ettei tuplata
+        //currentSwing = null; // ettei tuplata
     }
 }
