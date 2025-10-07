@@ -66,19 +66,15 @@ public class PlayerDeathController : MonoBehaviour
     {
         yield return new WaitForSeconds(respawnDelay);
 
-        if (mode == PlayerDeathMode.ReloadScene)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            yield break;
-        }
+        Time.timeScale = 1.0f;
 
-        // Respawn point
-        if (!respawnPoint)
-        {
-            // jos respawnia ei ole m‰‰ritetty, fallback reloadiin
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            yield break;
-        }
+
+        // Lataa AKTIIVINEN slotti SaveManagerin kautta, jotta kaikki ISaveable-tilat palautuvat
+        int slot = SaveManager.Instance && SaveManager.Instance.HasActiveSlot
+            ? SaveManager.Instance.CurrentSlot
+            : 0;
+
+        GameManager.Instance.LoadGame(slot);
 
         // Resetoi
         transform.position = respawnPoint.position;

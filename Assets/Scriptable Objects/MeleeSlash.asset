@@ -27,7 +27,7 @@ MonoBehaviour:
   windup: 0.15
   active: 0.01
   recovery: 0.2
-  damage: 12
+  damage: 2
   knockbackFwd: 12
   knockbackUp: 8
   knockbackDown: 8

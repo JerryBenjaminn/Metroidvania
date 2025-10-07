@@ -273,6 +273,8 @@ var ents = GameObject.FindObjectsOfType<SaveableEntity>(true);
         public PlayerState player;
         public List<string> unlockedAbilities;
         public List<EntityRecord> entities;
+        public string playerSpawnScene;
+        public Vector3 playerSpawnPos;
 
         //Metadata
         public long savedAtUtcTicks; //aikaleima
@@ -320,7 +322,6 @@ var ents = GameObject.FindObjectsOfType<SaveableEntity>(true);
         }
     }
     public bool HasValidSave(int slot) => GetSummary(slot).valid;
-
 
     [System.Serializable]
     public class PlayerState

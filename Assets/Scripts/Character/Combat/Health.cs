@@ -4,8 +4,13 @@ using System.Collections;
 
 public class Health : MonoBehaviour, IHealth, IDamageable
 {
-    [SerializeField] float max = 100;
-    public float Max => max;
+    [Header("Hearts (HK-style)")]
+    [SerializeField] int maxHearts = 5;
+    [SerializeField] int currentHearts = 5;
+
+    // Legacy float-API, pidetään kompatin vuoksi (1.0 = 1 heart)
+    [SerializeField] float max = 5f;
+    public float Max => maxHearts;
     public float Current { get; private set; }
 
     [Header("Damage Response")]
@@ -15,26 +20,45 @@ public class Health : MonoBehaviour, IHealth, IDamageable
     [SerializeField] float invulnSeconds = 0.15f;
 
     public event Action OnDeath;
-    public event Action<float, float> OnHealthChanged;          // current, max
-    public event Action<float, Vector2> OnDamaged;             // amount, hitDir  <-- UUSI
+    public event Action<float, float> OnHealthChanged;
+    public event Action<float, Vector2> OnDamaged;
 
-    public float InvulnSeconds => invulnSeconds;               // <-- UUSI
-    public bool IsInvulnerable => invuln;                      // <-- UUSI
+    public float InvulnSeconds => invulnSeconds;
+    public bool IsInvulnerable => invuln;
 
     Rigidbody2D rb;
     bool invuln;
 
     void Awake()
     {
-        Current = max;
+        maxHearts = Mathf.Max(1, maxHearts <= 0 ? Mathf.RoundToInt(max) : maxHearts);
+        currentHearts = Mathf.Clamp(currentHearts <= 0 ? maxHearts : currentHearts, 0, maxHearts);
+        max = maxHearts;
+        Current = currentHearts;
         rb = GetComponent<Rigidbody2D>();
+        OnHealthChanged?.Invoke(Current, Max);
     }
-    // Health.cs
+
+    public int MaxHearts => maxHearts;
+    public int CurrentHearts => currentHearts;
+
+    public void SetMaxHearts(int value, bool healToFull = true)
+    {
+        maxHearts = Mathf.Max(1, value);
+        if (healToFull) currentHearts = maxHearts;
+        currentHearts = Mathf.Clamp(currentHearts, 0, maxHearts);
+        max = maxHearts;
+        Current = currentHearts;
+        OnHealthChanged?.Invoke(Current, Max);
+    }
+
     public void SetHealthFromSave(float value)
     {
-        Current = Mathf.Clamp(value, 0, Max);
-        OnHealthChanged?.Invoke(Current, Max); // EI OnDamaged-kutsua
+        currentHearts = Mathf.Clamp(Mathf.RoundToInt(value), 0, maxHearts);
+        Current = currentHearts;
+        OnHealthChanged?.Invoke(Current, Max);
     }
+
     public void ForceInvulnerability(float seconds)
     {
         if (seconds <= 0) return;
@@ -45,39 +69,39 @@ public class Health : MonoBehaviour, IHealth, IDamageable
 
     public void Heal(float amount)
     {
-        Current = Mathf.Min(Max, Current + amount);
+        int add = Mathf.Max(0, Mathf.RoundToInt(amount));
+        if (add == 0 || currentHearts <= 0) return;
+        currentHearts = Mathf.Clamp(currentHearts + add, 0, maxHearts);
+        Current = currentHearts;
         OnHealthChanged?.Invoke(Current, Max);
     }
 
     public void ApplyDamage(float amount, Vector2 hitDir)
     {
-        if (Current <= 0) return;
+        if (currentHearts <= 0) return;
         if (useInvulnerability && invuln) return;
 
-        Current = Mathf.Max(0, Current - amount);
+        int dmg = Mathf.Max(0, Mathf.RoundToInt(amount));
+        if (dmg == 0) return;
+
+        currentHearts = Mathf.Max(0, currentHearts - dmg);
+        Current = currentHearts;
         OnHealthChanged?.Invoke(Current, Max);
+        OnDamaged?.Invoke(dmg, hitDir);
 
-        // kerro kuittauksena että nyt sattui
-        OnDamaged?.Invoke(amount, hitDir);                     // <-- UUSI
+        if (applyKnockback && rb) rb.AddForce(hitDir * knockbackScale, ForceMode2D.Impulse);
 
-        if (applyKnockback && rb)
-            rb.AddForce(hitDir * knockbackScale, ForceMode2D.Impulse);
-
-        if (Current <= 0) { Kill(); return; }
-
+        if (currentHearts <= 0) { Kill(); return; }
         if (useInvulnerability) StartCoroutine(CoIFrames());
     }
 
-    System.Collections.IEnumerator CoIFrames()
-    {
-        invuln = true;
-        yield return new WaitForSeconds(invulnSeconds);
-        invuln = false;
-    }
+    IEnumerator CoIFrames() { invuln = true; yield return new WaitForSeconds(invulnSeconds); invuln = false; }
 
     public void Kill()
     {
-        if (Current > 0) Current = 0;
+        if (currentHearts > 0) currentHearts = 0;
+        Current = currentHearts;
+        OnHealthChanged?.Invoke(Current, Max);
         OnDeath?.Invoke();
     }
 }
