@@ -35,12 +35,20 @@ public class PlayerSave : MonoBehaviour, ISaveable
         };
     }
 
+    // 10/7/2025 AI-Tag
+    // This was created with the help of Assistant, a Unity Artificial Intelligence product.
+
     public void RestoreState(object o)
     {
-        var s = o as State; if (s == null) return;
+        var s = o as State;
+        if (s == null) return;
+
         transform.position = s.pos;
 
-        if (hp) { hp.Heal(hp.Max); hp.ApplyDamage(hp.Max - s.health, Vector2.zero); }
+        if (hp)
+        {
+            hp.SetHealthFromSave(s.health); // Use SetHealthFromSave to ensure OnHealthChanged is invoked
+        }
         if (ac) ac.SetUnlockedByNames(s.abilities);
         if (ap) ap.Set(s.abilityPower);
     }

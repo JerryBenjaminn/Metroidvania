@@ -1,3 +1,6 @@
+// 10/7/2025 AI-Tag
+// This was created with the help of Assistant, a Unity Artificial Intelligence product.
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,13 +15,32 @@ public class HealthUI : MonoBehaviour
 
     void Awake()
     {
-        if (!health) health = FindFirstObjectByType<Health>();
+        InitializeHealthReference();
         Rebuild();
-        health.OnHealthChanged += UpdateUI;
         UpdateUI(health.Current, health.Max);
     }
 
-    void OnDestroy() { if (health) health.OnHealthChanged -= UpdateUI; }
+    void OnEnable()
+    {
+        if (health) health.OnHealthChanged += UpdateUI;
+    }
+
+    void OnDisable()
+    {
+        if (health) health.OnHealthChanged -= UpdateUI;
+    }
+
+    void InitializeHealthReference()
+    {
+        if (!health)
+        {
+            health = FindFirstObjectByType<Health>();
+            if (health)
+            {
+                health.OnHealthChanged += UpdateUI;
+            }
+        }
+    }
 
     void Rebuild()
     {
@@ -29,6 +51,8 @@ public class HealthUI : MonoBehaviour
 
     void UpdateUI(float cur, float max)
     {
+        if (!health) InitializeHealthReference();
+
         int m = Mathf.RoundToInt(max);
         int c = Mathf.RoundToInt(cur);
         if (icons == null || icons.Length != m) Rebuild();

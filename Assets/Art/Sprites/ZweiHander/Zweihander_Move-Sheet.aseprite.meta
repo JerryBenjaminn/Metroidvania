@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 0
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 638948716790476534
   textureAssetName: 
@@ -270,9 +275,15 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1098700627
+    uuid:
+      value0: 1922935713
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1922935713
     name: Zweihander_Move-Sheet
     layerFlags: 0
     layerType: 0
@@ -288,7 +299,10 @@ ScriptedImporter:
         height: 128
       spriteId: 43451ef7b6eda3d4a8a00d11c22a1189
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings:
   - name: Default
     overridden: 0
@@ -342,3 +356,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 768, y: 128}
+  previousTextureSize: {x: 1024, y: 128}
