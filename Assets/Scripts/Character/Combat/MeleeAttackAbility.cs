@@ -158,7 +158,7 @@ public class MeleeAttackAbility : Ability
                         kbPow = knockbackUp;
                         break;
                     case SlashDir.Down:
-                        kbDir = Vector2.down + new Vector2(facing * 0.1f, 0f);
+                        kbDir = Vector2.up;
                         kbPow = knockbackDown;
                         break;
                     default:
@@ -192,40 +192,37 @@ public class MeleeAttackAbility : Ability
 
                 if (camShake && cameraShakeAmp > 0f)
                     camShake.Shake(cameraShakeAmp, 1.5f);
+
+                Debug.Log($"Pogo Force Direction: {kbDir}, Magnitude: {kbPow}");
             }
 
             yield return new WaitForFixedUpdate();
         }
 
         // omat palautteet osumasta
-        if (anyHit && rb)
-        {
-            if (selfPause && selfHitpause > 0f) selfPause.Pause(selfHitpause);
+        // 10/7/2025 AI-Tag
+        // This was created with the help of Assistant, a Unity Artificial Intelligence product.
 
-            if (rb)
+        if (anyHit && rb != null)
+        {
+            switch (dir)
             {
-                switch (dir)
-                {
-                    case SlashDir.Up:
-                        if (selfRecoilUp > 0f) rb.AddForce(new Vector2(-facing * 0.5f, -selfRecoilUp), ForceMode2D.Impulse);
-                        break;
-                    case SlashDir.Down:
-                        if (enablePogo && !user.IsGrounded)
-                        {
-                            var v = rb.linearVelocity;
-                            if (v.y > pogoMinAirSpeedY) v.y = pogoMinAirSpeedY; // leikkaa ylöspäin ennen hyppyä
-                            v.y = pogoUpVelocity;
-                            rb.linearVelocity = v;
-                        }
-                        if (selfRecoilDown > 0f) rb.AddForce(new Vector2(-facing * selfRecoilDown, 0f), ForceMode2D.Impulse);
-                        break;
-                    default:
-                        if (selfRecoilFwd > 0f) rb.AddForce(new Vector2(-facing * selfRecoilFwd, 0f), ForceMode2D.Impulse);
-                        break;
-                }
+                case SlashDir.Up:
+                    rb.AddForce(new Vector2(-facing * 0.5f, -selfRecoilUp), ForceMode2D.Impulse);
+                    break;
+                case SlashDir.Down:
+                    rb.AddForce(new Vector2(/*-facing * selfRecoilDown*/0f, pogoUpVelocity), ForceMode2D.Impulse);
+                    if(motor != null)
+                    {
+                        motor.Lockmove(0.1f);
+                    }
+                    break;
+                default:
+                    rb.AddForce(new Vector2(-facing * selfRecoilFwd, 0f), ForceMode2D.Impulse);
+                    break;
             }
         }
-
+        
         if (recovery > 0) yield return new WaitForSeconds(recovery);
     }
 }

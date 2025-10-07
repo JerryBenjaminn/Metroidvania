@@ -157,8 +157,8 @@ public class CharacterMotor : ActorBase
         facingLocked = false;
         facingLockTimer = 0f;
     }
-    public void Lockmove(float seconds)
+    public void Lockmove(float duration)
     {
-        moveLockTimer = Mathf.Max(moveLockTimer, seconds);
+        moveLockTimer = Mathf.Max(moveLockTimer, duration);
     }
 }

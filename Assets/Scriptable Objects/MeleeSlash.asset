@@ -28,15 +28,15 @@ MonoBehaviour:
   active: 0.01
   recovery: 0.2
   damage: 2
-  knockbackFwd: 12
-  knockbackUp: 8
-  knockbackDown: 8
+  knockbackFwd: 10
+  knockbackUp: 10
+  knockbackDown: 10
   enablePogo: 1
   pogoUpVelocity: 1000
   pogoMinAirSpeedY: -1
-  selfRecoilFwd: 500
-  selfRecoilUp: 500
-  selfRecoilDown: 500
+  selfRecoilFwd: 10
+  selfRecoilUp: 10
+  selfRecoilDown: 30
   victimHitpause: 0.05
   selfHitpause: 0.05
   cameraShakeAmp: 2
