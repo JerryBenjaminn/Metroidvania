@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// Handles saving and restoring the player's state.
+/// </summary>
 [RequireComponent(typeof(Health))]
 public class PlayerSave : MonoBehaviour, ISaveable
 {
@@ -12,15 +15,15 @@ public class PlayerSave : MonoBehaviour, ISaveable
         public int abilityPower;
     }
 
-    Health hp;
-    AbilityController ac;
-    AbilityPower ap;
+    private Health _health;
+    private AbilityController _abilityController;
+    private AbilityPower _abilityPower;
 
     void Awake()
     {
-        hp = GetComponent<Health>();
-        ac = GetComponent<AbilityController>();
-        ap = GetComponent<AbilityPower>();
+        _health = GetComponent<Health>();
+        _abilityController = GetComponent<AbilityController>();
+        _abilityPower = GetComponent<AbilityPower>();
         GameManager.Instance?.RegisterPlayer(transform);
     }
 
@@ -29,42 +32,20 @@ public class PlayerSave : MonoBehaviour, ISaveable
         return new State
         {
             pos = transform.position,
-            health = hp ? hp.Current : 0,
-            abilities = ac ? ac.GetUnlockedAbilityNames() : new System.Collections.Generic.List<string>(),
-            abilityPower = ap ? ap.Current : 0
+            health = _health ? _health.Current : 0,
+            abilities = _abilityController ? _abilityController.GetUnlockedAbilityNames() : new System.Collections.Generic.List<string>(),
+            abilityPower = _abilityPower ? _abilityPower.Current : 0
         };
     }
 
-    // 10/7/2025 AI-Tag
-    // This was created with the help of Assistant, a Unity Artificial Intelligence product.
-
-    public void RestoreState(object o)
+    public void RestoreState(object state)
     {
-        var s = o as State;
-        if (s == null) return;
+        if (state is not State s) return;
 
         transform.position = s.pos;
 
-        if (hp)
-        {
-            hp.SetHealthFromSave(s.health); // Use SetHealthFromSave to ensure OnHealthChanged is invoked
-        }
-        if (ac) ac.SetUnlockedByNames(s.abilities);
-        if (ap) ap.Set(s.abilityPower);
-    }
-
-    public void SaveState()
-    {
-        //Tallenna pelaajan data
-        Debug.Log("Player state saved.");
-    }
-
-    public void RestoreStateFromCheckpoint(Checkpoint checkpoint)
-    {
-        //Palauta pelaajan positio checkpointille
-        transform.position = checkpoint.SpawnPoint.position;
-
-        //Palauta muu data jos tarvitsee
-        Debug.Log("Player state restored to checkpoint.");
+        if (_health) _health.SetHealthFromSave(s.health);
+        if (_abilityController) _abilityController.SetUnlockedByNames(s.abilities);
+        if (_abilityPower) _abilityPower.Set(s.abilityPower);
     }
 }

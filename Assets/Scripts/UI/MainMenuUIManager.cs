@@ -1,88 +1,68 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
 using TMPro;
-using System.Linq;
 
+/// <summary>
+/// Manages the main menu UI and its interactions.
+/// </summary>
 public class MainMenuUIManager : MonoBehaviour
 {
     [Header("Panels")]
-    public GameObject mainMenuPanel;
-    public GameObject saveSlotsPanel;
-    public GameObject optionsPanel;
+    [SerializeField] private GameObject mainMenuPanel;
+    [SerializeField] private GameObject saveSlotsPanel;
+    [SerializeField] private GameObject optionsPanel;
 
     [Header("Main Menu Buttons")]
-    public Button startBtn;
-    public Button optionsBtn;
-    public Button quitBtn;
-    public Button continueBtn;           // valinnainen
+    [SerializeField] private Button startButton;
+    [SerializeField] private Button optionsButton;
+    [SerializeField] private Button quitButton;
+    [SerializeField] private Button continueButton;
 
     [Header("First Selected")]
-    public GameObject mainFirstSelected; // esim. Start Game
-    public GameObject slotsFirstSelected;// esim. 1. slotin primary-nappi
-    public GameObject optionsFirstSelected;
+    [SerializeField] private GameObject mainFirstSelected;
+    [SerializeField] private GameObject slotsFirstSelected;
+    [SerializeField] private GameObject optionsFirstSelected;
 
     [Header("Slots")]
-    public SaveSlotView[] slots;         // vedä 3 kpl inspectorissa
-
-    void OnEnable()
-    {
-        if (SaveManager.Instance) SaveManager.Instance.SavesDisabled = true;
-    }
+    [SerializeField] private SaveSlotView[] slots;
 
     void Start()
     {
         if (SaveManager.Instance) SaveManager.Instance.SavesDisabled = true;
 
-        // Hookit
-        startBtn.onClick.AddListener(OpenSlots);
-        optionsBtn.onClick.AddListener(OpenOptions);
-        quitBtn.onClick.AddListener(QuitGame);
+        startButton.onClick.AddListener(OpenSlots);
+        optionsButton.onClick.AddListener(OpenOptions);
+        quitButton.onClick.AddListener(QuitGame);
 
-        // Continue-nappi: lataa tuorein validi slotti
-        if (continueBtn)
+        if (continueButton)
         {
-            continueBtn.onClick.AddListener(ContinueLatest);
+            continueButton.onClick.AddListener(ContinueLatest);
             RefreshContinueButton();
         }
 
         OpenMain();
     }
 
-    void OpenMain()
+    private void OpenMain()
     {
-        mainMenuPanel.SetActive(true);
-        saveSlotsPanel.SetActive(false);
-        optionsPanel.SetActive(false);
-        SelectFirst(mainFirstSelected);
+        SetActivePanel(mainMenuPanel);
         RefreshContinueButton();
     }
 
-    void OpenSlots()
+    private void OpenSlots()
     {
-        // päivitä jokainen slot-kortti
-        foreach (var s in slots) if (s) s.Refresh();
-
-        mainMenuPanel.SetActive(false);
-        saveSlotsPanel.SetActive(true);
-        optionsPanel.SetActive(false);
-        SelectFirst(slotsFirstSelected);
+        foreach (var slot in slots) slot?.Refresh();
+        SetActivePanel(saveSlotsPanel);
     }
 
     public void CloseSlots() => OpenMain();
 
-    void OpenOptions()
-    {
-        mainMenuPanel.SetActive(false);
-        saveSlotsPanel.SetActive(false);
-        optionsPanel.SetActive(true);
-        SelectFirst(optionsFirstSelected);
-    }
+    private void OpenOptions() => SetActivePanel(optionsPanel);
 
     public void CloseOptions() => OpenMain();
 
-    void QuitGame()
+    private void QuitGame()
     {
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
@@ -91,46 +71,42 @@ public class MainMenuUIManager : MonoBehaviour
 #endif
     }
 
-    void SelectFirst(GameObject go)
+    private void SetActivePanel(GameObject panel)
+    {
+        mainMenuPanel.SetActive(panel == mainMenuPanel);
+        saveSlotsPanel.SetActive(panel == saveSlotsPanel);
+        optionsPanel.SetActive(panel == optionsPanel);
+        SelectFirst(panel == mainMenuPanel ? mainFirstSelected : panel == saveSlotsPanel ? slotsFirstSelected : optionsFirstSelected);
+    }
+
+    private void SelectFirst(GameObject go)
     {
         if (!go) return;
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(go);
     }
-    public void BackFromSlots()
+
+    private void RefreshContinueButton()
     {
-        // sulje Slots, avaa Main
-        saveSlotsPanel.SetActive(false);
-        mainMenuPanel.SetActive(true);
-        optionsPanel.SetActive(false);
+        if (!continueButton || SaveManager.Instance == null) return;
 
-        // aseta ohjainfokus takaisin Start Gameen (tai mihin haluat)
-        SelectFirst(mainFirstSelected);
-    }
-
-
-    void RefreshContinueButton()
-    {
-        if (!continueBtn || SaveManager.Instance == null) return;
-
-        // etsi uusin validi
         int latest = -1;
         long latestTicks = long.MinValue;
         for (int i = 0; i < SaveManager.Instance.slotCount; i++)
         {
-            var sum = SaveManager.Instance.GetSummary(i);
-            if (sum.valid && sum.savedAtUtc.Ticks > latestTicks)
+            var summary = SaveManager.Instance.GetSummary(i);
+            if (summary.valid && summary.savedAtUtc.Ticks > latestTicks)
             {
-                latest = i; latestTicks = sum.savedAtUtc.Ticks;
+                latest = i;
+                latestTicks = summary.savedAtUtc.Ticks;
             }
         }
-        continueBtn.interactable = latest >= 0;
-        continueBtn.gameObject.SetActive(true); // jos et halua näyttää lainkaan, kun ei löydy, piilota tässä
-        continueBtn.GetComponentInChildren<TMP_Text>().text =
-            latest >= 0 ? "Continue" : "Continue (no save)";
+
+        continueButton.interactable = latest >= 0;
+        continueButton.GetComponentInChildren<TMP_Text>().text = latest >= 0 ? "Continue" : "Continue (no save)";
     }
 
-    void ContinueLatest()
+    private void ContinueLatest()
     {
         if (!SaveManager.Instance) return;
 
@@ -138,15 +114,16 @@ public class MainMenuUIManager : MonoBehaviour
         long latestTicks = long.MinValue;
         for (int i = 0; i < SaveManager.Instance.slotCount; i++)
         {
-            var sum = SaveManager.Instance.GetSummary(i);
-            if (sum.valid && sum.savedAtUtc.Ticks > latestTicks)
+            var summary = SaveManager.Instance.GetSummary(i);
+            if (summary.valid && summary.savedAtUtc.Ticks > latestTicks)
             {
-                latest = i; latestTicks = sum.savedAtUtc.Ticks;
+                latest = i;
+                latestTicks = summary.savedAtUtc.Ticks;
             }
         }
+
         if (latest >= 0)
         {
-            // Ensure saving is disabled while loading the game
             SaveManager.Instance.SavesDisabled = true;
             GameManager.Instance.LoadGame(latest);
         }

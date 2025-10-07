@@ -34,11 +34,7 @@ public class SaveManager : MonoBehaviour
 
         //Tallenna pelaajan tila (positio, hp yms)
         PlayerSave playerSave = FindFirstObjectByType<PlayerSave>();
-        if(playerSave != null)
-        {
-            playerSave.SaveState();
-        }
-
+       
         Debug.Log("Game saved at checkpoint: " + checkpoint.name);
     }
 
@@ -48,10 +44,10 @@ public class SaveManager : MonoBehaviour
         {
             //Palautetaan pelaajan tila
             PlayerSave playerSave = FindFirstObjectByType<PlayerSave>();
-            if(playerSave != null)
+            /*if(playerSave != null)
             {
                 playerSave.RestoreStateFromCheckpoint(lastCheckpoint);
-            }
+            }*/
 
             Debug.Log("Game loaded at checkpoint: " + lastCheckpoint.name);
         }
