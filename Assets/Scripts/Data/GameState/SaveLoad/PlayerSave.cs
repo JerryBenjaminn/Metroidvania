@@ -52,4 +52,19 @@ public class PlayerSave : MonoBehaviour, ISaveable
         if (ac) ac.SetUnlockedByNames(s.abilities);
         if (ap) ap.Set(s.abilityPower);
     }
+
+    public void SaveState()
+    {
+        //Tallenna pelaajan data
+        Debug.Log("Player state saved.");
+    }
+
+    public void RestoreStateFromCheckpoint(Checkpoint checkpoint)
+    {
+        //Palauta pelaajan positio checkpointille
+        transform.position = checkpoint.SpawnPoint.position;
+
+        //Palauta muu data jos tarvitsee
+        Debug.Log("Player state restored to checkpoint.");
+    }
 }

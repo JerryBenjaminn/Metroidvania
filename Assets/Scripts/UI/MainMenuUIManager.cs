@@ -146,7 +146,8 @@ public class MainMenuUIManager : MonoBehaviour
         }
         if (latest >= 0)
         {
-            SaveManager.Instance.SavesDisabled = true; // valikossa, älä kirjoita
+            // Ensure saving is disabled while loading the game
+            SaveManager.Instance.SavesDisabled = true;
             GameManager.Instance.LoadGame(latest);
         }
     }

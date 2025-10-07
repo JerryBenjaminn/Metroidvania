@@ -8,6 +8,7 @@ using System.Collections.Generic;
 public class SaveManager : MonoBehaviour
 {
     public static SaveManager Instance { get; private set; }
+    private Checkpoint lastCheckpoint;
     public int CurrentSlot { get; private set; } = -1;
     public bool HasActiveSlot => CurrentSlot >= 0;
     public bool IsLoading { get; private set; }
@@ -16,9 +17,48 @@ public class SaveManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance && Instance != this) { Destroy(gameObject); return; }
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
+        if(Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void SaveGame(Checkpoint checkpoint)
+    {
+        lastCheckpoint = checkpoint;
+
+        //Tallenna pelaajan tila (positio, hp yms)
+        PlayerSave playerSave = FindFirstObjectByType<PlayerSave>();
+        if(playerSave != null)
+        {
+            playerSave.SaveState();
+        }
+
+        Debug.Log("Game saved at checkpoint: " + checkpoint.name);
+    }
+
+    public void LoadGame()
+    {
+        if (lastCheckpoint != null)
+        {
+            //Palautetaan pelaajan tila
+            PlayerSave playerSave = FindFirstObjectByType<PlayerSave>();
+            if(playerSave != null)
+            {
+                playerSave.RestoreStateFromCheckpoint(lastCheckpoint);
+            }
+
+            Debug.Log("Game loaded at checkpoint: " + lastCheckpoint.name);
+        }
+        else
+        {
+            Debug.LogWarning("No checkpoint found to load from!");
+        }
     }
 
     string PathForSlot(int slot) =>
@@ -41,6 +81,14 @@ public class SaveManager : MonoBehaviour
         if (IsLoading) { Debug.Log("[Save] skipped: loading"); return; }
         if (SavesDisabled) { Debug.Log("[Save] skipped: disabled"); return; }
 
+        //Skip saving if the active scene is the Main Menu
+        if(SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            Debug.Log("[Save] skipped: Main Menu scene");
+            return;
+        }
+
+        Debug.Log("[SaveNow] Triggered");
         var data = Capture();
         var json = JsonUtility.ToJson(data, true);
         WriteJsonAtomic(CurrentSlot, json);
@@ -216,6 +264,7 @@ var ents = GameObject.FindObjectsOfType<SaveableEntity>(true);
         SavesDisabled = false;
     }
 
+
     IEnumerator CoLoadSceneAndPlace(string sceneName, Vector3 pos, bool writeInitialSave)
     {
         var op = UnityEngine.SceneManagement.SceneManager
@@ -225,8 +274,8 @@ var ents = GameObject.FindObjectsOfType<SaveableEntity>(true);
         var player = GameManager.Instance.Player;
         if (player) player.position = pos;
 
-        // anna yhden framen asettua ennen ensimmäistä saven ottoa
-        if (writeInitialSave)
+        // Ensure saving is skipped when entering the GameScene
+        if (writeInitialSave && sceneName != "GameScene")
         {
             yield return null;
             var data = Capture();
@@ -234,7 +283,7 @@ var ents = GameObject.FindObjectsOfType<SaveableEntity>(true);
             WriteJsonAtomic(CurrentSlot, json);
         }
 
-        // TÄRKEÄ: nyt ollaan gameplay-scenessä sallitaan tallennus
+        // Allow saving after the scene has been loaded
         IsLoading = false;
         SavesDisabled = false;
     }

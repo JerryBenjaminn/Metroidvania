@@ -19,10 +19,10 @@ public class PauseMenuUI : MonoBehaviour
     public void OnQuitToMenu()
     {
         // jos slot ei ole asetettu, ‰l‰ s‰ik‰yt‰ k‰ytt‰j‰‰ ñ ‰l‰ tallenna
-        if (SaveManager.Instance.HasActiveSlot)
-            GameManager.Instance.SaveGame();
-
-        Time.timeScale = 1f;
+        // if (SaveManager.Instance.HasActiveSlot)
+        //GameManager.Instance.SaveGame();
+        SaveManager.Instance.SavesDisabled = true;
+        //Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 
