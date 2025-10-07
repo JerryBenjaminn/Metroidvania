@@ -48,3 +48,5 @@ MonoBehaviour:
   swingWhiffSfx: {fileID: 11400000, guid: eb6aa32937dceb742872096f648a4191, type: 2}
   hitEnemySfx: {fileID: 11400000, guid: a1b0e80f65cf17e478ee6ae7732e5955, type: 2}
   playWhiffAtActivate: 0
+  apOnHit: 10
+  apOnKill: 15

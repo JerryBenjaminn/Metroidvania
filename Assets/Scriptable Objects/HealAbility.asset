@@ -16,7 +16,7 @@ MonoBehaviour:
   icon: {fileID: 0}
   cooldown: 0.2
   healAmount: 1
-  apCost: 33
+  apCost: 30
   castTime: 0.6
   lockMovement: 1
   startSfx: {fileID: 0}
