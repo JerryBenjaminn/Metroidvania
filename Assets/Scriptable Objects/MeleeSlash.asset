@@ -32,7 +32,7 @@ MonoBehaviour:
   knockbackUp: 10
   knockbackDown: 10
   enablePogo: 1
-  pogoUpVelocity: 1000
+  pogoUpVelocity: 10
   pogoMinAirSpeedY: -1
   selfRecoilFwd: 10
   selfRecoilUp: 10

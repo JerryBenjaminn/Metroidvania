@@ -2963,6 +2963,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Patroller
       objectReference: {fileID: 0}
+    - target: {fileID: 8328566880308283562, guid: 863b260332593ca4d8550a006b422cb4, type: 3}
+      propertyPath: m_Constraints
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

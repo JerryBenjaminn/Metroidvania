@@ -63,6 +63,7 @@ public class MeleeAttackAbility : Ability
     public int apOnHit = 5;
     public int apOnKill = 15;
 
+    private EnemyBase enemy;
     public override bool CanUse(IAbilityUser user) => true;
 
     public override IEnumerator Execute(IAbilityUser user)
@@ -211,7 +212,13 @@ public class MeleeAttackAbility : Ability
                     rb.AddForce(new Vector2(-facing * 0.5f, -selfRecoilUp), ForceMode2D.Impulse);
                     break;
                 case SlashDir.Down:
-                    rb.AddForce(new Vector2(/*-facing * selfRecoilDown*/0f, pogoUpVelocity), ForceMode2D.Impulse);
+
+                    //rb.AddForce(new Vector2(/*-facing * selfRecoilDown*/0f, pogoUpVelocity), ForceMode2D.Impulse);
+                    var v = rb.linearVelocity;
+                    v.y = Mathf.Max(v.y, pogoMinAirSpeedY);
+                    v.y = pogoUpVelocity;
+                    rb.linearVelocity = v;
+
                     if(motor != null)
                     {
                         motor.Lockmove(0.1f);
