@@ -60,6 +60,9 @@ public class MeleeAttackAbility : Ability
     public SoundEvent hitEnemySfx;
     public bool playWhiffAtActivate = true;
 
+    public int apOnHit = 5;
+    public int apOnKill = 15;
+
     public override bool CanUse(IAbilityUser user) => true;
 
     public override IEnumerator Execute(IAbilityUser user)
@@ -168,6 +171,17 @@ public class MeleeAttackAbility : Ability
                 {
                     AudioManager.Instance.Play(hitEnemySfx, comp.transform.position);
                     hitPlayed = true;
+                }
+
+                var attackerGo = (user as MonoBehaviour)?.gameObject;
+                if (!attackerGo) yield break;
+
+                var attackerAP = attackerGo.GetComponent<AbilityPower>();
+                 
+
+                if (attackerAP != null)
+                {
+                    attackerAP.Gain(apOnHit);                   
                 }
 
                 if (h.TryGetComponent<IDamageable>(out var dmg))

@@ -180,6 +180,17 @@
                 },
                 {
                     "name": "",
+                    "id": "5c67bde4-e183-4d4d-b64b-4cbe3555efb4",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Ability1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "6f5fa1f2-f18f-43ec-8e6a-50630a68d2c2",
                     "path": "<Gamepad>/rightShoulder",
                     "interactions": "",

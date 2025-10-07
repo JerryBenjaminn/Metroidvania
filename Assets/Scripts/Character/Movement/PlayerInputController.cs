@@ -31,7 +31,8 @@ public class PlayerInputController : MonoBehaviour
     }
 
     public void OnAbility1(InputAction.CallbackContext ctx) {
-        if (ctx.started) GetComponent<AbilityController>().TriggerAbility(0);
+        if (ctx.started) GetComponent<AbilityController>().TriggerAbility(2);
+        Debug.Log("Pressed F");
     }
 
     public void OnAbility2(InputAction.CallbackContext ctx) {
