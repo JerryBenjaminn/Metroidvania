@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4907781490183053165}
   - component: {fileID: 2130835848777201979}
   - component: {fileID: 3063019151869941754}
+  - component: {fileID: 8524963277434476852}
   m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
@@ -55,6 +56,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -76,6 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -112,6 +116,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8524963277434476852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173472817877513104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e94fefafb3cd27343acfd79b45d9b9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSwing: {fileID: 11400000, guid: eb6aa32937dceb742872096f648a4191, type: 2}
 --- !u!1 &3137884768444572793
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,7 +321,6 @@ MonoBehaviour:
   m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
-  m_Version: 2
   m_TaaSettings:
     m_Quality: 3
     m_FrameInfluence: 0.1
@@ -312,6 +328,7 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!114 &3320997857204505513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,6 +385,7 @@ GameObject:
   - component: {fileID: 204574961273075418}
   - component: {fileID: 6005029499918319219}
   - component: {fileID: 3826895703861286231}
+  - component: {fileID: 5337101890448124968}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -407,7 +425,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 4
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -629,7 +647,7 @@ MonoBehaviour:
   moveSpeed: 6
   accel: 60
   decel: 80
-  jumpForce: 15
+  jumpForce: 14
   maxAirJumps: 0
   groundMask:
     serializedVersion: 2
@@ -706,6 +724,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0700f7e5e69aa0045a202defe8165afd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHearts: 5
+  currentHearts: 5
   max: 100
   applyKnockback: 1
   knockbackScale: 0.5
@@ -744,7 +764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mode: 0
   respawnDelay: 1.2
-  respawnPoint: {fileID: 0}
+  respawnPoint: {fileID: 4825728396382825372}
   animator: {fileID: 3063019151869941754}
   dieTrigger: Die
   deadBool: Dead
@@ -770,7 +790,8 @@ MonoBehaviour:
   abilities:
   - {fileID: 11400000, guid: ca60075d401417e45b4d3d8aa510794c, type: 2}
   - {fileID: 11400000, guid: 644ebca2b46ce3f4b8c293d1f34c6d7f, type: 2}
-  unlocked: 0100
+  - {fileID: 11400000, guid: e4479c33c011101449dd73bdee41e57f, type: 2}
+  unlocked: 010000
 --- !u!114 &2050776202855113019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -822,3 +843,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0d596157b016042b5456f2017fd475, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5337101890448124968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9074775790662725853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b50c6d6b704b4648809078920a9c397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  max: 99
+  start: 0

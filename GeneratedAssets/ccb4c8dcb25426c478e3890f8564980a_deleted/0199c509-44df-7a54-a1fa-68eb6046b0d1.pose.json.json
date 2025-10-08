@@ -1,0 +1,11 @@
+{
+    "asset": "ccb4c8dcb25426c478e3890f8564980a",
+    "fileName": "0199c509-44df-7a54-a1fa-68eb6046b0d1.pose.json",
+    "prompt": "A short animation where arena doors close dramatically, followed by a boss character entering the scene with an intimidating pose to signal the start of a boss battle.",
+    "negativePrompt": "",
+    "model": "a9c27ca4-3ec9-43e8-96cd-ee891aba64c5",
+    "modelName": "Text to Motion",
+    "customSeed": 721415340,
+    "w3CTraceId": "f24a599a638e9ed934c536b7d753991d",
+    "isTrimmed": false
+}

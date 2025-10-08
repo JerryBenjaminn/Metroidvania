@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 
 public interface IState
 {
@@ -18,3 +18,4 @@ public class StateMachine
     public void Tick() => current?.Tick();
 }
 
+*/
