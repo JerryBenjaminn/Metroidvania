@@ -310,7 +310,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -324,7 +324,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -373,28 +373,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_0
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 452
-        width: 9
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 15723accf9ad44710800000000000000
-      internalID: 1676705341156566865
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_1
       rect:
         serializedVersion: 2
@@ -402,8 +380,8 @@ TextureImporter:
         y: 401
         width: 45
         height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.48158604, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -417,50 +395,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_2
-      rect:
-        serializedVersion: 2
-        x: 105
-        y: 457
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5271a35c6102f7b60800000000000000
-      internalID: 7745945166270830373
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_3
-      rect:
-        serializedVersion: 2
-        x: 241
-        y: 453
-        width: 9
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f008d440c0d416a30800000000000000
-      internalID: 4206728240947888143
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_4
       rect:
         serializedVersion: 2
@@ -468,8 +402,8 @@ TextureImporter:
         y: 401
         width: 49
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.44926795, y: 0.48705244}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -483,50 +417,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_5
-      rect:
-        serializedVersion: 2
-        x: 284
-        y: 453
-        width: 13
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5962d949624463430800000000000000
-      internalID: 3762269471207401109
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_6
-      rect:
-        serializedVersion: 2
-        x: 417
-        y: 454
-        width: 9
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 021dcb81e90cc92e0800000000000000
-      internalID: -2117605939518582496
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_7
       rect:
         serializedVersion: 2
@@ -534,8 +424,8 @@ TextureImporter:
         y: 402
         width: 60
         height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.38951722, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -549,28 +439,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_8
-      rect:
-        serializedVersion: 2
-        x: 592
-        y: 455
-        width: 10
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0c40d69216fa269c0800000000000000
-      internalID: -3935390292526693184
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_9
       rect:
         serializedVersion: 2
@@ -578,8 +446,8 @@ TextureImporter:
         y: 403
         width: 61
         height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.43207988, y: 0.48725164}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -593,28 +461,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_10
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 456
-        width: 10
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5a81247816fed0bd0800000000000000
-      internalID: -2662208602545973083
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_11
       rect:
         serializedVersion: 2
@@ -622,8 +468,8 @@ TextureImporter:
         y: 403
         width: 55
         height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.40960473, y: 0.47450373}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -637,28 +483,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_12
-      rect:
-        serializedVersion: 2
-        x: 944
-        y: 454
-        width: 10
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7ea9d47cba912dde0800000000000000
-      internalID: -1309956316037539097
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_13
       rect:
         serializedVersion: 2
@@ -666,8 +490,8 @@ TextureImporter:
         y: 403
         width: 81
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.29540113, y: 0.48705244}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -681,37 +505,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_14
-      rect:
-        serializedVersion: 2
-        x: 1120
-        y: 453
-        width: 10
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9359b0af931710aa0800000000000000
-      internalID: -6196547118462954183
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_15
       rect:
         serializedVersion: 2
         x: 1122
         y: 402
-        width: 60
+        width: 90
         height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.26982558, y: 0.46054175}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -725,37 +527,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_16
-      rect:
-        serializedVersion: 2
-        x: 1296
-        y: 451
-        width: 10
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d3f5cd6558a1932b0800000000000000
-      internalID: -5604419101295616195
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_17
       rect:
         serializedVersion: 2
         x: 1298
         y: 402
-        width: 60
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 94
+        height: 75
+      alignment: 9
+      pivot: {x: 0.26031363, y: 0.36850667}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -769,125 +549,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_18
-      rect:
-        serializedVersion: 2
-        x: 1345
-        y: 458
-        width: 24
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ddcc587c2d2b48ef0800000000000000
-      internalID: -106763872789738275
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_19
-      rect:
-        serializedVersion: 2
-        x: 1188
-        y: 417
-        width: 25
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4a3de781b2c0f0210800000000000000
-      internalID: 1301272196567454628
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_20
-      rect:
-        serializedVersion: 2
-        x: 1368
-        y: 416
-        width: 25
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 893b064f28c5e19d0800000000000000
-      internalID: -2801700200662387816
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_21
-      rect:
-        serializedVersion: 2
-        x: 122
-        y: 338
-        width: 23
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 97d64bd2b7486dfc0800000000000000
-      internalID: -3470440798259745415
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_22
-      rect:
-        serializedVersion: 2
-        x: 308
-        y: 345
-        width: 22
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 05901f1c4bdd75ce0800000000000000
-      internalID: -1416419789367080624
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_23
       rect:
         serializedVersion: 2
-        x: 418
-        y: 251
-        width: 63
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 417
+        y: 274
+        width: 108
+        height: 85
+      alignment: 9
+      pivot: {x: 0.21385843, y: 0.39934152}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -901,37 +571,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_24
-      rect:
-        serializedVersion: 2
-        x: 487
-        y: 347
-        width: 24
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3925eb29349b53440800000000000000
-      internalID: 4915038268220658323
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_25
       rect:
         serializedVersion: 2
-        x: 594
+        x: 593
         y: 275
-        width: 109
-        height: 84
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 110
+        height: 93
+      alignment: 9
+      pivot: {x: 0.22252974, y: 0.35641643}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -945,37 +593,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_26
-      rect:
-        serializedVersion: 2
-        x: 622
-        y: 343
-        width: 15
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8d1715a7a31dd7d80800000000000000
-      internalID: -8251208893182414376
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_27
       rect:
         serializedVersion: 2
-        x: 770
+        x: 769
         y: 275
-        width: 110
-        height: 85
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 111
+        height: 99
+      alignment: 9
+      pivot: {x: 0.20096952, y: 0.33043477}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -989,37 +615,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_28
-      rect:
-        serializedVersion: 2
-        x: 798
-        y: 356
-        width: 15
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f7915672bbb40e470800000000000000
-      internalID: 8421814570374732159
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_29
       rect:
         serializedVersion: 2
-        x: 946
+        x: 944
         y: 275
-        width: 111
-        height: 84
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 103
+        height: 101
+      alignment: 9
+      pivot: {x: 0.22960122, y: 0.31490514}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1033,103 +637,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_30
-      rect:
-        serializedVersion: 2
-        x: 976
-        y: 357
-        width: 12
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f4aa4bb7e0d5eeb70800000000000000
-      internalID: 8930177427908635215
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_31
-      rect:
-        serializedVersion: 2
-        x: 1153
-        y: 353
-        width: 11
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bad01aff58efd1eb0800000000000000
-      internalID: -4747358580705784405
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_32
-      rect:
-        serializedVersion: 2
-        x: 1329
-        y: 355
-        width: 10
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6e1b89b273f90dbc0800000000000000
-      internalID: -3760330629550919194
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_33
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 324
-        width: 9
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 66214013454a02990800000000000000
-      internalID: -7412744305145277850
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_34
       rect:
         serializedVersion: 2
         x: 66
-        y: 238
-        width: 60
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 273
+        width: 98
+        height: 83
+      alignment: 9
+      pivot: {x: 0.22748418, y: 0.37129378}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1143,37 +659,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_35
-      rect:
-        serializedVersion: 2
-        x: 241
-        y: 325
-        width: 9
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8f08350af793fb3d0800000000000000
-      internalID: -3188766790841564936
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_36
       rect:
         serializedVersion: 2
         x: 242
-        y: 247
-        width: 85
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 273
+        width: 106
+        height: 88
+      alignment: 9
+      pivot: {x: 0.21442975, y: 0.35729077}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1187,125 +681,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_37
-      rect:
-        serializedVersion: 2
-        x: 417
-        y: 326
-        width: 9
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c40e74c21947f6970800000000000000
-      internalID: 8750340767866150988
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_38
-      rect:
-        serializedVersion: 2
-        x: 592
-        y: 327
-        width: 10
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 20870fff04deae670800000000000000
-      internalID: 8568922104453429250
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_39
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 328
-        width: 10
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 38c07e9aadbd85940800000000000000
-      internalID: 5285215894919122051
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_40
-      rect:
-        serializedVersion: 2
-        x: 944
-        y: 326
-        width: 10
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cffd07901e336fcb0800000000000000
-      internalID: -4830616508689227780
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_41
-      rect:
-        serializedVersion: 2
-        x: 1120
-        y: 325
-        width: 10
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fc79499757c23e390800000000000000
-      internalID: -7790334047358249009
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_42
       rect:
         serializedVersion: 2
-        x: 1122
+        x: 1121
         y: 274
-        width: 60
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 61
+        height: 105
+      alignment: 9
+      pivot: {x: 0.36010945, y: 0.30378884}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1325,9 +709,9 @@ TextureImporter:
         x: 1296
         y: 274
         width: 62
-        height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 108
+      alignment: 9
+      pivot: {x: 0.3888333, y: 0.25967407}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1341,301 +725,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_44
-      rect:
-        serializedVersion: 2
-        x: 139
-        y: 285
-        width: 26
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b15d5c3900a3007c0800000000000000
-      internalID: -4107219086008265445
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_45
-      rect:
-        serializedVersion: 2
-        x: 329
-        y: 285
-        width: 20
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ff4c4bd7a4e649170800000000000000
-      internalID: 8184287689054668031
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_46
-      rect:
-        serializedVersion: 2
-        x: 501
-        y: 287
-        width: 25
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 71af21b3e55c814e0800000000000000
-      internalID: -2010640225112229353
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_47
-      rect:
-        serializedVersion: 2
-        x: 57
-        y: 196
-        width: 23
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3a47e49af33e4f510800000000000000
-      internalID: 1582139231676822691
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_48
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 216
-        width: 17
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9d550222ec24e2950800000000000000
-      internalID: 6426147171407517145
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_49
-      rect:
-        serializedVersion: 2
-        x: 241
-        y: 197
-        width: 9
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d412286922bae3cf0800000000000000
-      internalID: -270590762553302707
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_50
-      rect:
-        serializedVersion: 2
-        x: 395
-        y: 218
-        width: 20
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7ab32fe614261c250800000000000000
-      internalID: 5963155414789012391
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_51
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 198
-        width: 10
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f37b13edcf788e150800000000000000
-      internalID: 5902116831798343487
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_52
-      rect:
-        serializedVersion: 2
-        x: 568
-        y: 199
-        width: 34
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8abb4cba63cac2ee0800000000000000
-      internalID: -1284462442897425496
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_53
-      rect:
-        serializedVersion: 2
-        x: 741
-        y: 200
-        width: 37
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 88ce15c6becb22f40800000000000000
-      internalID: 5702327797525113992
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_54
-      rect:
-        serializedVersion: 2
-        x: 915
-        y: 198
-        width: 39
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: afb2e9644897067c0800000000000000
-      internalID: -4080127653370254342
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_55
-      rect:
-        serializedVersion: 2
-        x: 1120
-        y: 197
-        width: 10
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2564f5389895c42b0800000000000000
-      internalID: -5599001789578918318
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_56
-      rect:
-        serializedVersion: 2
-        x: 1296
-        y: 195
-        width: 10
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cc890c77e697e6820800000000000000
-      internalID: 2913399524317763788
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_57
       rect:
         serializedVersion: 2
-        x: 66
+        x: 57
         y: 145
-        width: 60
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 69
+        height: 78
+      alignment: 9
+      pivot: {x: 0.42811882, y: 0.37771744}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1652,12 +750,12 @@ TextureImporter:
       name: Lich_magenta_long_spin_with_ghosts_attack_58
       rect:
         serializedVersion: 2
-        x: 235
+        x: 225
         y: 145
-        width: 67
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 77
+        height: 84
+      alignment: 9
+      pivot: {x: 0.51486444, y: 0.37736782}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1674,12 +772,12 @@ TextureImporter:
       name: Lich_magenta_long_spin_with_ghosts_attack_59
       rect:
         serializedVersion: 2
-        x: 401
+        x: 396
         y: 146
-        width: 77
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 82
+        height: 80
+      alignment: 9
+      pivot: {x: 0.546527, y: 0.41415748}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1693,37 +791,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_60
-      rect:
-        serializedVersion: 2
-        x: 573
-        y: 162
-        width: 20
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ca740633a9893f190800000000000000
-      internalID: -7929826730814978132
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_61
       rect:
         serializedVersion: 2
-        x: 592
+        x: 569
         y: 147
-        width: 62
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 85
+        height: 78
+      alignment: 9
+      pivot: {x: 0.56146383, y: 0.42173904}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1737,37 +813,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_62
-      rect:
-        serializedVersion: 2
-        x: 745
-        y: 159
-        width: 20
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5cf7c3282f81b37b0800000000000000
-      internalID: -5243569911296655419
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_63
       rect:
         serializedVersion: 2
-        x: 767
+        x: 746
         y: 147
-        width: 63
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 84
+        height: 79
+      alignment: 9
+      pivot: {x: 0.55450296, y: 0.40824136}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1781,37 +835,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_64
-      rect:
-        serializedVersion: 2
-        x: 913
-        y: 159
-        width: 20
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0f11e366f16815a10800000000000000
-      internalID: 1896444387517141488
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_65
       rect:
         serializedVersion: 2
-        x: 935
+        x: 913
         y: 147
-        width: 71
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 93
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5984576, y: 0.43641302}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1825,37 +857,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_66
-      rect:
-        serializedVersion: 2
-        x: 1088
-        y: 161
-        width: 12
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 640929dca628d1b20800000000000000
-      internalID: 3106782713182588998
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_67
       rect:
         serializedVersion: 2
-        x: 1104
+        x: 1089
         y: 146
-        width: 78
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 93
+        height: 74
+      alignment: 9
+      pivot: {x: 0.5943551, y: 0.4697205}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1875,9 +885,9 @@ TextureImporter:
         x: 1263
         y: 146
         width: 89
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 75
+      alignment: 9
+      pivot: {x: 0.64146304, y: 0.40203512}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1894,12 +904,12 @@ TextureImporter:
       name: Lich_magenta_long_spin_with_ghosts_attack_69
       rect:
         serializedVersion: 2
-        x: 30
+        x: 66
         y: 17
-        width: 77
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 41
+        height: 74
+      alignment: 9
+      pivot: {x: 0.5465267, y: 0.41750845}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1913,37 +923,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_70
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 68
-        width: 9
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 07b434942350b0cd0800000000000000
-      internalID: -2590971447085937808
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_71
       rect:
         serializedVersion: 2
-        x: 205
+        x: 240
         y: 17
-        width: 82
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 49
+        height: 69
+      alignment: 9
+      pivot: {x: 0.50066453, y: 0.44807655}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1957,81 +945,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_72
-      rect:
-        serializedVersion: 2
-        x: 241
-        y: 69
-        width: 9
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 24ac547b3960360a0800000000000000
-      internalID: -6889655773441963454
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_73
-      rect:
-        serializedVersion: 2
-        x: 267
-        y: 74
-        width: 22
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 20739d862d27f3890800000000000000
-      internalID: -7476130608383969534
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_74
-      rect:
-        serializedVersion: 2
-        x: 417
-        y: 70
-        width: 9
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f2b26794469d0ca60800000000000000
-      internalID: 7692387188301245231
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_75
       rect:
         serializedVersion: 2
         x: 418
         y: 18
-        width: 50
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 53
+        height: 69
+      alignment: 9
+      pivot: {x: 0.4389563, y: 0.5000001}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2045,59 +967,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_76
-      rect:
-        serializedVersion: 2
-        x: 454
-        y: 74
-        width: 18
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8f0e5e5d58138baf0800000000000000
-      internalID: -380499717623783176
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_77
-      rect:
-        serializedVersion: 2
-        x: 592
-        y: 71
-        width: 10
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7a67824866f447bd0800000000000000
-      internalID: -2633392580382394713
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_78
       rect:
         serializedVersion: 2
-        x: 594
+        x: 593
         y: 19
-        width: 50
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 70
+      alignment: 9
+      pivot: {x: 0.4465869, y: 0.49413064}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2111,59 +989,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_79
-      rect:
-        serializedVersion: 2
-        x: 641
-        y: 73
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4f8d425917685f200800000000000000
-      internalID: 213224379761613044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_80
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 72
-        width: 10
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fd703fad2387d10c0800000000000000
-      internalID: -4603391084285720609
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_81
       rect:
         serializedVersion: 2
-        x: 770
+        x: 769
         y: 19
-        width: 50
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 71
+      alignment: 9
+      pivot: {x: 0.39290184, y: 0.44626424}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2177,59 +1011,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_82
-      rect:
-        serializedVersion: 2
-        x: 817
-        y: 74
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 46cd9a28b444271a0800000000000000
-      internalID: -6813308195152733084
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_83
-      rect:
-        serializedVersion: 2
-        x: 944
-        y: 70
-        width: 10
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2a106044f038adfd0800000000000000
-      internalID: -2316394956739706462
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_84
       rect:
         serializedVersion: 2
-        x: 946
+        x: 945
         y: 19
-        width: 50
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 72
+      alignment: 9
+      pivot: {x: 0.39372036, y: 0.42978913}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2243,59 +1033,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_85
-      rect:
-        serializedVersion: 2
-        x: 993
-        y: 73
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fbad99bf1b9bc34e0800000000000000
-      internalID: -2000519960377828673
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_86
-      rect:
-        serializedVersion: 2
-        x: 1120
-        y: 69
-        width: 10
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 87bdca29999941670800000000000000
-      internalID: 8508594480879557496
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_87
       rect:
         serializedVersion: 2
         x: 1122
         y: 18
-        width: 45
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 50
+        height: 75
+      alignment: 9
+      pivot: {x: 0.43132567, y: 0.40334758}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2309,59 +1055,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_88
-      rect:
-        serializedVersion: 2
-        x: 1163
-        y: 75
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1f09d21f1a807c710800000000000000
-      internalID: 1713347674866815217
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_89
-      rect:
-        serializedVersion: 2
-        x: 1296
-        y: 67
-        width: 10
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0da20c4bcaaa600c0800000000000000
-      internalID: -4609809509823534384
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_long_spin_with_ghosts_attack_90
       rect:
         serializedVersion: 2
-        x: 1298
+        x: 1297
         y: 18
-        width: 45
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 50
+        height: 75
+      alignment: 9
+      pivot: {x: 0.45421875, y: 0.3982606}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2374,33 +1076,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_long_spin_with_ghosts_attack_91
-      rect:
-        serializedVersion: 2
-        x: 1338
-        y: 74
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d98b73bccd40d5740800000000000000
-      internalID: 5142271695875717277
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: af845d316309c4b48bff3c11c0ab8b4e
     internalID: 0
     vertices: []
     indices: 

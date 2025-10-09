@@ -220,7 +220,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -234,7 +234,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -283,37 +283,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lich_magenta_third_attack_0
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 196
-        width: 9
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9bcf1ba2e05e599d0800000000000000
-      internalID: -2768054546940691271
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_third_attack_1
       rect:
         serializedVersion: 2
         x: 66
         y: 145
-        width: 45
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 47
+        height: 74
+      alignment: 9
+      pivot: {x: 0.44743818, y: 0.41320142}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -327,59 +305,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_third_attack_2
-      rect:
-        serializedVersion: 2
-        x: 105
-        y: 201
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0635dca64304772e0800000000000000
-      internalID: -2128161705034951840
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_3
-      rect:
-        serializedVersion: 2
-        x: 241
-        y: 197
-        width: 9
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: abeb29d3c1f32e680800000000000000
-      internalID: -8727343737365938502
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_third_attack_4
       rect:
         serializedVersion: 2
         x: 242
         y: 145
-        width: 45
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 50
+        height: 71
+      alignment: 9
+      pivot: {x: 0.41655394, y: 0.4366079}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -393,59 +327,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_third_attack_5
-      rect:
-        serializedVersion: 2
-        x: 281
-        y: 206
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 74a5a09bfdd4028d0800000000000000
-      internalID: -2873210938984867257
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_6
-      rect:
-        serializedVersion: 2
-        x: 417
-        y: 198
-        width: 9
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 63564cca7e88e2fd0800000000000000
-      internalID: -2364802225705556682
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_third_attack_7
       rect:
         serializedVersion: 2
         x: 418
         y: 146
-        width: 49
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 57
+        height: 70
+      alignment: 9
+      pivot: {x: 0.3873141, y: 0.46470794}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -459,59 +349,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_third_attack_8
-      rect:
-        serializedVersion: 2
-        x: 465
-        y: 204
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8d929026da894cd80800000000000000
-      internalID: -8231286348484892200
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_9
-      rect:
-        serializedVersion: 2
-        x: 592
-        y: 199
-        width: 10
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 58cfa0ddfffbc7010800000000000000
-      internalID: 1188035507365018757
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_third_attack_10
       rect:
         serializedVersion: 2
-        x: 594
+        x: 593
         y: 147
-        width: 61
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 71
+        height: 71
+      alignment: 9
+      pivot: {x: 0.319409, y: 0.45824593}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -525,37 +371,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_third_attack_11
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 200
-        width: 10
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eed224ab32bbc0c70800000000000000
-      internalID: 8938725122546740718
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_third_attack_12
       rect:
         serializedVersion: 2
-        x: 770
+        x: 769
         y: 147
         width: 77
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 72
+      alignment: 9
+      pivot: {x: 0.29466665, y: 0.44510162}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -569,37 +393,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_third_attack_13
-      rect:
-        serializedVersion: 2
-        x: 944
-        y: 198
-        width: 10
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7331a9ffc55022bf0800000000000000
-      internalID: -350711923998059721
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_third_attack_14
       rect:
         serializedVersion: 2
-        x: 946
+        x: 945
         y: 147
-        width: 60
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 72
+        height: 72
+      alignment: 9
+      pivot: {x: 0.378502, y: 0.43137658}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -613,37 +415,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_third_attack_15
-      rect:
-        serializedVersion: 2
-        x: 1120
-        y: 197
-        width: 10
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bb7b5db39c4f0e510800000000000000
-      internalID: 1576529014709139387
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_third_attack_16
       rect:
         serializedVersion: 2
-        x: 1122
+        x: 1121
         y: 146
-        width: 77
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 83
+        height: 74
+      alignment: 9
+      pivot: {x: 0.27379194, y: 0.3998479}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -657,37 +437,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_third_attack_17
-      rect:
-        serializedVersion: 2
-        x: 1296
-        y: 195
-        width: 10
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0c2434b808914eea0800000000000000
-      internalID: -5844518376537111872
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_third_attack_18
       rect:
         serializedVersion: 2
-        x: 1298
+        x: 1297
         y: 146
-        width: 77
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 84
+        height: 75
+      alignment: 9
+      pivot: {x: 0.2678399, y: 0.38142008}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -701,169 +459,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_third_attack_19
-      rect:
-        serializedVersion: 2
-        x: 654
-        y: 187
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b63ce5a47caf0f200800000000000000
-      internalID: 211944916339573611
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_20
-      rect:
-        serializedVersion: 2
-        x: 1007
-        y: 180
-        width: 11
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c67d22697f15de420800000000000000
-      internalID: 2660873078663468908
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_21
-      rect:
-        serializedVersion: 2
-        x: 1179
-        y: 166
-        width: 25
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 58d91e9159631f9c0800000000000000
-      internalID: -3895272188686525051
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_22
-      rect:
-        serializedVersion: 2
-        x: 1371
-        y: 186
-        width: 8
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cda12acd137afc4f0800000000000000
-      internalID: -806241975679182116
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_23
-      rect:
-        serializedVersion: 2
-        x: 1369
-        y: 170
-        width: 8
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 83384a1ac1ecc9a80800000000000000
-      internalID: -8458659377742314696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_24
-      rect:
-        serializedVersion: 2
-        x: 1375
-        y: 176
-        width: 7
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9f96839958bd899b0800000000000000
-      internalID: -5073063613385119239
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_25
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 68
-        width: 9
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1df7cb6e118659030800000000000000
-      internalID: 3500818711445274577
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_third_attack_26
       rect:
         serializedVersion: 2
         x: 66
         y: 17
-        width: 89
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 88
+        height: 73
+      alignment: 9
+      pivot: {x: 0.23611528, y: 0.40524438}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -877,37 +481,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_third_attack_27
-      rect:
-        serializedVersion: 2
-        x: 241
-        y: 69
-        width: 9
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 25f09b2fafcd284d0800000000000000
-      internalID: -3133699420324294830
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_third_attack_28
       rect:
         serializedVersion: 2
         x: 242
         y: 17
-        width: 60
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 80
+        height: 69
+      alignment: 9
+      pivot: {x: 0.26531067, y: 0.43555433}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -921,37 +503,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_third_attack_29
-      rect:
-        serializedVersion: 2
-        x: 417
-        y: 70
-        width: 9
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 27d3e8460616d1260800000000000000
-      internalID: 7069914056673344882
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_third_attack_30
       rect:
         serializedVersion: 2
         x: 418
         y: 18
-        width: 61
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 91
+        height: 69
+      alignment: 9
+      pivot: {x: 0.24018508, y: 0.46287447}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -965,125 +525,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_third_attack_31
-      rect:
-        serializedVersion: 2
-        x: 478
-        y: 77
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fb004dadeebda0580800000000000000
-      internalID: -8860027497978003265
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_32
-      rect:
-        serializedVersion: 2
-        x: 484
-        y: 79
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 22c3f47008c270820800000000000000
-      internalID: 2884323014744161314
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_33
-      rect:
-        serializedVersion: 2
-        x: 488
-        y: 75
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6e84b0f88166e8aa0800000000000000
-      internalID: -6156871384903759642
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_34
-      rect:
-        serializedVersion: 2
-        x: 493
-        y: 75
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a4b77612ecb9c4c20800000000000000
-      internalID: 3192097545524837194
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_35
-      rect:
-        serializedVersion: 2
-        x: 592
-        y: 71
-        width: 10
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bc54604a5f1573d60800000000000000
-      internalID: 7869848989313942987
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_third_attack_36
       rect:
         serializedVersion: 2
-        x: 594
+        x: 593
         y: 19
-        width: 60
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 73
+        height: 70
+      alignment: 9
+      pivot: {x: 0.30372015, y: 0.45764983}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1097,37 +547,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_third_attack_37
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 72
-        width: 10
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 284b27112a429e500800000000000000
-      internalID: 425911918259254402
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_third_attack_38
       rect:
         serializedVersion: 2
-        x: 770
+        x: 769
         y: 19
-        width: 60
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 73
+        height: 72
+      alignment: 9
+      pivot: {x: 0.31048834, y: 0.44510195}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1141,37 +569,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_third_attack_39
-      rect:
-        serializedVersion: 2
-        x: 944
-        y: 70
-        width: 10
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3f9ba6e52caeeb880800000000000000
-      internalID: -8593172918447719949
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_third_attack_40
       rect:
         serializedVersion: 2
-        x: 946
+        x: 945
         y: 19
-        width: 71
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 93
+        height: 72
+      alignment: 9
+      pivot: {x: 0.23436384, y: 0.41765293}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1185,125 +591,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_third_attack_41
-      rect:
-        serializedVersion: 2
-        x: 1000
-        y: 77
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 66dce6144efb4e5f0800000000000000
-      internalID: -728246252655948442
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_42
-      rect:
-        serializedVersion: 2
-        x: 1005
-        y: 77
-        width: 8
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 47fb511abbbf0b5c0800000000000000
-      internalID: -4201581669056659596
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_43
-      rect:
-        serializedVersion: 2
-        x: 1011
-        y: 81
-        width: 8
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bcecdd04b6d9534f0800000000000000
-      internalID: -849599870714130741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_44
-      rect:
-        serializedVersion: 2
-        x: 1018
-        y: 76
-        width: 10
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a244f79daafd2a6b0800000000000000
-      internalID: -5286417087693110230
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_45
-      rect:
-        serializedVersion: 2
-        x: 1120
-        y: 69
-        width: 10
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c681364ce8f94baa0800000000000000
-      internalID: -6146112155924883348
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_third_attack_46
       rect:
         serializedVersion: 2
         x: 1122
         y: 18
-        width: 47
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 55
+        height: 74
+      alignment: 9
+      pivot: {x: 0.3921986, y: 0.41320178}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1317,235 +613,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_third_attack_47
-      rect:
-        serializedVersion: 2
-        x: 1167
-        y: 70
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9e35c5b2792abdb80800000000000000
-      internalID: -8368916712386702359
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_48
-      rect:
-        serializedVersion: 2
-        x: 1296
-        y: 67
-        width: 10
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a5685f604c3f9ace0800000000000000
-      internalID: -1393314586438564262
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_49
-      rect:
-        serializedVersion: 2
-        x: 1337
-        y: 31
-        width: 53
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 22de873e82151d9e0800000000000000
-      internalID: -1598407156682920670
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_50
-      rect:
-        serializedVersion: 2
-        x: 294
-        y: 42
-        width: 29
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ba5dacb8d75af5230800000000000000
-      internalID: 3629801783318730155
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_51
-      rect:
-        serializedVersion: 2
-        x: 477
-        y: 50
-        width: 15
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 057194474d0ff7f30800000000000000
-      internalID: 4575640541706393424
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_52
-      rect:
-        serializedVersion: 2
-        x: 497
-        y: 53
-        width: 13
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 707162014e39a8440800000000000000
-      internalID: 4938922549097928455
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_53
-      rect:
-        serializedVersion: 2
-        x: 654
-        y: 52
-        width: 13
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6dd3e2cb54cf7afd0800000000000000
-      internalID: -2330616905700852266
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_54
-      rect:
-        serializedVersion: 2
-        x: 830
-        y: 52
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cfbdcafe892675cd0800000000000000
-      internalID: -2569476653395944452
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_55
-      rect:
-        serializedVersion: 2
-        x: 1016
-        y: 34
-        width: 22
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f557fc2a2fe4e62c0800000000000000
-      internalID: -4436521778892802721
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_56
-      rect:
-        serializedVersion: 2
-        x: 1025
-        y: 64
-        width: 12
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ee640f00d1962acb0800000000000000
-      internalID: -4854201875061258514
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_third_attack_57
       rect:
         serializedVersion: 2
-        x: 1298
+        x: 1297
         y: 18
-        width: 50
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 93
+        height: 76
+      alignment: 9
+      pivot: {x: 0.23967521, y: 0.38298035}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1558,99 +634,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_58
-      rect:
-        serializedVersion: 2
-        x: 501
-        y: 46
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1b03c42632f53b6b0800000000000000
-      internalID: -5281773332397805391
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_59
-      rect:
-        serializedVersion: 2
-        x: 1007
-        y: 52
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7f11705b87c86c2f0800000000000000
-      internalID: -952919821081177609
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_60
-      rect:
-        serializedVersion: 2
-        x: 477
-        y: 33
-        width: 18
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3049244bedd9ad970800000000000000
-      internalID: 8780504003344765955
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_third_attack_61
-      rect:
-        serializedVersion: 2
-        x: 494
-        y: 38
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c612fcb9873312630800000000000000
-      internalID: 3900455345382695276
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b88c5f151856b5149873e20300c6a6a6
     internalID: 0
     vertices: []
     indices: 
