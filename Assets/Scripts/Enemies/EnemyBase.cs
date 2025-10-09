@@ -7,7 +7,7 @@ public abstract class EnemyBase : ActorBase
     protected Health health;
 
     [Header("Death")]
-    [SerializeField] Animator animator;
+    public Animator animator;
     [SerializeField] string dieTrigger = "Die";
     [SerializeField] float destroyDelay = 0.8f;       // jos ei käytä animaatioeventtiä
     [SerializeField] Collider2D[] collidersToDisable; // jos tyhjä  haetaan automaattisesti
