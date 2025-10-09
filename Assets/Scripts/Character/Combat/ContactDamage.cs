@@ -24,8 +24,10 @@ public class ContactDamage : MonoBehaviour
             {
                 var dir = (other.transform.position - (Vector3)fromPos).normalized;
                 dmg.ApplyDamage(damage, dir * knockback);
+                Debug.Log($"ContactDamage: Attempting to damage {other.name}");
             }
         }
+
     }
 
     void OnCollisionEnter2D(Collision2D c) => TryHit(c.collider.gameObject, transform.position);

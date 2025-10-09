@@ -1,6 +1,3 @@
-// 10/9/2025 AI-Tag
-// This was created with the help of Assistant, a Unity Artificial Intelligence product.
-
 using UnityEngine;
 using System.Collections;
 
@@ -21,6 +18,7 @@ public class LichMovement : MonoBehaviour
     public GameObject homingProjectilePrefab; // Prefab for the homing projectile
     public Transform attackSpawnPoint; // Spawn point for attacks
     public float homingProjectileLifetime = 3f; // Lifetime of homing projectiles
+    public int[] groundWaypointIndices; // Indices of ground waypoints
 
     private int currentWaypointIndex = 0;
     private bool isWaiting = false;
@@ -86,7 +84,10 @@ public class LichMovement : MonoBehaviour
         switch (attackIndex)
         {
             case 1:
-                PerformLightningAttack();
+                if (IsOnGroundWaypoint())
+                {
+                    PerformLightningAttack();
+                }
                 break;
             case 2:
                 PerformSummonPatroller();
@@ -102,11 +103,25 @@ public class LichMovement : MonoBehaviour
         isAttacking = false;
     }
 
+    // 10/9/2025 AI-Tag
+    // This was created with the help of Assistant, a Unity Artificial Intelligence product.
+
     void PerformLightningAttack()
     {
         if (lightningPrefab && attackSpawnPoint)
         {
-            Instantiate(lightningPrefab, attackSpawnPoint.position, Quaternion.identity);
+            // Determine the direction the Lich is facing
+            float facingDirection = sprite.flipX ? -1f : 1f;
+
+            // Set the rotation of the lightning based on the facing direction
+            Quaternion rotation = Quaternion.Euler(0, facingDirection < 0 ? 180f : 0, 0);
+
+            // Instantiate the lightning prefab with the correct rotation
+            GameObject lightning = Instantiate(lightningPrefab, attackSpawnPoint.position, rotation);
+
+            // Destroy the lightning object after a short delay
+            Destroy(lightning, 0.33f);
+
             Debug.Log("Lich performed Lightning Attack!");
         }
     }
@@ -129,18 +144,36 @@ public class LichMovement : MonoBehaviour
         if (homing)
         {
             homing.SetLifetime(homingProjectileLifetime);
-            homing.Init(player); // tämä kääntää ja antaa alkunopeuden suoraan pelaajaan
+            homing.Init(player);
         }
     }
 
-
-
     void FlipTowardsPlayer()
     {
-        if (!player || !sprite) return;
+        if (!player || !sprite || !attackSpawnPoint) return;
 
+        // Determine the direction to the player
         float dx = player.position.x - transform.position.x;
 
-        sprite.flipX = dx > 0f;
+        // Flip the sprite
+        bool shouldFlip = dx > 0f;
+        sprite.flipX = shouldFlip;
+
+        // Adjust the attackSpawnPoint's local position
+        Vector3 localPosition = attackSpawnPoint.localPosition;
+        localPosition.x = Mathf.Abs(localPosition.x) * (sprite.flipX ? -1 : 1);
+        attackSpawnPoint.localPosition = localPosition;
+    }
+
+    bool IsOnGroundWaypoint()
+    {
+        foreach (int index in groundWaypointIndices)
+        {
+            if (currentWaypointIndex == index)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }

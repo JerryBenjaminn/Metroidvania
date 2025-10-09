@@ -1,3 +1,6 @@
+// 10/9/2025 AI-Tag
+// This was created with the help of Assistant, a Unity Artificial Intelligence product.
+
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
@@ -6,7 +9,7 @@ public class HomingProjectile : MonoBehaviour
     public enum ForwardAxis { Up, Right }
 
     [Header("Setup")]
-    public ForwardAxis forwardAxis = ForwardAxis.Up; // Mihin suuntaan sprite on piirretty
+    public ForwardAxis forwardAxis = ForwardAxis.Up; // Direction the sprite is drawn
     public float speed = 6f;
     public float turnRateDegPerSec = 360f;
     public float homingDuration = 0.6f;
@@ -25,26 +28,25 @@ public class HomingProjectile : MonoBehaviour
         lifeTimer = maxLifetime;
     }
 
-    // Kutsutaan heti spawnin j�lkeen
     public void Init(Transform t)
     {
         target = t;
 
-        // Suunta pelaajaan spawnihetkell�
+        // Initial direction toward the player
         Vector2 toTarget = (target ? (Vector2)(target.position - transform.position) : Vector2.up).normalized;
 
-        // Aseta alkurotatio sen mukaan mihin suuntaan sprite "osoittaa"
+        // Set initial rotation based on sprite's forward axis
         float angleDeg = Mathf.Atan2(toTarget.y, toTarget.x) * Mathf.Rad2Deg;
-        if (forwardAxis == ForwardAxis.Up) angleDeg -= 90f; // koska up-etu
+        if (forwardAxis == ForwardAxis.Up) angleDeg -= 90f;
         rb.rotation = angleDeg;
 
-        // L�hde heti suoraan kohti pelaajaa
+        // Start moving toward the player
         rb.linearVelocity = toTarget * speed;
     }
 
     void FixedUpdate()
     {
-        // Elinik�
+        // Lifetime management
         lifeTimer -= Time.fixedDeltaTime;
         if (lifeTimer <= 0f)
         {
@@ -54,20 +56,16 @@ public class HomingProjectile : MonoBehaviour
 
         if (target == null)
         {
-            // Ei kohdetta, jatka suoraan
+            // Continue straight if no target
             rb.linearVelocity = GetForward() * speed;
             return;
         }
 
-        // Tuhoudu jos ollaan tarpeeksi l�hell�
+        // Destroy if close enough to the target
         Vector2 toTarget = (Vector2)(target.position - transform.position);
-        if (toTarget.magnitude <= stopDistance)
-        {
-            Destroy(gameObject);
-            return;
-        }
 
-        // HOMING
+
+        // Homing logic
         if (homingTimer > 0f)
         {
             homingTimer -= Time.fixedDeltaTime;
@@ -75,23 +73,22 @@ public class HomingProjectile : MonoBehaviour
             Vector2 currentForward = GetForward();
             Vector2 desiredForward = toTarget.normalized;
 
-            // K��nn� pehme�sti kohti kohdetta
+            // Smoothly rotate toward the target
             float maxRad = turnRateDegPerSec * Mathf.Deg2Rad * Time.fixedDeltaTime;
             Vector2 newForward = Vector3.RotateTowards(currentForward, desiredForward, maxRad, 0f);
 
-            // P�ivit� rotatio newForwardin mukaan
+            // Update rotation based on new forward direction
             float newAngle = Mathf.Atan2(newForward.y, newForward.x) * Mathf.Rad2Deg;
             if (forwardAxis == ForwardAxis.Up) newAngle -= 90f;
             rb.MoveRotation(newAngle);
         }
 
-        // Kulje aina eteenp�in nykyisen etusuunnan mukaan
+        // Move forward in the current direction
         rb.linearVelocity = GetForward() * speed;
     }
 
     private Vector2 GetForward()
     {
-        // Huom: transform.up/transform.right p�ivittyy rb.rotationista
         return forwardAxis == ForwardAxis.Up ? (Vector2)transform.up : (Vector2)transform.right;
     }
 
@@ -105,7 +102,10 @@ public class HomingProjectile : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // damage tms.
+            // Let ContactDamage handle the damage application
+            Debug.Log($"HomingProjectile collided with: {other.name}");
+
+            // Destroy the projectile after collision
             Destroy(gameObject);
         }
     }
