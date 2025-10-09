@@ -3,12 +3,15 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public class HomingProjectile : MonoBehaviour
 {
-    [Header("Homing Settings")]
-    public float speed = 6f;                 // liike-etenemisnopeus
-    public float turnRateDegPerSec = 360f;   // maksimikääntönopeus asteina/s
-    public float stopDistance = 0.5f;        // tuhoa kun päästään tarpeeksi lähelle
-    public float homingDuration = 0.6f;      // kuinka kauan haetaan kohdetta
-    public float maxLifetime = 3f;           // kovakatto eliniälle
+    public enum ForwardAxis { Up, Right }
+
+    [Header("Setup")]
+    public ForwardAxis forwardAxis = ForwardAxis.Up; // Mihin suuntaan sprite on piirretty
+    public float speed = 6f;
+    public float turnRateDegPerSec = 360f;
+    public float homingDuration = 0.6f;
+    public float maxLifetime = 3f;
+    public float stopDistance = 0.5f;
 
     private Transform target;
     private Rigidbody2D rb;
@@ -22,9 +25,26 @@ public class HomingProjectile : MonoBehaviour
         lifeTimer = maxLifetime;
     }
 
+    // Kutsutaan heti spawnin jï¿½lkeen
+    public void Init(Transform t)
+    {
+        target = t;
+
+        // Suunta pelaajaan spawnihetkellï¿½
+        Vector2 toTarget = (target ? (Vector2)(target.position - transform.position) : Vector2.up).normalized;
+
+        // Aseta alkurotatio sen mukaan mihin suuntaan sprite "osoittaa"
+        float angleDeg = Mathf.Atan2(toTarget.y, toTarget.x) * Mathf.Rad2Deg;
+        if (forwardAxis == ForwardAxis.Up) angleDeg -= 90f; // koska up-etu
+        rb.rotation = angleDeg;
+
+        // Lï¿½hde heti suoraan kohti pelaajaa
+        rb.linearVelocity = toTarget * speed;
+    }
+
     void FixedUpdate()
     {
-        // Elinikä aina tikittää
+        // Elinikï¿½
         lifeTimer -= Time.fixedDeltaTime;
         if (lifeTimer <= 0f)
         {
@@ -32,44 +52,52 @@ public class HomingProjectile : MonoBehaviour
             return;
         }
 
-        // Jos ei targettia, vedä suoraan eteenpäin
         if (target == null)
         {
-            rb.linearVelocity = transform.up * speed;
+            // Ei kohdetta, jatka suoraan
+            rb.linearVelocity = GetForward() * speed;
             return;
         }
 
-        // Jos tarpeeksi lähellä, tuhoa
+        // Tuhoudu jos ollaan tarpeeksi lï¿½hellï¿½
         Vector2 toTarget = (Vector2)(target.position - transform.position);
-        float dist = toTarget.magnitude;
-        if (dist <= stopDistance)
+        if (toTarget.magnitude <= stopDistance)
         {
             Destroy(gameObject);
             return;
         }
 
-        // HOMING-vaihe
+        // HOMING
         if (homingTimer > 0f)
         {
             homingTimer -= Time.fixedDeltaTime;
 
-            // haluttu kulma kohti targettia
-            float desiredDeg = Mathf.Atan2(toTarget.y, toTarget.x) * Mathf.Rad2Deg - 90f; // -90 jos ohjus "osoittaa ylös"
-            float currentDeg = rb.rotation;
-            float newDeg = Mathf.MoveTowardsAngle(currentDeg, desiredDeg, turnRateDegPerSec * Time.fixedDeltaTime);
-            rb.rotation = newDeg;
+            Vector2 currentForward = GetForward();
+            Vector2 desiredForward = toTarget.normalized;
+
+            // Kï¿½ï¿½nnï¿½ pehmeï¿½sti kohti kohdetta
+            float maxRad = turnRateDegPerSec * Mathf.Deg2Rad * Time.fixedDeltaTime;
+            Vector2 newForward = Vector3.RotateTowards(currentForward, desiredForward, maxRad, 0f);
+
+            // Pï¿½ivitï¿½ rotatio newForwardin mukaan
+            float newAngle = Mathf.Atan2(newForward.y, newForward.x) * Mathf.Rad2Deg;
+            if (forwardAxis == ForwardAxis.Up) newAngle -= 90f;
+            rb.MoveRotation(newAngle);
         }
 
-        // eteneminen aina eteenpäin (oli homing päällä tai ei)
-        rb.linearVelocity = transform.up * speed;
+        // Kulje aina eteenpï¿½in nykyisen etusuunnan mukaan
+        rb.linearVelocity = GetForward() * speed;
     }
 
-    public void SetTarget(Transform newTarget) => target = newTarget;
-
-    // Yhteensopivuus vanhan kutsun kanssa: käytä tätä max-lifetimeena
-    public void SetLifetime(float newLifetime)
+    private Vector2 GetForward()
     {
-        maxLifetime = newLifetime;
+        // Huom: transform.up/transform.right pï¿½ivittyy rb.rotationista
+        return forwardAxis == ForwardAxis.Up ? (Vector2)transform.up : (Vector2)transform.right;
+    }
+
+    public void SetLifetime(float seconds)
+    {
+        maxLifetime = seconds;
         lifeTimer = maxLifetime;
     }
 
@@ -77,7 +105,7 @@ public class HomingProjectile : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // damage tähän jos haluat
+            // damage tms.
             Destroy(gameObject);
         }
     }

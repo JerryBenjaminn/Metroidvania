@@ -122,30 +122,17 @@ public class LichMovement : MonoBehaviour
 
     void PerformHomingProjectileAttack()
     {
-        if (homingProjectilePrefab && attackSpawnPoint)
+        if (!homingProjectilePrefab || !attackSpawnPoint) return;
+
+        var go = Instantiate(homingProjectilePrefab, attackSpawnPoint.position, Quaternion.identity);
+        var homing = go.GetComponent<HomingProjectile>();
+        if (homing)
         {
-            for (int i = 0; i < 3; i++)
-            {
-                var projectile = Instantiate(homingProjectilePrefab, attackSpawnPoint.position, Quaternion.identity);
-
-                // Aseta alku-rotatio kohti pelaajaa
-                if (player)
-                {
-                    Vector2 dir = (player.position - attackSpawnPoint.position).normalized;
-                    float deg = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg; // jos ohjus osoittaa ylˆs
-                    projectile.transform.rotation = Quaternion.Euler(0, 0, deg);
-                }
-
-                var homing = projectile.GetComponent<HomingProjectile>();
-                if (homing)
-                {
-                    homing.SetTarget(player);
-                    homing.SetLifetime(homingProjectileLifetime);
-                }
-            }
-            Debug.Log("Lich performed Homing Projectile Attack!");
+            homing.SetLifetime(homingProjectileLifetime);
+            homing.Init(player); // t‰m‰ k‰‰nt‰‰ ja antaa alkunopeuden suoraan pelaajaan
         }
     }
+
 
 
     void FlipTowardsPlayer()

@@ -128,11 +128,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8971e87cf42319a43ab579443507fa5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HomingProjectile
-  speed: 10
-  turnRateDegPerSec: 180
-  stopDistance: 1
+  forwardAxis: 1
+  speed: 7
+  turnRateDegPerSec: 240
   homingDuration: 1
   maxLifetime: 10
+  stopDistance: 1
 --- !u!50 &7231261359594099837
 Rigidbody2D:
   serializedVersion: 5
