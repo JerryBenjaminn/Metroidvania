@@ -20,6 +20,8 @@ public class LichMovement : MonoBehaviour
     public float homingProjectileLifetime = 3f; // Lifetime of homing projectiles
     public int[] groundWaypointIndices; // Indices of ground waypoints
 
+    public Animator animator;
+
     private int currentWaypointIndex = 0;
     private bool isWaiting = false;
     private bool isAttacking = false;
@@ -30,7 +32,7 @@ public class LichMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         if (!sprite) sprite = GetComponentInChildren<SpriteRenderer>();
-
+        if (!animator) animator = GetComponentInChildren<Animator>();
         if (waypoints == null || waypoints.Length == 0)
         {
             Debug.LogWarning("No waypoints assigned to LichMovement!");
@@ -50,6 +52,7 @@ public class LichMovement : MonoBehaviour
     void MoveToWaypoint()
     {
         if (waypoints == null || waypoints.Length == 0) return;
+        
 
         Vector2 targetPos = waypoints[currentWaypointIndex].position;
         Vector2 newPos = Vector2.MoveTowards(rb.position, targetPos, moveSpeed * Time.fixedDeltaTime);
@@ -62,6 +65,8 @@ public class LichMovement : MonoBehaviour
     IEnumerator PauseAtWaypoint()
     {
         isWaiting = true;
+
+        
 
         // Wait for the pause duration
         yield return new WaitForSeconds(waypointPauseDuration);
@@ -86,14 +91,24 @@ public class LichMovement : MonoBehaviour
             case 1:
                 if (IsOnGroundWaypoint())
                 {
+                    animator.SetTrigger("LightningAttack");
+                    yield return new WaitForSeconds(1.3f);
                     PerformLightningAttack();
+                    animator.SetTrigger("Idle");
                 }
                 break;
             case 2:
+                animator.SetTrigger("SummonPatroller");
+                yield return new WaitForSeconds(2f);
                 PerformSummonPatroller();
+                animator.SetTrigger("Idle");
                 break;
             case 3:
-                PerformHomingProjectileAttack();
+                animator.SetTrigger("HomingProjectile");
+                yield return new WaitForSeconds(0.25f);
+                StartCoroutine(PerformHomingProjectileAttack());
+                yield return new WaitForSeconds(2.0f);
+                animator.SetTrigger("Idle");
                 break;
         }
 
@@ -135,16 +150,28 @@ public class LichMovement : MonoBehaviour
         }
     }
 
-    void PerformHomingProjectileAttack()
+    IEnumerator PerformHomingProjectileAttack()
     {
-        if (!homingProjectilePrefab || !attackSpawnPoint) return;
+        if (!homingProjectilePrefab || !attackSpawnPoint) yield break;
 
-        var go = Instantiate(homingProjectilePrefab, attackSpawnPoint.position, Quaternion.identity);
-        var homing = go.GetComponent<HomingProjectile>();
-        if (homing)
+        // Randomly determine the number of projectiles to shoot (2 to 3)
+        int projectileCount = Random.Range(2, 4);
+
+        Debug.Log($"Lich will shoot {projectileCount} homing projectiles!");
+
+        for (int i = 0; i < projectileCount; i++)
         {
-            homing.SetLifetime(homingProjectileLifetime);
-            homing.Init(player);
+            // Instantiate the homing projectile
+            var go = Instantiate(homingProjectilePrefab, attackSpawnPoint.position, Quaternion.identity);
+            var homing = go.GetComponent<HomingProjectile>();
+            if (homing)
+            {
+                homing.SetLifetime(homingProjectileLifetime);
+                homing.Init(player);
+            }
+
+            // Wait for 0.5 seconds before spawning the next projectile
+            yield return new WaitForSeconds(0.75f);
         }
     }
 
