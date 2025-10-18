@@ -7,6 +7,7 @@ public class LichMovement : MonoBehaviour
     public float moveSpeed = 2f;
     public Transform[] waypoints;
     public float waypointPauseDuration = 2f;
+    public float teleportChance = 0.3f;
 
     [Header("Facing")]
     public Transform player;
@@ -26,6 +27,7 @@ public class LichMovement : MonoBehaviour
     private int currentWaypointIndex = 0;
     private bool isWaiting = false;
     private bool isAttacking = false;
+    private bool isMovingLeg = false;
 
     private Rigidbody2D rb;
 
@@ -47,82 +49,139 @@ public class LichMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!isWaiting && !isAttacking) MoveToWaypoint();
+        if (!isWaiting && !isAttacking)
+        {
+            if (isMovingLeg)
+            {
+                MoveToWaypoint();
+            }
+            else
+            {
+                StartNextLeg();
+            }
+        }
     }
 
     void MoveToWaypoint()
     {
         if (waypoints == null || waypoints.Length == 0) return;
-        
 
         Vector2 targetPos = waypoints[currentWaypointIndex].position;
         Vector2 newPos = Vector2.MoveTowards(rb.position, targetPos, moveSpeed * Time.fixedDeltaTime);
         rb.MovePosition(newPos);
 
-        if (Vector2.Distance(rb.position, targetPos) < 0.1f)
+        if (Vector2.Distance(rb.position, targetPos) < 0.05f)
+        {
+            isMovingLeg = false;
             StartCoroutine(PauseAtWaypoint());
+        }
+    }
+    void TeleportToWaypoint(int newWaypointIndex)
+    {
+        currentWaypointIndex = newWaypointIndex;
+        rb.position = waypoints[currentWaypointIndex].position; // älä käytä transform.position
+        Debug.Log($"Lich teleported to waypoint {currentWaypointIndex}");
+        StartCoroutine(PauseAtWaypoint());
     }
 
     IEnumerator PauseAtWaypoint()
     {
         isWaiting = true;
-
-        
-
-        // Wait for the pause duration
         yield return new WaitForSeconds(waypointPauseDuration);
 
-        // Perform an attack
-        StartCoroutine(PerformAttack());
+        // Hyökkäys
+        yield return StartCoroutine(PerformAttack());
 
-        // Move to the next waypoint
-        currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
         isWaiting = false;
+
+        // Päätä seuraava legi (teleport vai kävely)
+        StartNextLeg();
     }
 
+    void StartNextLeg()
+    {
+        if (waypoints == null || waypoints.Length == 0) return;
+
+        // Select the next waypoint index (different from the current one)
+        int nextIndex;
+        if (waypoints.Length == 1)
+        {
+            nextIndex = 0;
+        }
+        else
+        {
+            do
+            {
+                nextIndex = Random.Range(0, waypoints.Length);
+            } while (nextIndex == currentWaypointIndex);
+        }
+
+        // Decide whether to teleport or move
+        if (Random.value < teleportChance)
+        {
+            TeleportToWaypoint(nextIndex);
+        }
+        else
+        {
+            currentWaypointIndex = nextIndex;
+            isMovingLeg = true; // Set the flag to start moving
+        }
+    }
     IEnumerator PerformAttack()
     {
         isAttacking = true;
 
-        // Randomly choose one of the three attacks
-        int attackIndex = Random.Range(1, 5);
+        // Create a list of valid attacks based on the Lich's current state
+        var validAttacks = new System.Collections.Generic.List<int>();
+
+        if (IsOnGroundWaypoint())
+        {
+            validAttacks.Add(1); // Lightning Attack
+            validAttacks.Add(2); // Summon Patroller
+        }
+        else
+        {
+            validAttacks.Add(4); // Summon Flyer
+        }
+
+        validAttacks.Add(3); // Homing Projectile (always valid)
+
+        // Randomly choose one of the valid attacks
+        int attackIndex = validAttacks[Random.Range(0, validAttacks.Count)];
+        Debug.Log($"Lich is attempting attack {attackIndex}");
 
         switch (attackIndex)
         {
             case 1:
-                if (IsOnGroundWaypoint())
-                {
-                    animator.SetTrigger("LightningAttack");
-                    yield return new WaitForSeconds(1.3f);
-                    PerformLightningAttack();
-                    animator.SetTrigger("Idle");
-                }
+                Debug.Log("Performing Lightning Attack anim");
+                animator.SetTrigger("LightningAttack");
+                yield return new WaitForSeconds(1.3f);
+                PerformLightningAttack();
+                animator.SetTrigger("Idle");
                 break;
+
             case 2:
-                if (IsOnGroundWaypoint())
-                {
-                    animator.SetTrigger("SummonPatroller");
-                    yield return new WaitForSeconds(2f);
-                    PerformSummonPatroller();
-                    animator.SetTrigger("Idle");
-                }
-                    break;
+                Debug.Log("Performing Summon Patroller anim");
+                animator.SetTrigger("SummonPatroller");
+                yield return new WaitForSeconds(2f);
+                PerformSummonPatroller();
+                animator.SetTrigger("Idle");
+                break;
+
             case 3:
+                Debug.Log("Performing Homing Projectile Attack anim");
                 animator.SetTrigger("HomingProjectile");
                 yield return new WaitForSeconds(0.25f);
-                StartCoroutine(PerformHomingProjectileAttack());
-                yield return new WaitForSeconds(2.0f);
+                yield return StartCoroutine(PerformHomingProjectileAttack());
                 animator.SetTrigger("Idle");
                 break;
 
             case 4:
-                if (!IsOnGroundWaypoint())
-                {
-                    animator.SetTrigger("SummonPatroller");
-                    yield return new WaitForSeconds(2f);
-                    PerformSummonFlyer();
-                    animator.SetTrigger("Idle");
-                }
+                Debug.Log("Performing Summon Flyer anim");
+                animator.SetTrigger("SummonPatroller");
+                yield return new WaitForSeconds(2f);
+                PerformSummonFlyer();
+                animator.SetTrigger("Idle");
                 break;
         }
 
@@ -131,9 +190,6 @@ public class LichMovement : MonoBehaviour
 
         isAttacking = false;
     }
-
-    // 10/9/2025 AI-Tag
-    // This was created with the help of Assistant, a Unity Artificial Intelligence product.
 
     void PerformLightningAttack()
     {
