@@ -5840,6 +5840,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c048462809dd274297191408c3251f0, type: 3}
+--- !u!1 &6715424003127179430 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6473553198220576203, guid: 8c048462809dd274297191408c3251f0, type: 3}
+  m_PrefabInstance: {fileID: 6715424003127179429}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6903838192810698258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5973,6 +5978,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 6676746550204815065}
+    - target: {fileID: 6712861690206638452, guid: 3b7c4e4287303b54ea6b3fc9eecac9d0, type: 3}
+      propertyPath: flyerPrefab
+      value: 
+      objectReference: {fileID: 6715424003127179430}
     - target: {fileID: 6712861690206638452, guid: 3b7c4e4287303b54ea6b3fc9eecac9d0, type: 3}
       propertyPath: 'waypoints.Array.data[0]'
       value: 

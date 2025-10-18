@@ -16,6 +16,7 @@ public class LichMovement : MonoBehaviour
     public GameObject lightningPrefab; // Prefab for the lightning attack
     public GameObject patrollerPrefab; // Prefab for the summoned patroller
     public GameObject homingProjectilePrefab; // Prefab for the homing projectile
+    public GameObject flyerPrefab; //Prefab for the summoned flyer
     public Transform attackSpawnPoint; // Spawn point for attacks
     public float homingProjectileLifetime = 3f; // Lifetime of homing projectiles
     public int[] groundWaypointIndices; // Indices of ground waypoints
@@ -84,7 +85,7 @@ public class LichMovement : MonoBehaviour
         isAttacking = true;
 
         // Randomly choose one of the three attacks
-        int attackIndex = Random.Range(1, 4);
+        int attackIndex = Random.Range(1, 5);
 
         switch (attackIndex)
         {
@@ -98,17 +99,30 @@ public class LichMovement : MonoBehaviour
                 }
                 break;
             case 2:
-                animator.SetTrigger("SummonPatroller");
-                yield return new WaitForSeconds(2f);
-                PerformSummonPatroller();
-                animator.SetTrigger("Idle");
-                break;
+                if (IsOnGroundWaypoint())
+                {
+                    animator.SetTrigger("SummonPatroller");
+                    yield return new WaitForSeconds(2f);
+                    PerformSummonPatroller();
+                    animator.SetTrigger("Idle");
+                }
+                    break;
             case 3:
                 animator.SetTrigger("HomingProjectile");
                 yield return new WaitForSeconds(0.25f);
                 StartCoroutine(PerformHomingProjectileAttack());
                 yield return new WaitForSeconds(2.0f);
                 animator.SetTrigger("Idle");
+                break;
+
+            case 4:
+                if (!IsOnGroundWaypoint())
+                {
+                    animator.SetTrigger("SummonPatroller");
+                    yield return new WaitForSeconds(2f);
+                    PerformSummonFlyer();
+                    animator.SetTrigger("Idle");
+                }
                 break;
         }
 
@@ -143,10 +157,20 @@ public class LichMovement : MonoBehaviour
 
     void PerformSummonPatroller()
     {
+
         if (patrollerPrefab && attackSpawnPoint)
         {
             Instantiate(patrollerPrefab, attackSpawnPoint.position, Quaternion.identity);
             Debug.Log("Lich summoned a Patroller!");
+        }
+    }
+
+    void PerformSummonFlyer()
+    {
+        if (flyerPrefab && attackSpawnPoint)
+        {
+            Instantiate(flyerPrefab, attackSpawnPoint.position, Quaternion.identity);
+            Debug.Log("Lich summoned a Flyer!");
         }
     }
 
