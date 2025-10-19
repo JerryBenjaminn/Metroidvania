@@ -181,14 +181,16 @@ public class LichMovement : MonoBehaviour
         else
         {
             validAttacks.Add(4); // Summon Flyer
+
+            if (isSecondPhase)
+            {
+                validAttacks.Add(5); // Lightning Storm
+            }
         }
 
         validAttacks.Add(3); // Homing Projectile (always valid)
 
-        if (isSecondPhase)
-        {
-            validAttacks.Add(5); // Lightning Storm
-        }
+
 
         // Randomly choose one of the valid attacks
         int attackIndex = validAttacks[Random.Range(0, validAttacks.Count)];
@@ -288,6 +290,11 @@ public class LichMovement : MonoBehaviour
         // Randomly determine the number of projectiles to shoot (2 to 3)
         int projectileCount = Random.Range(2, 4);
 
+        if (isSecondPhase)
+        {
+            projectileCount = Random.Range(3, 5);
+        }
+
         Debug.Log($"Lich will shoot {projectileCount} homing projectiles!");
 
         for (int i = 0; i < projectileCount; i++)
@@ -320,7 +327,7 @@ public class LichMovement : MonoBehaviour
             Debug.Log($"Lightning strike at {position.position}");
 
             // Wait briefly before the next strike
-            yield return new WaitForSeconds(1.5f / secondPhaseAttackSpeedMultiplier);
+            yield return new WaitForSeconds(2.5f / secondPhaseAttackSpeedMultiplier);
         }
     }
     void FlipTowardsPlayer()
