@@ -52,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -66,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 48
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -115,37 +115,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lich_magenta_hurt_0
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 67
-        width: 10
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6b0a0de23a639e900800000000000000
-      internalID: 714162090407927990
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_hurt_1
       rect:
         serializedVersion: 2
         x: 66
         y: 17
-        width: 45
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 49
+        height: 65
+      alignment: 9
+      pivot: {x: 0.42390162, y: 0.4649428}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -159,59 +137,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lich_magenta_hurt_2
-      rect:
-        serializedVersion: 2
-        x: 107
-        y: 71
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6be8a58636b010eb0800000000000000
-      internalID: -4755507209946100042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_hurt_3
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 70
-        width: 9
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f029ee8e2bfdc3650800000000000000
-      internalID: 6214087545369563663
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lich_magenta_hurt_4
       rect:
         serializedVersion: 2
         x: 241
         y: 18
-        width: 45
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 47
+        height: 68
+      alignment: 9
+      pivot: {x: 0.46033105, y: 0.45125732}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -224,33 +158,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Lich_magenta_hurt_5
-      rect:
-        serializedVersion: 2
-        x: 280
-        y: 73
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9ecc667dbe6ad7c00800000000000000
-      internalID: 900059032405331177
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8ef45cc0b37ac524fb765e2237a86da6
     internalID: 0
     vertices: []
     indices: 

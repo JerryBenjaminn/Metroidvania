@@ -7,7 +7,7 @@ public class LichMovement : MonoBehaviour
     public float moveSpeed = 2f;
     public Transform[] waypoints;
     public float waypointPauseDuration = 2f;
-    public float teleportChance = 0.3f;
+    public float teleportChance = 1f;
 
     [Header("Facing")]
     public Transform player;
@@ -78,10 +78,25 @@ public class LichMovement : MonoBehaviour
     }
     void TeleportToWaypoint(int newWaypointIndex)
     {
+        if (isWaiting) return;
+        isWaiting = true;
+        StartCoroutine(TeleportOutAnimation());
         currentWaypointIndex = newWaypointIndex;
         rb.position = waypoints[currentWaypointIndex].position; // älä käytä transform.position
         Debug.Log($"Lich teleported to waypoint {currentWaypointIndex}");
+        StartCoroutine(TeleportInAnimation());
         StartCoroutine(PauseAtWaypoint());
+    }
+    IEnumerator TeleportOutAnimation()
+    {
+        animator.SetTrigger("TeleportOut");
+        yield return new WaitForSeconds(0.25f);
+    }
+    IEnumerator TeleportInAnimation()
+    {
+        animator.SetTrigger("TeleportIn");
+        yield return new WaitForSeconds(0.3f);
+        animator.SetTrigger("Idle");
     }
 
     IEnumerator PauseAtWaypoint()
