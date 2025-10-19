@@ -7,7 +7,7 @@ public class LichMovement : MonoBehaviour
     public float moveSpeed = 2f;
     public Transform[] waypoints;
     public float waypointPauseDuration = 2f;
-    public float teleportChance = 1f;
+    public float teleportChance = 0.3f;
 
     [Header("Facing")]
     public Transform player;
@@ -21,6 +21,13 @@ public class LichMovement : MonoBehaviour
     public Transform attackSpawnPoint; // Spawn point for attacks
     public float homingProjectileLifetime = 3f; // Lifetime of homing projectiles
     public int[] groundWaypointIndices; // Indices of ground waypoints
+
+    [Header("Second Phase")]
+    public bool isSecondPhase = false; // Tracks if the Lich is in the second phase
+    public float secondPhaseHealthThreshold = 0.6f; // 60% health threshold
+    public float secondPhaseAttackSpeedMultiplier = 1.5f; // Multiplier for attack speed in the second phase
+    public GameObject lightningStormPrefab; // Prefab for the lightning storm attack
+    public Transform[] lightningStormPositions; // Positions for the lightning storm
 
     public Animator animator;
 
@@ -45,6 +52,11 @@ public class LichMovement : MonoBehaviour
     void Update()
     {
         FlipTowardsPlayer();
+
+        if (!isSecondPhase && GetComponent<Health>().Current / GetComponent<Health>().Max <= secondPhaseHealthThreshold)
+        {
+            ActivateSecondPhase();
+        }
     }
 
     void FixedUpdate()
@@ -60,6 +72,18 @@ public class LichMovement : MonoBehaviour
                 StartNextLeg();
             }
         }
+    }
+
+    void ActivateSecondPhase()
+    {
+        isSecondPhase = true;
+        Debug.Log("Lich has entered the second phase!");
+
+        // Increase attack speed
+        waypointPauseDuration /= secondPhaseAttackSpeedMultiplier;
+
+        // Optionally, add visual or audio effects to indicate the phase change
+        animator.SetTrigger("SecondPhase");
     }
 
     void MoveToWaypoint()
@@ -161,6 +185,11 @@ public class LichMovement : MonoBehaviour
 
         validAttacks.Add(3); // Homing Projectile (always valid)
 
+        if (isSecondPhase)
+        {
+            validAttacks.Add(5); // Lightning Storm
+        }
+
         // Randomly choose one of the valid attacks
         int attackIndex = validAttacks[Random.Range(0, validAttacks.Count)];
         Debug.Log($"Lich is attempting attack {attackIndex}");
@@ -196,6 +225,13 @@ public class LichMovement : MonoBehaviour
                 animator.SetTrigger("SummonPatroller");
                 yield return new WaitForSeconds(2f);
                 PerformSummonFlyer();
+                animator.SetTrigger("Idle");
+                break;
+
+            case 5: // Lightning Storm
+                Debug.Log("Performing Lightning Storm attack");
+                animator.SetTrigger("LightningStorm");
+                yield return StartCoroutine(PerformLightningStorm());
                 animator.SetTrigger("Idle");
                 break;
         }
@@ -269,7 +305,24 @@ public class LichMovement : MonoBehaviour
             yield return new WaitForSeconds(0.75f);
         }
     }
+    IEnumerator PerformLightningStorm()
+    {
+        if (lightningStormPrefab == null || lightningStormPositions == null || lightningStormPositions.Length == 0)
+        {
+            Debug.LogWarning("Lightning Storm setup is incomplete!");
+            yield break;
+        }
 
+        foreach (Transform position in lightningStormPositions)
+        {
+            // Instantiate a lightning strike at each position
+            Instantiate(lightningStormPrefab, position.position, Quaternion.Euler(0, 0, -90));
+            Debug.Log($"Lightning strike at {position.position}");
+
+            // Wait briefly before the next strike
+            yield return new WaitForSeconds(1.5f / secondPhaseAttackSpeedMultiplier);
+        }
+    }
     void FlipTowardsPlayer()
     {
         if (!player || !sprite || !attackSpawnPoint) return;

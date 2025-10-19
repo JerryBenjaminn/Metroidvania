@@ -194,9 +194,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0700f7e5e69aa0045a202defe8165afd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  maxHearts: 5
-  currentHearts: 5
-  max: 5
+  maxHearts: 30
+  currentHearts: 30
+  max: 100
   applyKnockback: 1
   knockbackScale: 1
   useInvulnerability: 1
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80619e7f10aac734187d384f608000e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ContactDamage
-  damage: 10
+  damage: 1
   knockback: 6
   tickCooldown: 0.35
   targetMask:
@@ -346,14 +346,29 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   waypointPauseDuration: 3
+  teleportChance: 1
   player: {fileID: 0}
   sprite: {fileID: 2653849413664477176}
   lightningPrefab: {fileID: 8950654377342009637, guid: 6afac405bfb977240a298285e96ce5ec, type: 3}
   patrollerPrefab: {fileID: 7629233035588187175, guid: 863b260332593ca4d8550a006b422cb4, type: 3}
   homingProjectilePrefab: {fileID: 2725832030012503783, guid: 026b570191ec3a34b9096d75eb53dbec, type: 3}
+  flyerPrefab: {fileID: 0}
   attackSpawnPoint: {fileID: 1520771246258707142}
   homingProjectileLifetime: 3
   groundWaypointIndices: 0000000002000000
+  isSecondPhase: 0
+  secondPhaseHealthThreshold: 0.6
+  secondPhaseAttackSpeedMultiplier: 5
+  lightningStormPrefab: {fileID: 8919023668107739023, guid: a00ab3be4fabd0443ba3e3c544feea59, type: 3}
+  lightningStormPositions:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  animator: {fileID: 0}
 --- !u!1 &4932832756242190456
 GameObject:
   m_ObjectHideFlags: 0
