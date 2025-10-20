@@ -29,6 +29,14 @@ public class LichMovement : MonoBehaviour
     public GameObject lightningStormPrefab; // Prefab for the lightning storm attack
     public Transform[] lightningStormPositions; // Positions for the lightning storm
 
+    [Header("Audio")]
+    public SoundEvent introSound; // Intro animation sound
+    public SoundEvent lightningAttackSound; // Lightning attack sound
+    public SoundEvent summonPatrollerSound; // Summon patroller sound
+    public SoundEvent homingProjectileSound; // Homing projectile sound
+    public SoundEvent summonFlyerSound; // Summon flyer sound
+    public SoundEvent lightningStormSound; // Lightning storm sound
+
     public Animator animator;
 
     private int currentWaypointIndex = 0;
@@ -205,6 +213,10 @@ public class LichMovement : MonoBehaviour
                 animator.SetTrigger("LightningAttack");
                 yield return new WaitForSeconds(1.3f);
                 PerformLightningAttack();
+                if(lightningAttackSound != null)
+                {
+                    AudioManager.Instance.Play(lightningAttackSound, transform.position, is2D: true);
+                }
                 animator.SetTrigger("Idle");
                 break;
 
@@ -213,6 +225,10 @@ public class LichMovement : MonoBehaviour
                 animator.SetTrigger("SummonPatroller");
                 yield return new WaitForSeconds(2f);
                 PerformSummonPatroller();
+                if (lightningAttackSound != null)
+                {
+                    AudioManager.Instance.Play(summonPatrollerSound, transform.position, is2D: true);
+                }
                 animator.SetTrigger("Idle");
                 break;
 
@@ -221,6 +237,10 @@ public class LichMovement : MonoBehaviour
                 animator.SetTrigger("HomingProjectile");
                 yield return new WaitForSeconds(0.25f);
                 yield return StartCoroutine(PerformHomingProjectileAttack());
+                if (lightningAttackSound != null)
+                {
+                    AudioManager.Instance.Play(homingProjectileSound, transform.position, is2D: true);
+                }
                 animator.SetTrigger("Idle");
                 break;
 
@@ -229,6 +249,10 @@ public class LichMovement : MonoBehaviour
                 animator.SetTrigger("SummonPatroller");
                 yield return new WaitForSeconds(2f);
                 PerformSummonFlyer();
+                if (lightningAttackSound != null)
+                {
+                    AudioManager.Instance.Play(summonFlyerSound, transform.position, is2D: true);
+                }
                 animator.SetTrigger("Idle");
                 break;
 
@@ -237,6 +261,10 @@ public class LichMovement : MonoBehaviour
                 Debug.Log("Performing Lightning Storm attack");
                 animator.SetTrigger("LightningStorm");
                 yield return StartCoroutine(PerformLightningStorm());
+                if (lightningAttackSound != null)
+                {
+                    AudioManager.Instance.Play(lightningStormSound, transform.position, is2D: true);
+                }
                 animator.SetTrigger("Idle");
                 break;
         }
@@ -360,5 +388,40 @@ public class LichMovement : MonoBehaviour
             }
         }
         return false;
+    }
+    public void PlayLightningAttackSound()
+    {
+        if (lightningAttackSound != null)
+        {
+            AudioManager.Instance.Play(lightningAttackSound, transform.position, is2D: true);
+        }
+    }
+    public void PlaySummonPatrollerSound()
+    {
+        if (summonPatrollerSound != null)
+        {
+            AudioManager.Instance.Play(summonPatrollerSound, transform.position, is2D: true);
+        }
+    }
+    public void PlaySummonFlyerSound()
+    {
+        if (summonFlyerSound != null)
+        {
+            AudioManager.Instance.Play(summonFlyerSound, transform.position, is2D: true);
+        }
+    }
+    public void PlayHomingProjectileSound()
+    {
+        if (homingProjectileSound != null)
+        {
+            AudioManager.Instance.Play(homingProjectileSound, transform.position, is2D: true);
+        }
+    }
+    public void PlayLightningStormSound()
+    {
+        if(lightningStormSound != null)
+        {
+            AudioManager.Instance.Play(lightningStormSound,transform.position, is2D: true);
+        }
     }
 }

@@ -1,0 +1,13 @@
+{
+    "asset": "70158d81da8b3fc4b9c59868e5002b3e",
+    "fileName": "019a02f6-949a-7bc5-acc1-fd5de4d90fe5.wav",
+    "prompt": "A dark and ominous sound effect for the lich's intro animation, evoking dread and mystery.",
+    "negativePrompt": "",
+    "model": "0ee39b33-2893-4e0f-8c46-0e0bdd4eda85",
+    "modelName": "Text to Sound",
+    "customSeed": -1,
+    "w3CTraceId": "fd0bc27103c42deda516ba04c702dce2",
+    "duration": 10.0,
+    "autoTrim": false,
+    "hasReference": false
+}

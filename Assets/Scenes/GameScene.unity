@@ -6250,6 +6250,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6712861690206638452, guid: 3b7c4e4287303b54ea6b3fc9eecac9d0, type: 3}
+      propertyPath: introSound
+      value: 
+      objectReference: {fileID: 11400000, guid: 843cb744401d7cf429f878b0e0ddec22, type: 2}
+    - target: {fileID: 6712861690206638452, guid: 3b7c4e4287303b54ea6b3fc9eecac9d0, type: 3}
       propertyPath: flyerPrefab
       value: 
       objectReference: {fileID: 6715424003127179430}
@@ -6257,6 +6261,26 @@ PrefabInstance:
       propertyPath: teleportChance
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 6712861690206638452, guid: 3b7c4e4287303b54ea6b3fc9eecac9d0, type: 3}
+      propertyPath: summonFlyerSound
+      value: 
+      objectReference: {fileID: 11400000, guid: 280390e41b277114da8b12d1db7a9612, type: 2}
+    - target: {fileID: 6712861690206638452, guid: 3b7c4e4287303b54ea6b3fc9eecac9d0, type: 3}
+      propertyPath: lightningStormSound
+      value: 
+      objectReference: {fileID: 11400000, guid: 50a6c1680f472a6429f5202260661e97, type: 2}
+    - target: {fileID: 6712861690206638452, guid: 3b7c4e4287303b54ea6b3fc9eecac9d0, type: 3}
+      propertyPath: lightningAttackSound
+      value: 
+      objectReference: {fileID: 11400000, guid: 73c7bdeda68998c4687c4343727df819, type: 2}
+    - target: {fileID: 6712861690206638452, guid: 3b7c4e4287303b54ea6b3fc9eecac9d0, type: 3}
+      propertyPath: summonPatrollerSound
+      value: 
+      objectReference: {fileID: 11400000, guid: 2d4e72fdff3818f4f8bb5086d4e6a019, type: 2}
+    - target: {fileID: 6712861690206638452, guid: 3b7c4e4287303b54ea6b3fc9eecac9d0, type: 3}
+      propertyPath: homingProjectileSound
+      value: 
+      objectReference: {fileID: 11400000, guid: 5a2d77c8cce9f224ea08fe56cb198492, type: 2}
     - target: {fileID: 6712861690206638452, guid: 3b7c4e4287303b54ea6b3fc9eecac9d0, type: 3}
       propertyPath: 'waypoints.Array.data[0]'
       value: 
@@ -6328,7 +6352,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 755473381781392194, guid: 3b7c4e4287303b54ea6b3fc9eecac9d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7258657534857654016}
   m_SourcePrefab: {fileID: 100100000, guid: 3b7c4e4287303b54ea6b3fc9eecac9d0, type: 3}
 --- !u!114 &7258657534857654013 stripped
 MonoBehaviour:
@@ -6346,6 +6373,23 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 2419296506340792166, guid: 3b7c4e4287303b54ea6b3fc9eecac9d0, type: 3}
   m_PrefabInstance: {fileID: 7258657534857654012}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7258657534857654015 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 755473381781392194, guid: 3b7c4e4287303b54ea6b3fc9eecac9d0, type: 3}
+  m_PrefabInstance: {fileID: 7258657534857654012}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7258657534857654016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7258657534857654015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cc2947b0b34c3448a005cea369278a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimationEventBridge
 --- !u!1001 &8587773759590065057
 PrefabInstance:
   m_ObjectHideFlags: 0

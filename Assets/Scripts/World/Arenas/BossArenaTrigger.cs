@@ -49,7 +49,15 @@ public class BossArenaTrigger : MonoBehaviour
 
         // Play the intro animation
         Animator lichAnimator = lich.GetComponentInChildren<Animator>();
+
         lichAnimator.SetTrigger("Intro");
+
+        // Play intro sound
+        if (lichMovement.introSound != null)
+        {
+            AudioManager.Instance.Play(lichMovement.introSound, transform.position, is2D: true);
+        }
+
 
         // Wait for the intro animation to finish
         yield return new WaitForSeconds(1.5f);

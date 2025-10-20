@@ -33,6 +33,13 @@ public class BossArena : MonoBehaviour
         {
             arenaAnimator.SetTrigger("StartBattle");
         }
+        LichMovement lichMovement = lich.GetComponent<LichMovement>();
+
+        // Play intro sound
+        if (lichMovement.introSound != null)
+        {
+            AudioManager.Instance.Play(lichMovement.introSound, transform.position, is2D: true);
+        }
 
         // Activate the Lich
         if (lich != null)
