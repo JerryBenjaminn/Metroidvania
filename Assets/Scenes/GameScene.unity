@@ -5992,6 +5992,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4865045869428173058, guid: 11823f2ee1f937d48b9741fa15157884, type: 3}
+      propertyPath: bossArena
+      value: 
+      objectReference: {fileID: 9150714944876488886}
     - target: {fileID: 6770830313523687997, guid: 11823f2ee1f937d48b9741fa15157884, type: 3}
       propertyPath: jumpForce
       value: 14
@@ -6175,11 +6179,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2222732251342726877, guid: 3b7c4e4287303b54ea6b3fc9eecac9d0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 81.88
+      value: 77.7
       objectReference: {fileID: 0}
     - target: {fileID: 2222732251342726877, guid: 3b7c4e4287303b54ea6b3fc9eecac9d0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.74
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: 2222732251342726877, guid: 3b7c4e4287303b54ea6b3fc9eecac9d0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6229,6 +6233,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 6676746550204815065}
+    - target: {fileID: 6712861690206638452, guid: 3b7c4e4287303b54ea6b3fc9eecac9d0, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 7258657534857654014}
+    - target: {fileID: 6712861690206638452, guid: 3b7c4e4287303b54ea6b3fc9eecac9d0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6712861690206638452, guid: 3b7c4e4287303b54ea6b3fc9eecac9d0, type: 3}
       propertyPath: flyerPrefab
       value: 
@@ -6301,11 +6313,31 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.01354748
       objectReference: {fileID: 0}
+    - target: {fileID: 7316426461873854507, guid: 3b7c4e4287303b54ea6b3fc9eecac9d0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b7c4e4287303b54ea6b3fc9eecac9d0, type: 3}
+--- !u!114 &7258657534857654013 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6712861690206638452, guid: 3b7c4e4287303b54ea6b3fc9eecac9d0, type: 3}
+  m_PrefabInstance: {fileID: 7258657534857654012}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5646601c16353bd43b947291d5237ffe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LichMovement
+--- !u!95 &7258657534857654014 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2419296506340792166, guid: 3b7c4e4287303b54ea6b3fc9eecac9d0, type: 3}
+  m_PrefabInstance: {fileID: 7258657534857654012}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8587773759590065057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6428,6 +6460,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 980517235}
     - target: {fileID: 6277161934046860544, guid: 90082cdaf0f68404790a541d5b1788d5, type: 3}
+      propertyPath: lich
+      value: 
+      objectReference: {fileID: 7258657534857654013}
+    - target: {fileID: 6277161934046860544, guid: 90082cdaf0f68404790a541d5b1788d5, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 6676746550204815065}
@@ -6436,6 +6472,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90082cdaf0f68404790a541d5b1788d5, type: 3}
+--- !u!114 &9150714944876488886 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6277161934046860544, guid: 90082cdaf0f68404790a541d5b1788d5, type: 3}
+  m_PrefabInstance: {fileID: 9150714944876488885}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2cd38233703d91498f85f777d8443fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossArena
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

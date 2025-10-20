@@ -10,8 +10,8 @@ public class PlayerDeathController : MonoBehaviour
 {
     [Header("Behavior")]
     public PlayerDeathMode mode = PlayerDeathMode.ReloadScene;
-    public float respawnDelay = 1.2f;           // odota animaation verran
-    public Transform respawnPoint;              // k‰ytet‰‰n jos mode == RespawnAtTransform
+    public float respawnDelay = 1.2f;           // Wait for death animation
+    public Transform respawnPoint;             // Used if mode == RespawnAtTransform
 
     [Header("Refs")]
     [SerializeField] Animator animator;
@@ -19,9 +19,12 @@ public class PlayerDeathController : MonoBehaviour
     [SerializeField] string deadBool = "Dead";
 
     [SerializeField] PlayerInput playerInput;
-    [SerializeField] MonoBehaviour[] disableOnDeath; // esim. CharacterMotor, PlayerInputController, AbilityController
+    [SerializeField] MonoBehaviour[] disableOnDeath; // e.g., CharacterMotor, PlayerInputController, AbilityController
     [SerializeField] Rigidbody2D rb;
-    [SerializeField] Collider2D[] colliders;   // yleens‰ j‰tet‰‰n p‰‰lle, mutta voit disabloida jos haluat
+    [SerializeField] Collider2D[] colliders;   // Usually left enabled, but can be disabled if needed
+
+    [Header("Boss Arena")]
+    [SerializeField] BossArena bossArena;      // Reference to the BossArena script
 
     Health health;
     bool dead;
@@ -46,7 +49,8 @@ public class PlayerDeathController : MonoBehaviour
 
     void HandleDeath()
     {
-        if (dead) return; dead = true;
+        if (dead) return;
+        dead = true;
 
         if (playerInput) playerInput.enabled = false;
         foreach (var c in disableOnDeath) if (c) c.enabled = false;
@@ -68,18 +72,23 @@ public class PlayerDeathController : MonoBehaviour
 
         Time.timeScale = 1.0f;
 
+        // Reset the boss fight if a BossArena is assigned
+        if (bossArena != null)
+        {
+            bossArena.ResetBossFight();
+        }
 
-        // Lataa AKTIIVINEN slotti SaveManagerin kautta, jotta kaikki ISaveable-tilat palautuvat
+        // Load the active slot via SaveManager to restore all ISaveable states
         int slot = SaveManager.Instance && SaveManager.Instance.HasActiveSlot
             ? SaveManager.Instance.CurrentSlot
             : 0;
 
         GameManager.Instance.LoadGame(slot);
 
-        // Resetoi
+        // Reset player position
         transform.position = respawnPoint.position;
 
-        // her‰t‰ henkiin
+        // Revive the player
         health.Heal(health.Max);
         if (rb) { rb.simulated = true; rb.linearVelocity = Vector2.zero; }
         foreach (var c in disableOnDeath) if (c) c.enabled = true;

@@ -139,6 +139,7 @@ public class LichMovement : MonoBehaviour
 
     void StartNextLeg()
     {
+
         if (waypoints == null || waypoints.Length == 0) return;
 
         // Select the next waypoint index (different from the current one)
