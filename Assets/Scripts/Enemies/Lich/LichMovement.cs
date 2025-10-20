@@ -186,6 +186,7 @@ public class LichMovement : MonoBehaviour
             if (isSecondPhase)
             {
                 validAttacks.Add(5); // Lightning Storm
+                validAttacks.Remove(4);
             }
         }
 
@@ -232,6 +233,7 @@ public class LichMovement : MonoBehaviour
                 break;
 
             case 5: // Lightning Storm
+                yield return new WaitForSeconds(0.5f);
                 Debug.Log("Performing Lightning Storm attack");
                 animator.SetTrigger("LightningStorm");
                 yield return StartCoroutine(PerformLightningStorm());

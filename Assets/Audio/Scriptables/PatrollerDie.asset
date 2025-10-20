@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c580bb3c09a5ab48808df2693083227, type: 3}
-  m_Name: SFX_Slash
-  m_EditorClassIdentifier: 
+  m_Name: PatrollerDie
+  m_EditorClassIdentifier: Assembly-CSharp::SoundEvent
   clips:
-  - {fileID: 8300000, guid: f3f5e835794411a4b832f41c150052f8, type: 3}
-  volume: 0.502
+  - {fileID: 8300000, guid: adc3e92f33da7e34b9999163b5d35579, type: 3}
+  volume: 0.5
   pitch: 1
   pitchVariance: 0.05
   spatialBlend: 1
   minDistance: 1
-  maxDistance: 30
+  maxDistance: 20
   outputOverride: {fileID: 0}
   cooldown: 0
   maxSimultaneous: 8

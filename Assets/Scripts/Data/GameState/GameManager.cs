@@ -16,6 +16,11 @@ public class GameManager : MonoBehaviour
         // varmista että SaveManager on olemassa
         if (!SaveManager.Instance)
             Instantiate(saveManagerPrefab);
+
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.globalSfxVolume = 0.3f; // Adjust this value as needed
+        }
     }
 
     // kutsu kun pelaaja spawnaa / scene vaihtuu

@@ -170,7 +170,7 @@ public class MeleeAttackAbility : Ability
 
                 if (hitEnemySfx && !hitPlayed)
                 {
-                    AudioManager.Instance.Play(hitEnemySfx, comp.transform.position);
+                    AudioManager.Instance.Play(hitEnemySfx, comp.transform.position, is2D: true);
                     hitPlayed = true;
                 }
 

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
+    [Range(0f, 1f)] public float globalSfxVolume = 0.5f;
 
     [Header("Mixer")]
     public AudioMixer mixer;
@@ -85,7 +86,7 @@ public class AudioManager : MonoBehaviour
     public void Play(SoundEvent ev) => Play(ev, null);
     public void Play(SoundEvent ev, Vector3 position) => Play(ev, (Vector3?)position);
 
-    public void Play(SoundEvent ev, Vector3? position)
+    public void Play(SoundEvent ev, Vector3? position, bool is2D = false)
     {
         if (!ev) return;
 
@@ -110,9 +111,20 @@ public class AudioManager : MonoBehaviour
         src.minDistance = ev.minDistance;
         src.maxDistance = ev.maxDistance;
         src.pitch = Mathf.Clamp(ev.pitch + Random.Range(-ev.pitchVariance, ev.pitchVariance), -3f, 3f);
-        src.volume = ev.volume;
+        src.volume = ev.volume * globalSfxVolume;
         src.loop = false;
         src.clip = clip;
+
+        if (is2D)
+        {
+            src.spatialBlend = 0f;
+            src.transform.position = Vector3.zero;
+        }
+        else
+        {
+            src.spatialBlend = 1f;
+            src.transform.position = transform.position;
+        }
 
         StartCoroutine(CoPlayCount(ev, src));
 

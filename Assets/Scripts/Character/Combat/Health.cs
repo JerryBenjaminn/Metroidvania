@@ -19,6 +19,10 @@ public class Health : MonoBehaviour, IHealth, IDamageable
     [SerializeField] bool useInvulnerability = true;
     [SerializeField] float invulnSeconds = 0.15f;
 
+    [Header("Audio")]
+    [SerializeField] SoundEvent hurtSound;
+    [SerializeField] SoundEvent deathSound;
+
     public event Action OnDeath;
     public event Action<float, float> OnHealthChanged;
     public event Action<float, Vector2> OnDamaged;
@@ -89,10 +93,19 @@ public class Health : MonoBehaviour, IHealth, IDamageable
         OnHealthChanged?.Invoke(Current, Max);
         OnDamaged?.Invoke(dmg, hitDir);
 
+        if (hurtSound != null)
+        {
+            AudioManager.Instance.Play(hurtSound, transform.position, is2D: true);
+        }
+
         if (applyKnockback && rb) rb.AddForce(hitDir * knockbackScale, ForceMode2D.Impulse);
 
         if (currentHearts <= 0) { Kill(); return; }
         if (useInvulnerability) StartCoroutine(CoIFrames());
+    }
+    public void SetHurtSound(SoundEvent sound)
+    {
+        hurtSound = sound;
     }
 
     IEnumerator CoIFrames() { invuln = true; yield return new WaitForSeconds(invulnSeconds); invuln = false; }
@@ -102,6 +115,16 @@ public class Health : MonoBehaviour, IHealth, IDamageable
         if (currentHearts > 0) currentHearts = 0;
         Current = currentHearts;
         OnHealthChanged?.Invoke(Current, Max);
+
+        if (deathSound != null)
+        {
+            AudioManager.Instance.Play(deathSound, transform.position, is2D: true);
+        }
+
         OnDeath?.Invoke();
+    }
+    public void SetDeathSound(SoundEvent sound)
+    {
+        deathSound = sound;
     }
 }
