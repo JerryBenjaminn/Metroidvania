@@ -23,7 +23,7 @@ public class SaveSlotView : MonoBehaviour
 
         if (has)
         {
-            if (titleText) titleText.text = $"Slot {slotIndex + 1} — Continue";
+            if (titleText) titleText.text = $"Continue";
             if (subText)
             {
                 var local = s.savedAtUtc == System.DateTime.MinValue ? "unknown" :
@@ -35,7 +35,7 @@ public class SaveSlotView : MonoBehaviour
         }
         else
         {
-            if (titleText) titleText.text = $"Slot {slotIndex + 1} — New Game";
+            if (titleText) titleText.text = $"New Game";
             if (subText) subText.text = s.exists ? "Corrupted/Unknown save" : "Empty";
             SetPrimary("New Game", OnNewGame);
             deleteButton.interactable = s.exists;
